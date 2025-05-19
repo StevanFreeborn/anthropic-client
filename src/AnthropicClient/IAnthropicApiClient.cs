@@ -96,7 +96,7 @@ public interface IAnthropicApiClient
   Task<AnthropicResult<Page<AnthropicModel>>> ListModelsAsync(PagingRequest? request = null, CancellationToken cancellationToken = default);
 
   /// <summary>
-  /// Lists the model asynchronously getting all the pages of models.
+  /// Lists all models asynchronously, returning every page of results.
   /// </summary>
   /// <param name="limit">The maximum number of models to return in each page.</param>
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>

@@ -32,15 +32,15 @@ references:
   fullName.vb: AnthropicClient.AnthropicApiClient.New
   nameWithType: AnthropicApiClient.AnthropicApiClient
   nameWithType.vb: AnthropicApiClient.New
-- uid: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(System.String)
-  name: CancelMessageBatchAsync(string)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CancelMessageBatchAsync_System_String_
-  commentId: M:AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(System.String)
-  name.vb: CancelMessageBatchAsync(String)
-  fullName: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(string)
-  fullName.vb: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(String)
-  nameWithType: AnthropicApiClient.CancelMessageBatchAsync(string)
-  nameWithType.vb: AnthropicApiClient.CancelMessageBatchAsync(String)
+- uid: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name: CancelMessageBatchAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CancelMessageBatchAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name.vb: CancelMessageBatchAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.CancelMessageBatchAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.CancelMessageBatchAsync(String, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync*
   name: CancelMessageBatchAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CancelMessageBatchAsync_
@@ -48,12 +48,12 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync
   nameWithType: AnthropicApiClient.CancelMessageBatchAsync
-- uid: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)
-  name: CountMessageTokensAsync(CountMessageTokensRequest)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CountMessageTokensAsync_AnthropicClient_Models_CountMessageTokensRequest_
-  commentId: M:AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)
-  fullName: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)
-  nameWithType: AnthropicApiClient.CountMessageTokensAsync(CountMessageTokensRequest)
+- uid: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest,System.Threading.CancellationToken)
+  name: CountMessageTokensAsync(CountMessageTokensRequest, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CountMessageTokensAsync_AnthropicClient_Models_CountMessageTokensRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.CountMessageTokensAsync(CountMessageTokensRequest, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync*
   name: CountMessageTokensAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CountMessageTokensAsync_
@@ -61,18 +61,18 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync
   nameWithType: AnthropicApiClient.CountMessageTokensAsync
-- uid: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)
-  name: CreateMessageAsync(MessageRequest)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_
-  commentId: M:AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)
-  fullName: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)
-  nameWithType: AnthropicApiClient.CreateMessageAsync(MessageRequest)
-- uid: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)
-  name: CreateMessageAsync(StreamMessageRequest)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_StreamMessageRequest_
-  commentId: M:AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)
-  fullName: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)
-  nameWithType: AnthropicApiClient.CreateMessageAsync(StreamMessageRequest)
+- uid: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)
+  name: CreateMessageAsync(MessageRequest, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.CreateMessageAsync(MessageRequest, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest,System.Threading.CancellationToken)
+  name: CreateMessageAsync(StreamMessageRequest, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_StreamMessageRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.CreateMessageAsync(StreamMessageRequest, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.CreateMessageAsync*
   name: CreateMessageAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageAsync_
@@ -80,12 +80,12 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.CreateMessageAsync
   nameWithType: AnthropicApiClient.CreateMessageAsync
-- uid: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)
-  name: CreateMessageBatchAsync(MessageBatchRequest)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageBatchAsync_AnthropicClient_Models_MessageBatchRequest_
-  commentId: M:AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)
-  fullName: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)
-  nameWithType: AnthropicApiClient.CreateMessageBatchAsync(MessageBatchRequest)
+- uid: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest,System.Threading.CancellationToken)
+  name: CreateMessageBatchAsync(MessageBatchRequest, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageBatchAsync_AnthropicClient_Models_MessageBatchRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.CreateMessageBatchAsync(MessageBatchRequest, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync*
   name: CreateMessageBatchAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageBatchAsync_
@@ -93,15 +93,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync
   nameWithType: AnthropicApiClient.CreateMessageBatchAsync
-- uid: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String)
-  name: DeleteMessageBatchAsync(string)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_System_String_
-  commentId: M:AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String)
-  name.vb: DeleteMessageBatchAsync(String)
-  fullName: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(string)
-  fullName.vb: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(String)
-  nameWithType: AnthropicApiClient.DeleteMessageBatchAsync(string)
-  nameWithType.vb: AnthropicApiClient.DeleteMessageBatchAsync(String)
+- uid: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name: DeleteMessageBatchAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name.vb: DeleteMessageBatchAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.DeleteMessageBatchAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.DeleteMessageBatchAsync(String, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync*
   name: DeleteMessageBatchAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_
@@ -109,15 +109,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync
   nameWithType: AnthropicApiClient.DeleteMessageBatchAsync
-- uid: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String)
-  name: GetMessageBatchAsync(string)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_System_String_
-  commentId: M:AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String)
-  name.vb: GetMessageBatchAsync(String)
-  fullName: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(string)
-  fullName.vb: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(String)
-  nameWithType: AnthropicApiClient.GetMessageBatchAsync(string)
-  nameWithType.vb: AnthropicApiClient.GetMessageBatchAsync(String)
+- uid: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name: GetMessageBatchAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetMessageBatchAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.GetMessageBatchAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.GetMessageBatchAsync(String, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync*
   name: GetMessageBatchAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_
@@ -125,15 +125,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync
   nameWithType: AnthropicApiClient.GetMessageBatchAsync
-- uid: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(System.String)
-  name: GetMessageBatchResultsAsync(string)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchResultsAsync_System_String_
-  commentId: M:AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(System.String)
-  name.vb: GetMessageBatchResultsAsync(String)
-  fullName: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(string)
-  fullName.vb: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(String)
-  nameWithType: AnthropicApiClient.GetMessageBatchResultsAsync(string)
-  nameWithType.vb: AnthropicApiClient.GetMessageBatchResultsAsync(String)
+- uid: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(System.String,System.Threading.CancellationToken)
+  name: GetMessageBatchResultsAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchResultsAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetMessageBatchResultsAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.GetMessageBatchResultsAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.GetMessageBatchResultsAsync(String, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync*
   name: GetMessageBatchResultsAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchResultsAsync_
@@ -141,15 +141,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync
   nameWithType: AnthropicApiClient.GetMessageBatchResultsAsync
-- uid: AnthropicClient.AnthropicApiClient.GetModelAsync(System.String)
-  name: GetModelAsync(string)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetModelAsync_System_String_
-  commentId: M:AnthropicClient.AnthropicApiClient.GetModelAsync(System.String)
-  name.vb: GetModelAsync(String)
-  fullName: AnthropicClient.AnthropicApiClient.GetModelAsync(string)
-  fullName.vb: AnthropicClient.AnthropicApiClient.GetModelAsync(String)
-  nameWithType: AnthropicApiClient.GetModelAsync(string)
-  nameWithType.vb: AnthropicApiClient.GetModelAsync(String)
+- uid: AnthropicClient.AnthropicApiClient.GetModelAsync(System.String,System.Threading.CancellationToken)
+  name: GetModelAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetModelAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.GetModelAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetModelAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.GetModelAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.GetModelAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.GetModelAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.GetModelAsync(String, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.GetModelAsync*
   name: GetModelAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetModelAsync_
@@ -157,15 +157,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.GetModelAsync
   nameWithType: AnthropicApiClient.GetModelAsync
-- uid: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32)
-  name: ListAllMessageBatchesAsync(int)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_
-  commentId: M:AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32)
-  name.vb: ListAllMessageBatchesAsync(Integer)
-  fullName: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(int)
-  fullName.vb: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(Integer)
-  nameWithType: AnthropicApiClient.ListAllMessageBatchesAsync(int)
-  nameWithType.vb: AnthropicApiClient.ListAllMessageBatchesAsync(Integer)
+- uid: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)
+  name: ListAllMessageBatchesAsync(int, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ListAllMessageBatchesAsync(Integer, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(int, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.ListAllMessageBatchesAsync(int, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.ListAllMessageBatchesAsync(Integer, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync*
   name: ListAllMessageBatchesAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_
@@ -173,15 +173,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync
   nameWithType: AnthropicApiClient.ListAllMessageBatchesAsync
-- uid: AnthropicClient.AnthropicApiClient.ListAllModelsAsync(System.Int32)
-  name: ListAllModelsAsync(int)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllModelsAsync_System_Int32_
-  commentId: M:AnthropicClient.AnthropicApiClient.ListAllModelsAsync(System.Int32)
-  name.vb: ListAllModelsAsync(Integer)
-  fullName: AnthropicClient.AnthropicApiClient.ListAllModelsAsync(int)
-  fullName.vb: AnthropicClient.AnthropicApiClient.ListAllModelsAsync(Integer)
-  nameWithType: AnthropicApiClient.ListAllModelsAsync(int)
-  nameWithType.vb: AnthropicApiClient.ListAllModelsAsync(Integer)
+- uid: AnthropicClient.AnthropicApiClient.ListAllModelsAsync(System.Int32,System.Threading.CancellationToken)
+  name: ListAllModelsAsync(int, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllModelsAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.ListAllModelsAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ListAllModelsAsync(Integer, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.ListAllModelsAsync(int, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.ListAllModelsAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.ListAllModelsAsync(int, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.ListAllModelsAsync(Integer, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.ListAllModelsAsync*
   name: ListAllModelsAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllModelsAsync_
@@ -189,15 +189,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.ListAllModelsAsync
   nameWithType: AnthropicApiClient.ListAllModelsAsync
-- uid: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)
-  name: ListMessageBatchesAsync(PagingRequest?)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_
-  commentId: M:AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)
-  name.vb: ListMessageBatchesAsync(PagingRequest)
-  fullName: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest?)
-  fullName.vb: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)
-  nameWithType: AnthropicApiClient.ListMessageBatchesAsync(PagingRequest?)
-  nameWithType.vb: AnthropicApiClient.ListMessageBatchesAsync(PagingRequest)
+- uid: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name: ListMessageBatchesAsync(PagingRequest?, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name.vb: ListMessageBatchesAsync(PagingRequest, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest?, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.ListMessageBatchesAsync(PagingRequest?, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.ListMessageBatchesAsync(PagingRequest, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync*
   name: ListMessageBatchesAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_
@@ -205,15 +205,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync
   nameWithType: AnthropicApiClient.ListMessageBatchesAsync
-- uid: AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)
-  name: ListModelsAsync(PagingRequest?)
-  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListModelsAsync_AnthropicClient_Models_PagingRequest_
-  commentId: M:AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)
-  name.vb: ListModelsAsync(PagingRequest)
-  fullName: AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest?)
-  fullName.vb: AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)
-  nameWithType: AnthropicApiClient.ListModelsAsync(PagingRequest?)
-  nameWithType.vb: AnthropicApiClient.ListModelsAsync(PagingRequest)
+- uid: AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name: ListModelsAsync(PagingRequest?, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListModelsAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name.vb: ListModelsAsync(PagingRequest, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest?, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.ListModelsAsync(PagingRequest?, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.ListModelsAsync(PagingRequest, CancellationToken)
 - uid: AnthropicClient.AnthropicApiClient.ListModelsAsync*
   name: ListModelsAsync
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListModelsAsync_
@@ -227,15 +227,15 @@ references:
   commentId: T:AnthropicClient.IAnthropicApiClient
   fullName: AnthropicClient.IAnthropicApiClient
   nameWithType: IAnthropicApiClient
-- uid: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(System.String)
-  name: CancelMessageBatchAsync(string)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CancelMessageBatchAsync_System_String_
-  commentId: M:AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(System.String)
-  name.vb: CancelMessageBatchAsync(String)
-  fullName: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(string)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(String)
-  nameWithType: IAnthropicApiClient.CancelMessageBatchAsync(string)
-  nameWithType.vb: IAnthropicApiClient.CancelMessageBatchAsync(String)
+- uid: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name: CancelMessageBatchAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CancelMessageBatchAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name.vb: CancelMessageBatchAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.CancelMessageBatchAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.CancelMessageBatchAsync(String, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync*
   name: CancelMessageBatchAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CancelMessageBatchAsync_
@@ -243,12 +243,12 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.CancelMessageBatchAsync
   nameWithType: IAnthropicApiClient.CancelMessageBatchAsync
-- uid: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)
-  name: CountMessageTokensAsync(CountMessageTokensRequest)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CountMessageTokensAsync_AnthropicClient_Models_CountMessageTokensRequest_
-  commentId: M:AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)
-  fullName: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)
-  nameWithType: IAnthropicApiClient.CountMessageTokensAsync(CountMessageTokensRequest)
+- uid: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest,System.Threading.CancellationToken)
+  name: CountMessageTokensAsync(CountMessageTokensRequest, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CountMessageTokensAsync_AnthropicClient_Models_CountMessageTokensRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.CountMessageTokensAsync(CountMessageTokensRequest, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync*
   name: CountMessageTokensAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CountMessageTokensAsync_
@@ -256,18 +256,18 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync
   nameWithType: IAnthropicApiClient.CountMessageTokensAsync
-- uid: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)
-  name: CreateMessageAsync(MessageRequest)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_
-  commentId: M:AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)
-  fullName: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)
-  nameWithType: IAnthropicApiClient.CreateMessageAsync(MessageRequest)
-- uid: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)
-  name: CreateMessageAsync(StreamMessageRequest)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_StreamMessageRequest_
-  commentId: M:AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)
-  fullName: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)
-  nameWithType: IAnthropicApiClient.CreateMessageAsync(StreamMessageRequest)
+- uid: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)
+  name: CreateMessageAsync(MessageRequest, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.CreateMessageAsync(MessageRequest, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest,System.Threading.CancellationToken)
+  name: CreateMessageAsync(StreamMessageRequest, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_StreamMessageRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.CreateMessageAsync(StreamMessageRequest, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.CreateMessageAsync*
   name: CreateMessageAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageAsync_
@@ -275,12 +275,12 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.CreateMessageAsync
   nameWithType: IAnthropicApiClient.CreateMessageAsync
-- uid: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)
-  name: CreateMessageBatchAsync(MessageBatchRequest)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageBatchAsync_AnthropicClient_Models_MessageBatchRequest_
-  commentId: M:AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)
-  fullName: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)
-  nameWithType: IAnthropicApiClient.CreateMessageBatchAsync(MessageBatchRequest)
+- uid: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest,System.Threading.CancellationToken)
+  name: CreateMessageBatchAsync(MessageBatchRequest, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageBatchAsync_AnthropicClient_Models_MessageBatchRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.CreateMessageBatchAsync(MessageBatchRequest, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync*
   name: CreateMessageBatchAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageBatchAsync_
@@ -288,15 +288,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync
   nameWithType: IAnthropicApiClient.CreateMessageBatchAsync
-- uid: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(System.String)
-  name: DeleteMessageBatchAsync(string)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_DeleteMessageBatchAsync_System_String_
-  commentId: M:AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(System.String)
-  name.vb: DeleteMessageBatchAsync(String)
-  fullName: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(string)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(String)
-  nameWithType: IAnthropicApiClient.DeleteMessageBatchAsync(string)
-  nameWithType.vb: IAnthropicApiClient.DeleteMessageBatchAsync(String)
+- uid: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name: DeleteMessageBatchAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_DeleteMessageBatchAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name.vb: DeleteMessageBatchAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.DeleteMessageBatchAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.DeleteMessageBatchAsync(String, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync*
   name: DeleteMessageBatchAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_DeleteMessageBatchAsync_
@@ -304,15 +304,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync
   nameWithType: IAnthropicApiClient.DeleteMessageBatchAsync
-- uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(System.String)
-  name: GetMessageBatchAsync(string)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchAsync_System_String_
-  commentId: M:AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(System.String)
-  name.vb: GetMessageBatchAsync(String)
-  fullName: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(string)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(String)
-  nameWithType: IAnthropicApiClient.GetMessageBatchAsync(string)
-  nameWithType.vb: IAnthropicApiClient.GetMessageBatchAsync(String)
+- uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name: GetMessageBatchAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetMessageBatchAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.GetMessageBatchAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.GetMessageBatchAsync(String, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync*
   name: GetMessageBatchAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchAsync_
@@ -320,15 +320,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync
   nameWithType: IAnthropicApiClient.GetMessageBatchAsync
-- uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(System.String)
-  name: GetMessageBatchResultsAsync(string)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchResultsAsync_System_String_
-  commentId: M:AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(System.String)
-  name.vb: GetMessageBatchResultsAsync(String)
-  fullName: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(string)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(String)
-  nameWithType: IAnthropicApiClient.GetMessageBatchResultsAsync(string)
-  nameWithType.vb: IAnthropicApiClient.GetMessageBatchResultsAsync(String)
+- uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(System.String,System.Threading.CancellationToken)
+  name: GetMessageBatchResultsAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchResultsAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetMessageBatchResultsAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.GetMessageBatchResultsAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.GetMessageBatchResultsAsync(String, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync*
   name: GetMessageBatchResultsAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchResultsAsync_
@@ -336,15 +336,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.GetMessageBatchResultsAsync
   nameWithType: IAnthropicApiClient.GetMessageBatchResultsAsync
-- uid: AnthropicClient.IAnthropicApiClient.GetModelAsync(System.String)
-  name: GetModelAsync(string)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetModelAsync_System_String_
-  commentId: M:AnthropicClient.IAnthropicApiClient.GetModelAsync(System.String)
-  name.vb: GetModelAsync(String)
-  fullName: AnthropicClient.IAnthropicApiClient.GetModelAsync(string)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.GetModelAsync(String)
-  nameWithType: IAnthropicApiClient.GetModelAsync(string)
-  nameWithType.vb: IAnthropicApiClient.GetModelAsync(String)
+- uid: AnthropicClient.IAnthropicApiClient.GetModelAsync(System.String,System.Threading.CancellationToken)
+  name: GetModelAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetModelAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.GetModelAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetModelAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.GetModelAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.GetModelAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.GetModelAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.GetModelAsync(String, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.GetModelAsync*
   name: GetModelAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetModelAsync_
@@ -352,15 +352,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.GetModelAsync
   nameWithType: IAnthropicApiClient.GetModelAsync
-- uid: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(System.Int32)
-  name: ListAllMessageBatchesAsync(int)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_
-  commentId: M:AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(System.Int32)
-  name.vb: ListAllMessageBatchesAsync(Integer)
-  fullName: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(int)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(Integer)
-  nameWithType: IAnthropicApiClient.ListAllMessageBatchesAsync(int)
-  nameWithType.vb: IAnthropicApiClient.ListAllMessageBatchesAsync(Integer)
+- uid: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)
+  name: ListAllMessageBatchesAsync(int, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ListAllMessageBatchesAsync(Integer, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(int, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.ListAllMessageBatchesAsync(int, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.ListAllMessageBatchesAsync(Integer, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync*
   name: ListAllMessageBatchesAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllMessageBatchesAsync_
@@ -368,15 +368,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync
   nameWithType: IAnthropicApiClient.ListAllMessageBatchesAsync
-- uid: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(System.Int32)
-  name: ListAllModelsAsync(int)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllModelsAsync_System_Int32_
-  commentId: M:AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(System.Int32)
-  name.vb: ListAllModelsAsync(Integer)
-  fullName: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(int)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(Integer)
-  nameWithType: IAnthropicApiClient.ListAllModelsAsync(int)
-  nameWithType.vb: IAnthropicApiClient.ListAllModelsAsync(Integer)
+- uid: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(System.Int32,System.Threading.CancellationToken)
+  name: ListAllModelsAsync(int, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllModelsAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ListAllModelsAsync(Integer, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(int, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.ListAllModelsAsync(int, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.ListAllModelsAsync(Integer, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync*
   name: ListAllModelsAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllModelsAsync_
@@ -384,15 +384,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync
   nameWithType: IAnthropicApiClient.ListAllModelsAsync
-- uid: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)
-  name: ListMessageBatchesAsync(PagingRequest?)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_
-  commentId: M:AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)
-  name.vb: ListMessageBatchesAsync(PagingRequest)
-  fullName: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest?)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)
-  nameWithType: IAnthropicApiClient.ListMessageBatchesAsync(PagingRequest?)
-  nameWithType.vb: IAnthropicApiClient.ListMessageBatchesAsync(PagingRequest)
+- uid: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name: ListMessageBatchesAsync(PagingRequest?, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name.vb: ListMessageBatchesAsync(PagingRequest, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest?, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.ListMessageBatchesAsync(PagingRequest?, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.ListMessageBatchesAsync(PagingRequest, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync*
   name: ListMessageBatchesAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListMessageBatchesAsync_
@@ -400,15 +400,15 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync
   nameWithType: IAnthropicApiClient.ListMessageBatchesAsync
-- uid: AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)
-  name: ListModelsAsync(PagingRequest?)
-  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListModelsAsync_AnthropicClient_Models_PagingRequest_
-  commentId: M:AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)
-  name.vb: ListModelsAsync(PagingRequest)
-  fullName: AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest?)
-  fullName.vb: AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)
-  nameWithType: IAnthropicApiClient.ListModelsAsync(PagingRequest?)
-  nameWithType.vb: IAnthropicApiClient.ListModelsAsync(PagingRequest)
+- uid: AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name: ListModelsAsync(PagingRequest?, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListModelsAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name.vb: ListModelsAsync(PagingRequest, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest?, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.ListModelsAsync(PagingRequest?, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.ListModelsAsync(PagingRequest, CancellationToken)
 - uid: AnthropicClient.IAnthropicApiClient.ListModelsAsync*
   name: ListModelsAsync
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListModelsAsync_

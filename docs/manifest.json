@@ -18,7 +18,11 @@
           "relative_path": "api/AnthropicClient.AnthropicApiClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.AnthropicApiClient",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.AnthropicApiClient.yml\" sourcestartlinenumber=\"1\">Represents a client for interacting with the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/AnthropicClient.IAnthropicApiClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.IAnthropicApiClient",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.IAnthropicApiClient.yml\" sourcestartlinenumber=\"1\">Represents a client for interacting with the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/AnthropicClient.Models.AnthropicError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicError.yml\" sourcestartlinenumber=\"1\">Represents an error response from the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/AnthropicClient.Models.AnthropicEvent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicEvent",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicEvent.yml\" sourcestartlinenumber=\"1\">Represents an event from the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/AnthropicClient.Models.AnthropicFunction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicFunction",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicFunction.yml\" sourcestartlinenumber=\"1\">Represents a function that can be provided as a tool.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/AnthropicClient.Models.AnthropicHeaders.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicHeaders",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicHeaders.yml\" sourcestartlinenumber=\"1\">Represents headers included in Anthropic API responses.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/AnthropicClient.Models.AnthropicModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicModel",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicModel.yml\" sourcestartlinenumber=\"1\">Represents an Anthropic model.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/AnthropicClient.Models.AnthropicModels.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicModels",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicModels.yml\" sourcestartlinenumber=\"1\">Provides constants for the Anthropic models.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/AnthropicClient.Models.AnyToolChoice.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnyToolChoice",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnyToolChoice.yml\" sourcestartlinenumber=\"1\">Represents the any tool choice mode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/AnthropicClient.Models.ApiError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ApiError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ApiError.yml\" sourcestartlinenumber=\"1\">Represents an api_error response from the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/AnthropicClient.Models.AuthenticationError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AuthenticationError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AuthenticationError.yml\" sourcestartlinenumber=\"1\">Represents an authentication_error response from the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/AnthropicClient.Models.AutoToolChoice.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AutoToolChoice",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AutoToolChoice.yml\" sourcestartlinenumber=\"1\">Represents the auto tool choice mode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/AnthropicClient.Models.BaseMessageRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.BaseMessageRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.BaseMessageRequest.yml\" sourcestartlinenumber=\"1\">Represents a message request.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/AnthropicClient.Models.CacheControl.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CacheControl",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CacheControl.yml\" sourcestartlinenumber=\"1\">Represents the cache control to be used for content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/AnthropicClient.Models.CacheControlType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CacheControlType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CacheControlType.yml\" sourcestartlinenumber=\"1\">Provides constants for cache control types.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/AnthropicClient.Models.CanceledMessageBatchResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CanceledMessageBatchResult",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CanceledMessageBatchResult.yml\" sourcestartlinenumber=\"1\">Represents a message batch result that was cancelled.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/AnthropicClient.Models.Content.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Content",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Content.yml\" sourcestartlinenumber=\"1\">Represents part of the content of a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/AnthropicClient.Models.ContentDelta.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentDelta",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentDelta.yml\" sourcestartlinenumber=\"1\">Represents a content delta.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/AnthropicClient.Models.ContentDeltaEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentDeltaEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentDeltaEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a content_block_delta event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/AnthropicClient.Models.ContentDeltaType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentDeltaType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentDeltaType.yml\" sourcestartlinenumber=\"1\">Provides constants for content delta types.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/AnthropicClient.Models.ContentStartEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentStartEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentStartEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a content_block_start event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -228,7 +312,11 @@
           "relative_path": "api/AnthropicClient.Models.ContentStopEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentStopEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentStopEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a content_block_stop event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -238,7 +326,11 @@
           "relative_path": "api/AnthropicClient.Models.ContentType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentType.yml\" sourcestartlinenumber=\"1\">Represents the content type.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -248,7 +340,11 @@
           "relative_path": "api/AnthropicClient.Models.CountMessageTokensRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CountMessageTokensRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CountMessageTokensRequest.yml\" sourcestartlinenumber=\"1\">Represents a request to count the number of tokens in a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -258,7 +354,11 @@
           "relative_path": "api/AnthropicClient.Models.DocumentContent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.DocumentContent",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.DocumentContent.yml\" sourcestartlinenumber=\"1\">Represents content from a document that is part of a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -268,7 +368,11 @@
           "relative_path": "api/AnthropicClient.Models.DocumentSource.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.DocumentSource",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.DocumentSource.yml\" sourcestartlinenumber=\"1\">Represents a document source.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -278,7 +382,11 @@
           "relative_path": "api/AnthropicClient.Models.EphemeralCacheControl.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.EphemeralCacheControl",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.EphemeralCacheControl.yml\" sourcestartlinenumber=\"1\">Represents the cache control to be used for content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -288,7 +396,11 @@
           "relative_path": "api/AnthropicClient.Models.Error.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Error",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Error.yml\" sourcestartlinenumber=\"1\">Represents an error.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -298,7 +410,11 @@
           "relative_path": "api/AnthropicClient.Models.ErrorEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ErrorEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ErrorEventData.yml\" sourcestartlinenumber=\"1\">Represents data for an error event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -308,7 +424,11 @@
           "relative_path": "api/AnthropicClient.Models.ErrorType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ErrorType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ErrorType.yml\" sourcestartlinenumber=\"1\">Represents the error type.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +438,11 @@
           "relative_path": "api/AnthropicClient.Models.ErroredMessageBatchResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ErroredMessageBatchResult",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ErroredMessageBatchResult.yml\" sourcestartlinenumber=\"1\">Represents a message batch result that contains an error response.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -328,7 +452,11 @@
           "relative_path": "api/AnthropicClient.Models.EventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.EventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.EventData.yml\" sourcestartlinenumber=\"1\">Represents data for an event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -338,7 +466,11 @@
           "relative_path": "api/AnthropicClient.Models.EventType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.EventType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.EventType.yml\" sourcestartlinenumber=\"1\">Provides constants for event types.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -348,7 +480,11 @@
           "relative_path": "api/AnthropicClient.Models.ExpiredMessageBatchResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ExpiredMessageBatchResult",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ExpiredMessageBatchResult.yml\" sourcestartlinenumber=\"1\">Represents a message batch result that has expired.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +494,11 @@
           "relative_path": "api/AnthropicClient.Models.FunctionParameterAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.FunctionParameterAttribute",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.FunctionParameterAttribute.yml\" sourcestartlinenumber=\"1\">Attribute to describe a function parameter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -368,7 +508,11 @@
           "relative_path": "api/AnthropicClient.Models.FunctionPropertyAttribute.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.FunctionPropertyAttribute",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.FunctionPropertyAttribute.yml\" sourcestartlinenumber=\"1\">Attribute to describe a property of a type that is used as a function parameter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -378,7 +522,11 @@
           "relative_path": "api/AnthropicClient.Models.ITool.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ITool",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ITool.yml\" sourcestartlinenumber=\"1\">Interface that a class can implement to be used to create a tool.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -388,7 +536,11 @@
           "relative_path": "api/AnthropicClient.Models.ImageContent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ImageContent",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ImageContent.yml\" sourcestartlinenumber=\"1\">Represents image content that is part of a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -398,7 +550,11 @@
           "relative_path": "api/AnthropicClient.Models.ImageSource.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ImageSource",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ImageSource.yml\" sourcestartlinenumber=\"1\">Represents an image source.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -408,7 +564,11 @@
           "relative_path": "api/AnthropicClient.Models.ImageType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ImageType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ImageType.yml\" sourcestartlinenumber=\"1\">Represents the image type.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -418,7 +578,11 @@
           "relative_path": "api/AnthropicClient.Models.InputProperty.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.InputProperty",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.InputProperty.yml\" sourcestartlinenumber=\"1\">Represents an input property.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -428,7 +592,11 @@
           "relative_path": "api/AnthropicClient.Models.InputSchema.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.InputSchema",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.InputSchema.yml\" sourcestartlinenumber=\"1\">Represents an input schema.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -438,7 +606,11 @@
           "relative_path": "api/AnthropicClient.Models.InvalidRequestError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.InvalidRequestError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.InvalidRequestError.yml\" sourcestartlinenumber=\"1\">Represents an invalid_request error.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -448,7 +620,11 @@
           "relative_path": "api/AnthropicClient.Models.JsonDelta.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.JsonDelta",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.JsonDelta.yml\" sourcestartlinenumber=\"1\">Represents a JSON delta.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -458,7 +634,11 @@
           "relative_path": "api/AnthropicClient.Models.Message.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Message",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Message.yml\" sourcestartlinenumber=\"1\">Represents a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -468,7 +648,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchDeleteResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchDeleteResponse",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchDeleteResponse.yml\" sourcestartlinenumber=\"1\">Represents a message batch delete response.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -478,7 +662,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchRequest.yml\" sourcestartlinenumber=\"1\">Represents a request to create a batch of messages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -488,7 +676,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchRequestCounts.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchRequestCounts",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchRequestCounts.yml\" sourcestartlinenumber=\"1\">Represents the counts of requests in a batch of messages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -498,7 +690,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchRequestItem.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchRequestItem",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchRequestItem.yml\" sourcestartlinenumber=\"1\">Represents an item in a batch of messages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -508,7 +704,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchResponse",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchResponse.yml\" sourcestartlinenumber=\"1\">Represents a response to a batch of messages.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -518,7 +718,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchResult",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchResult.yml\" sourcestartlinenumber=\"1\">Represents a message batch result.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -528,7 +732,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchResultItem.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchResultItem",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchResultItem.yml\" sourcestartlinenumber=\"1\">Represents a message batch result item.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -538,7 +746,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchResultType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchResultType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchResultType.yml\" sourcestartlinenumber=\"1\">Represents the types of message batch results.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -548,7 +760,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageBatchStatus.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageBatchStatus",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageBatchStatus.yml\" sourcestartlinenumber=\"1\">Represents the status of a message batch.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -558,7 +774,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageCompleteEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageCompleteEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageCompleteEventData.yml\" sourcestartlinenumber=\"1\">Represents data for the message_complete event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -568,7 +788,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageDelta.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageDelta",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageDelta.yml\" sourcestartlinenumber=\"1\">Represents a message delta.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -578,7 +802,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageDeltaEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageDeltaEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageDeltaEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a message_delta event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -588,7 +816,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageRequest.yml\" sourcestartlinenumber=\"1\">Represents a message request.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -598,7 +830,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageResponse",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageResponse.yml\" sourcestartlinenumber=\"1\">Represents a response.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -608,7 +844,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageRole.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageRole",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageRole.yml\" sourcestartlinenumber=\"1\">Represents the message role.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -618,7 +858,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageStartEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageStartEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageStartEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a message_start event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -628,7 +872,11 @@
           "relative_path": "api/AnthropicClient.Models.MessageStopEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.MessageStopEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.MessageStopEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a message_stop event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -638,7 +886,11 @@
           "relative_path": "api/AnthropicClient.Models.NotFoundError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.NotFoundError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.NotFoundError.yml\" sourcestartlinenumber=\"1\">Represents a not_found error.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -648,7 +900,11 @@
           "relative_path": "api/AnthropicClient.Models.OverloadedError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.OverloadedError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.OverloadedError.yml\" sourcestartlinenumber=\"1\">Represents an overloaded error.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -658,7 +914,11 @@
           "relative_path": "api/AnthropicClient.Models.Page-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Page<T>",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Page-1.yml\" sourcestartlinenumber=\"1\">Represents a page with data.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -668,7 +928,11 @@
           "relative_path": "api/AnthropicClient.Models.Page.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Page",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Page.yml\" sourcestartlinenumber=\"1\">Represents a page.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -678,7 +942,11 @@
           "relative_path": "api/AnthropicClient.Models.PagingRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.PagingRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.PagingRequest.yml\" sourcestartlinenumber=\"1\">Represents a request to page through a collection of items.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -688,7 +956,11 @@
           "relative_path": "api/AnthropicClient.Models.PermissionError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.PermissionError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.PermissionError.yml\" sourcestartlinenumber=\"1\">Represents a permission error.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -698,7 +970,11 @@
           "relative_path": "api/AnthropicClient.Models.PingEventData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.PingEventData",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.PingEventData.yml\" sourcestartlinenumber=\"1\">Represents data for a ping event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -708,7 +984,11 @@
           "relative_path": "api/AnthropicClient.Models.RateLimitError.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.RateLimitError",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.RateLimitError.yml\" sourcestartlinenumber=\"1\">Represents a rate_limit error.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -718,7 +998,11 @@
           "relative_path": "api/AnthropicClient.Models.SpecificToolChoice.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.SpecificToolChoice",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.SpecificToolChoice.yml\" sourcestartlinenumber=\"1\">Represents the specific tool choice mode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -728,7 +1012,11 @@
           "relative_path": "api/AnthropicClient.Models.StopReasonType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.StopReasonType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.StopReasonType.yml\" sourcestartlinenumber=\"1\">Represents the stop reason type.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -738,7 +1026,11 @@
           "relative_path": "api/AnthropicClient.Models.StreamMessageRequest.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.StreamMessageRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.StreamMessageRequest.yml\" sourcestartlinenumber=\"1\">Represents a message request.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -748,7 +1040,11 @@
           "relative_path": "api/AnthropicClient.Models.SucceededMessageBatchResult.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.SucceededMessageBatchResult",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.SucceededMessageBatchResult.yml\" sourcestartlinenumber=\"1\">Represents a message batch result that contains a message response.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -758,7 +1054,11 @@
           "relative_path": "api/AnthropicClient.Models.TextContent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.TextContent",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.TextContent.yml\" sourcestartlinenumber=\"1\">Represents text content that is part of a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -768,7 +1068,11 @@
           "relative_path": "api/AnthropicClient.Models.TextDelta.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.TextDelta",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.TextDelta.yml\" sourcestartlinenumber=\"1\">Represents a text delta.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -778,7 +1082,11 @@
           "relative_path": "api/AnthropicClient.Models.TokenCountResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.TokenCountResponse",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.TokenCountResponse.yml\" sourcestartlinenumber=\"1\">Represents a response to a token count request.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -788,7 +1096,11 @@
           "relative_path": "api/AnthropicClient.Models.Tool.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Tool",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Tool.yml\" sourcestartlinenumber=\"1\">Represents a tool that can be used.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -798,7 +1110,11 @@
           "relative_path": "api/AnthropicClient.Models.ToolCall.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ToolCall",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolCall.yml\" sourcestartlinenumber=\"1\">Represents a tool call.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -808,7 +1124,11 @@
           "relative_path": "api/AnthropicClient.Models.ToolCallResult-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ToolCallResult<T>",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolCallResult-1.yml\" sourcestartlinenumber=\"1\">Represents a tool call result.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -818,7 +1138,11 @@
           "relative_path": "api/AnthropicClient.Models.ToolChoice.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ToolChoice",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolChoice.yml\" sourcestartlinenumber=\"1\">Represents a tool choice mode.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -828,7 +1152,11 @@
           "relative_path": "api/AnthropicClient.Models.ToolChoiceType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ToolChoiceType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolChoiceType.yml\" sourcestartlinenumber=\"1\">Represents the tool choice type.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -838,7 +1166,11 @@
           "relative_path": "api/AnthropicClient.Models.ToolResultContent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ToolResultContent",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolResultContent.yml\" sourcestartlinenumber=\"1\">Represents tool result content that is part of a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -848,7 +1180,11 @@
           "relative_path": "api/AnthropicClient.Models.ToolUseContent.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ToolUseContent",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolUseContent.yml\" sourcestartlinenumber=\"1\">Represents tool use content that is part of a message.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -858,7 +1194,11 @@
           "relative_path": "api/AnthropicClient.Models.Usage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Usage",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Usage.yml\" sourcestartlinenumber=\"1\">Represents the usage of a response.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -868,7 +1208,11 @@
           "relative_path": "api/AnthropicClient.Models.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -878,7 +1222,11 @@
           "relative_path": "api/AnthropicClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient",
+      "Summary": null
     },
     {
       "type": "Toc",

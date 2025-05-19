@@ -89,7 +89,7 @@
 
 
   <h1 id="AnthropicClient_AnthropicApiClient" data-uid="AnthropicClient.AnthropicApiClient" class="text-break">
-Class AnthropicApiClient  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class AnthropicApiClient  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -163,7 +163,7 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <h3 id="AnthropicClient_AnthropicApiClient__ctor_System_String_System_Net_Http_HttpClient_" data-uid="AnthropicClient.AnthropicApiClient.#ctor(System.String,System.Net.Http.HttpClient)">
   AnthropicApiClient(string, HttpClient)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="AnthropicClient.AnthropicApiClient.html">AnthropicApiClient</a> class.</p>
@@ -207,9 +207,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_CancelMessageBatchAsync_" data-uid="AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_CancelMessageBatchAsync_System_String_" data-uid="AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(System.String)">
-  CancelMessageBatchAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_CancelMessageBatchAsync_System_String_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.CancelMessageBatchAsync(System.String,System.Threading.CancellationToken)">
+  CancelMessageBatchAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Cancels a message batch asynchronously.</p>
@@ -217,13 +217,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchResponse&gt;&gt; CancelMessageBatchAsync(string batchId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchResponse&gt;&gt; CancelMessageBatchAsync(string batchId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>batchId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The ID of the message batch to cancel.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -246,9 +249,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_CountMessageTokensAsync_" data-uid="AnthropicClient.AnthropicApiClient.CountMessageTokensAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_CountMessageTokensAsync_AnthropicClient_Models_CountMessageTokensRequest_" data-uid="AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest)">
-  CountMessageTokensAsync(CountMessageTokensRequest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_CountMessageTokensAsync_AnthropicClient_Models_CountMessageTokensRequest_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.CountMessageTokensAsync(AnthropicClient.Models.CountMessageTokensRequest,System.Threading.CancellationToken)">
+  CountMessageTokensAsync(CountMessageTokensRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the tokens in a message asynchronously.</p>
@@ -256,13 +259,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;TokenCountResponse&gt;&gt; CountMessageTokensAsync(CountMessageTokensRequest request)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;TokenCountResponse&gt;&gt; CountMessageTokensAsync(CountMessageTokensRequest request, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>request</code> <a class="xref" href="AnthropicClient.Models.CountMessageTokensRequest.html">CountMessageTokensRequest</a></dt>
     <dd><p>The count message tokens request.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -285,9 +291,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_CreateMessageAsync_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest)">
-  CreateMessageAsync(MessageRequest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)">
+  CreateMessageAsync(MessageRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a message asynchronously.</p>
@@ -295,13 +301,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageResponse&gt;&gt; CreateMessageAsync(MessageRequest request)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageResponse&gt;&gt; CreateMessageAsync(MessageRequest request, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>request</code> <a class="xref" href="AnthropicClient.Models.MessageRequest.html">MessageRequest</a></dt>
     <dd><p>The message request to create.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -324,9 +333,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_CreateMessageAsync_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_StreamMessageRequest_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest)">
-  CreateMessageAsync(StreamMessageRequest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_StreamMessageRequest_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.StreamMessageRequest,System.Threading.CancellationToken)">
+  CreateMessageAsync(StreamMessageRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a message asynchronously and streams the response.</p>
@@ -334,13 +343,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;AnthropicEvent&gt; CreateMessageAsync(StreamMessageRequest request)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;AnthropicEvent&gt; CreateMessageAsync(StreamMessageRequest request, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>request</code> <a class="xref" href="AnthropicClient.Models.StreamMessageRequest.html">StreamMessageRequest</a></dt>
     <dd><p>The message request to create.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -363,9 +375,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_CreateMessageBatchAsync_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_CreateMessageBatchAsync_AnthropicClient_Models_MessageBatchRequest_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest)">
-  CreateMessageBatchAsync(MessageBatchRequest)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_CreateMessageBatchAsync_AnthropicClient_Models_MessageBatchRequest_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync(AnthropicClient.Models.MessageBatchRequest,System.Threading.CancellationToken)">
+  CreateMessageBatchAsync(MessageBatchRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a batch of messages asynchronously.</p>
@@ -373,13 +385,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchResponse&gt;&gt; CreateMessageBatchAsync(MessageBatchRequest request)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchResponse&gt;&gt; CreateMessageBatchAsync(MessageBatchRequest request, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>request</code> <a class="xref" href="AnthropicClient.Models.MessageBatchRequest.html">MessageBatchRequest</a></dt>
     <dd><p>The message batch request to create.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -402,9 +417,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_" data-uid="AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_System_String_" data-uid="AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String)">
-  DeleteMessageBatchAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_System_String_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)">
+  DeleteMessageBatchAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deletes a message batch asynchronously.</p>
@@ -412,13 +427,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchDeleteResponse&gt;&gt; DeleteMessageBatchAsync(string batchId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchDeleteResponse&gt;&gt; DeleteMessageBatchAsync(string batchId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>batchId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The ID of the message batch to delete.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -441,9 +459,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_" data-uid="AnthropicClient.AnthropicApiClient.GetMessageBatchAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_System_String_" data-uid="AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String)">
-  GetMessageBatchAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_System_String_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)">
+  GetMessageBatchAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a message batch asynchronously.</p>
@@ -451,13 +469,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchResponse&gt;&gt; GetMessageBatchAsync(string batchId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;MessageBatchResponse&gt;&gt; GetMessageBatchAsync(string batchId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>batchId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The ID of the message batch to get.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -480,9 +501,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_GetMessageBatchResultsAsync_" data-uid="AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_GetMessageBatchResultsAsync_System_String_" data-uid="AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(System.String)">
-  GetMessageBatchResultsAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L290"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_GetMessageBatchResultsAsync_System_String_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.GetMessageBatchResultsAsync(System.String,System.Threading.CancellationToken)">
+  GetMessageBatchResultsAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the results of a message batch asynchronously.</p>
@@ -490,13 +511,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;IAsyncEnumerable&lt;MessageBatchResultItem&gt;&gt;&gt; GetMessageBatchResultsAsync(string batchId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;IAsyncEnumerable&lt;MessageBatchResultItem&gt;&gt;&gt; GetMessageBatchResultsAsync(string batchId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>batchId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The ID of the message batch to get the results for.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -519,9 +543,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_GetModelAsync_" data-uid="AnthropicClient.AnthropicApiClient.GetModelAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_GetModelAsync_System_String_" data-uid="AnthropicClient.AnthropicApiClient.GetModelAsync(System.String)">
-  GetModelAsync(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_GetModelAsync_System_String_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.GetModelAsync(System.String,System.Threading.CancellationToken)">
+  GetModelAsync(string, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a model by its ID asynchronously.</p>
@@ -529,13 +553,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;AnthropicModel&gt;&gt; GetModelAsync(string modelId)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;AnthropicModel&gt;&gt; GetModelAsync(string modelId, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>modelId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The ID of the model to get.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -558,9 +585,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_" data-uid="AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_" data-uid="AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32)">
-  ListAllMessageBatchesAsync(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)">
+  ListAllMessageBatchesAsync(int, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L267"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lists all message batches asynchronously.</p>
@@ -568,13 +595,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;AnthropicResult&lt;Page&lt;MessageBatchResponse&gt;&gt;&gt; ListAllMessageBatchesAsync(int limit = 20)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;AnthropicResult&lt;Page&lt;MessageBatchResponse&gt;&gt;&gt; ListAllMessageBatchesAsync(int limit = 20, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The maximum number of message batches to return in each page.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -597,23 +627,26 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_ListAllModelsAsync_" data-uid="AnthropicClient.AnthropicApiClient.ListAllModelsAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_ListAllModelsAsync_System_Int32_" data-uid="AnthropicClient.AnthropicApiClient.ListAllModelsAsync(System.Int32)">
-  ListAllModelsAsync(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_ListAllModelsAsync_System_Int32_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.ListAllModelsAsync(System.Int32,System.Threading.CancellationToken)">
+  ListAllModelsAsync(int, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L340"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Lists the models asynchronously</p>
+  <div class="markdown level1 summary"><p>Lists all models asynchronously, returning every page of results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;AnthropicResult&lt;Page&lt;AnthropicModel&gt;&gt;&gt; ListAllModelsAsync(int limit = 20)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncEnumerable&lt;AnthropicResult&lt;Page&lt;AnthropicModel&gt;&gt;&gt; ListAllModelsAsync(int limit = 20, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The maximum number of models to return in each page.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -636,9 +669,9 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_" data-uid="AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_" data-uid="AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest)">
-  ListMessageBatchesAsync(PagingRequest?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)">
+  ListMessageBatchesAsync(PagingRequest?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Lists the message batches asynchronously.</p>
@@ -646,13 +679,16 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;Page&lt;MessageBatchResponse&gt;&gt;&gt; ListMessageBatchesAsync(PagingRequest? request = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;Page&lt;MessageBatchResponse&gt;&gt;&gt; ListMessageBatchesAsync(PagingRequest? request = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>request</code> <a class="xref" href="AnthropicClient.Models.PagingRequest.html">PagingRequest</a></dt>
     <dd><p>The paging request to use for listing the message batches.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -675,23 +711,26 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 
   <a id="AnthropicClient_AnthropicApiClient_ListModelsAsync_" data-uid="AnthropicClient.AnthropicApiClient.ListModelsAsync*"></a>
 
-  <h3 id="AnthropicClient_AnthropicApiClient_ListModelsAsync_AnthropicClient_Models_PagingRequest_" data-uid="AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest)">
-  ListModelsAsync(PagingRequest?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_AnthropicApiClient_ListModelsAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_" data-uid="AnthropicClient.AnthropicApiClient.ListModelsAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)">
+  ListModelsAsync(PagingRequest?, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L331"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Lists the models asynchronously.</p>
+  <div class="markdown level1 summary"><p>Lists models asynchronously, returning a single page of results.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;Page&lt;AnthropicModel&gt;&gt;&gt; ListModelsAsync(PagingRequest? request = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;AnthropicResult&lt;Page&lt;AnthropicModel&gt;&gt;&gt; ListModelsAsync(PagingRequest? request = null, CancellationToken cancellationToken = default)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>request</code> <a class="xref" href="AnthropicClient.Models.PagingRequest.html">PagingRequest</a></dt>
     <dd><p>The paging request to use for listing the models.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the asynchronous operation.</p>
 </dd>
   </dl>
 
@@ -716,7 +755,7 @@ Class AnthropicApiClient  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/AnthropicApiClient.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -88,7 +88,7 @@ public interface IAnthropicApiClient
   Task<AnthropicResult<TokenCountResponse>> CountMessageTokensAsync(CountMessageTokensRequest request, CancellationToken cancellationToken = default);
 
   /// <summary>
-  /// Lists the models asynchronously getting a page of models.
+  /// Lists models asynchronously, returning a single page of results.
   /// </summary>
   /// <param name="request">The paging request to use for listing the models.</param>
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>

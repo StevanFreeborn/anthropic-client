@@ -3,9 +3,18 @@
   "dotnet.defaultSolution": "AnthropicClient.sln",
   "cSpell.words": [
     "Browsable",
+    "buildtransitive",
+    "contentfiles",
+    "Docfx",
+    "globaltool",
     "haikus",
+    "Linq",
+    "msbuild",
     "nameof",
+    "reportgenerator",
+    "reporttypes",
     "Szalay",
+    "targetdir",
     "typeof"
   ],
   "dotnet.unitTests.runSettingsPath": "./tests/AnthropicClient.Tests/.runsettings"

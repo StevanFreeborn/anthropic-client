@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.6.1"></a>
+## [0.6.1](https://www.github.com/StevanFreeborn/anthropic-client/releases/tag/v0.6.1) (2025-05-19)
+
+### Bug Fixes
+
+* cleanup based on copilot review comments ([5d4fb29](https://www.github.com/StevanFreeborn/anthropic-client/commit/5d4fb290ba24095ea564cf8a33366dd53ab4ba44))
+* cleanup copilot mistakes with passing cancellation token to methods that don't accept them ([595326c](https://www.github.com/StevanFreeborn/anthropic-client/commit/595326c7a9454e3c9d4a5c9d95777e723896e1a0))
+* copilot first attempt ([0a1c6a0](https://www.github.com/StevanFreeborn/anthropic-client/commit/0a1c6a0135d997baa5475d1f6417772bae160a05))
+
 <a name="0.6.0"></a>
 ## [0.6.0](https://www.github.com/StevanFreeborn/anthropic-client/releases/tag/v0.6.0) (2025-01-15)
 

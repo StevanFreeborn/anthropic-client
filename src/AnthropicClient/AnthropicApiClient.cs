@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 
@@ -50,13 +51,12 @@ public class AnthropicApiClient : IAnthropicApiClient
       _httpClient.DefaultRequestHeaders.Add(pair.Key, pair.Value);
     }
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<MessageResponse>> CreateMessageAsync(MessageRequest request)
+  public async Task<AnthropicResult<MessageResponse>> CreateMessageAsync(MessageRequest request, CancellationToken cancellationToken = default)
   {
-    var response = await SendRequestAsync(MessagesEndpoint, request);
+    var response = await SendRequestAsync(MessagesEndpoint, request, cancellationToken);
     var anthropicHeaders = new AnthropicHeaders(response.Headers);
-    var responseContent = await response.Content.ReadAsStringAsync();
+    var responseContent = await response.Content.ReadAsStringAsync(cancellationToken);
 
     if (response.IsSuccessStatusCode is false)
     {
@@ -75,13 +75,13 @@ public class AnthropicApiClient : IAnthropicApiClient
   }
 
   /// <inheritdoc/>
-  public async IAsyncEnumerable<AnthropicEvent> CreateMessageAsync(StreamMessageRequest request)
+  public async IAsyncEnumerable<AnthropicEvent> CreateMessageAsync(StreamMessageRequest request, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
-    var response = await SendRequestAsync(MessagesEndpoint, request);
+    var response = await SendRequestAsync(MessagesEndpoint, request, cancellationToken);
 
     if (response.IsSuccessStatusCode is false)
     {
-      var error = Deserialize<AnthropicError>(await response.Content.ReadAsStringAsync()) ?? new AnthropicError();
+      var error = Deserialize<AnthropicError>(await response.Content.ReadAsStringAsync(cancellationToken)) ?? new AnthropicError();
       yield return new AnthropicEvent(EventType.Error, new ErrorEventData(error.Error));
       yield break;
     }
@@ -237,73 +237,66 @@ public class AnthropicApiClient : IAnthropicApiClient
       }
     } while (true);
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<MessageBatchResponse>> CreateMessageBatchAsync(MessageBatchRequest request)
+  public async Task<AnthropicResult<MessageBatchResponse>> CreateMessageBatchAsync(MessageBatchRequest request, CancellationToken cancellationToken = default)
   {
-    var response = await SendRequestAsync(MessageBatchesEndpoint, request);
-    return await CreateResultAsync<MessageBatchResponse>(response);
+    var response = await SendRequestAsync(MessageBatchesEndpoint, request, cancellationToken);
+    return await CreateResultAsync<MessageBatchResponse>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<MessageBatchResponse>> GetMessageBatchAsync(string batchId)
+  public async Task<AnthropicResult<MessageBatchResponse>> GetMessageBatchAsync(string batchId, CancellationToken cancellationToken = default)
   {
-    var response = await SendRequestAsync($"{MessageBatchesEndpoint}/{batchId}");
-    return await CreateResultAsync<MessageBatchResponse>(response);
+    var response = await SendRequestAsync($"{MessageBatchesEndpoint}/{batchId}", cancellationToken: cancellationToken);
+    return await CreateResultAsync<MessageBatchResponse>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<Page<MessageBatchResponse>>> ListMessageBatchesAsync(PagingRequest? request = null)
+  public async Task<AnthropicResult<Page<MessageBatchResponse>>> ListMessageBatchesAsync(PagingRequest? request = null, CancellationToken cancellationToken = default)
   {
     var pagingRequest = request ?? new PagingRequest();
     var endpoint = $"{MessageBatchesEndpoint}?{pagingRequest.ToQueryParameters()}";
-    var response = await SendRequestAsync(endpoint);
-    return await CreateResultAsync<Page<MessageBatchResponse>>(response);
+    var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
+    return await CreateResultAsync<Page<MessageBatchResponse>>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async IAsyncEnumerable<AnthropicResult<Page<MessageBatchResponse>>> ListAllMessageBatchesAsync(int limit = 20)
+  public async IAsyncEnumerable<AnthropicResult<Page<MessageBatchResponse>>> ListAllMessageBatchesAsync(int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
-    await foreach (var result in GetAllPagesAsync<MessageBatchResponse>(MessageBatchesEndpoint, limit))
+    await foreach (var result in GetAllPagesAsync<MessageBatchResponse>(MessageBatchesEndpoint, limit, cancellationToken))
     {
       yield return result;
     }
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<MessageBatchResponse>> CancelMessageBatchAsync(string batchId)
+  public async Task<AnthropicResult<MessageBatchResponse>> CancelMessageBatchAsync(string batchId, CancellationToken cancellationToken = default)
   {
     var endpoint = $"{MessageBatchesEndpoint}/{batchId}/cancel";
-    var response = await SendRequestAsync(endpoint, HttpMethod.Post);
-    return await CreateResultAsync<MessageBatchResponse>(response);
+    var response = await SendRequestAsync(endpoint, HttpMethod.Post, cancellationToken);
+    return await CreateResultAsync<MessageBatchResponse>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<MessageBatchDeleteResponse>> DeleteMessageBatchAsync(string batchId)
+  public async Task<AnthropicResult<MessageBatchDeleteResponse>> DeleteMessageBatchAsync(string batchId, CancellationToken cancellationToken = default)
   {
     var endpoint = $"{MessageBatchesEndpoint}/{batchId}";
-    var response = await SendRequestAsync(endpoint, HttpMethod.Delete);
-    return await CreateResultAsync<MessageBatchDeleteResponse>(response);
+    var response = await SendRequestAsync(endpoint, HttpMethod.Delete, cancellationToken);
+    return await CreateResultAsync<MessageBatchDeleteResponse>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<IAsyncEnumerable<MessageBatchResultItem>>> GetMessageBatchResultsAsync(string batchId)
+  public async Task<AnthropicResult<IAsyncEnumerable<MessageBatchResultItem>>> GetMessageBatchResultsAsync(string batchId, CancellationToken cancellationToken = default)
   {
-    var response = await SendRequestAsync($"{MessageBatchesEndpoint}/{batchId}/results");
+    var response = await SendRequestAsync($"{MessageBatchesEndpoint}/{batchId}/results", cancellationToken: cancellationToken);
     var anthropicHeaders = new AnthropicHeaders(response.Headers);
 
     if (response.IsSuccessStatusCode is false)
     {
-      var content = await response.Content.ReadAsStringAsync();
+      var content = await response.Content.ReadAsStringAsync(cancellationToken);
       var error = Deserialize<AnthropicError>(content) ?? new AnthropicError();
       return AnthropicResult<IAsyncEnumerable<MessageBatchResultItem>>.Failure(error, anthropicHeaders);
     }
 
     return AnthropicResult<IAsyncEnumerable<MessageBatchResultItem>>.Success(ReadResultsAsync(), anthropicHeaders);
 
-    async IAsyncEnumerable<MessageBatchResultItem> ReadResultsAsync()
+    async IAsyncEnumerable<MessageBatchResultItem> ReadResultsAsync([EnumeratorCancellation] CancellationToken ct = default)
     {
-      using var responseContent = await response.Content.ReadAsStreamAsync();
+      using var responseContent = await response.Content.ReadAsStreamAsync(ct);
       using var streamReader = new StreamReader(responseContent);
 
       var line = await streamReader.ReadLineAsync();
@@ -317,41 +310,36 @@ public class AnthropicApiClient : IAnthropicApiClient
       }
     }
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<TokenCountResponse>> CountMessageTokensAsync(CountMessageTokensRequest request)
+  public async Task<AnthropicResult<TokenCountResponse>> CountMessageTokensAsync(CountMessageTokensRequest request, CancellationToken cancellationToken = default)
   {
-    var response = await SendRequestAsync(CountTokensEndpoint, request);
-    return await CreateResultAsync<TokenCountResponse>(response);
+    var response = await SendRequestAsync(CountTokensEndpoint, request, cancellationToken);
+    return await CreateResultAsync<TokenCountResponse>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<Page<AnthropicModel>>> ListModelsAsync(PagingRequest? request = null)
+  public async Task<AnthropicResult<Page<AnthropicModel>>> ListModelsAsync(PagingRequest? request = null, CancellationToken cancellationToken = default)
   {
     var pagingRequest = request ?? new PagingRequest();
     var endpoint = $"{ModelsEndpoint}?{pagingRequest.ToQueryParameters()}";
-    var response = await SendRequestAsync(endpoint);
-    return await CreateResultAsync<Page<AnthropicModel>>(response);
+    var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
+    return await CreateResultAsync<Page<AnthropicModel>>(response, cancellationToken);
   }
-
   /// <inheritdoc/>
-  public async IAsyncEnumerable<AnthropicResult<Page<AnthropicModel>>> ListAllModelsAsync(int limit = 20)
+  public async IAsyncEnumerable<AnthropicResult<Page<AnthropicModel>>> ListAllModelsAsync(int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
-    await foreach (var result in GetAllPagesAsync<AnthropicModel>(ModelsEndpoint, limit))
+    await foreach (var result in GetAllPagesAsync<AnthropicModel>(ModelsEndpoint, limit, cancellationToken))
     {
       yield return result;
     }
   }
-
   /// <inheritdoc/>
-  public async Task<AnthropicResult<AnthropicModel>> GetModelAsync(string modelId)
+  public async Task<AnthropicResult<AnthropicModel>> GetModelAsync(string modelId, CancellationToken cancellationToken = default)
   {
     var endpoint = $"{ModelsEndpoint}/{modelId}";
-    var response = await SendRequestAsync(endpoint);
-    return await CreateResultAsync<AnthropicModel>(response);
+    var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
+    return await CreateResultAsync<AnthropicModel>(response, cancellationToken);
   }
-
-  private async IAsyncEnumerable<AnthropicResult<Page<T>>> GetAllPagesAsync<T>(string endpoint, int limit = 20)
+  private async IAsyncEnumerable<AnthropicResult<Page<T>>> GetAllPagesAsync<T>(string endpoint, int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
     var pagingRequest = new PagingRequest(limit: limit);
     string Endpoint() => $"{endpoint}?{pagingRequest.ToQueryParameters()}";
@@ -359,9 +347,9 @@ public class AnthropicApiClient : IAnthropicApiClient
 
     do
     {
-      var response = await SendRequestAsync(Endpoint());
+      var response = await SendRequestAsync(Endpoint(), cancellationToken: cancellationToken);
       var anthropicHeaders = new AnthropicHeaders(response.Headers);
-      var responseContent = await response.Content.ReadAsStringAsync();
+      var responseContent = await response.Content.ReadAsStringAsync(cancellationToken);
 
       if (response.IsSuccessStatusCode is false)
       {
@@ -404,11 +392,10 @@ public class AnthropicApiClient : IAnthropicApiClient
 
     return new ToolCall(tool, toolUse);
   }
-
-  private async Task<AnthropicResult<T>> CreateResultAsync<T>(HttpResponseMessage response) where T : new()
+  private async Task<AnthropicResult<T>> CreateResultAsync<T>(HttpResponseMessage response, CancellationToken cancellationToken = default) where T : new()
   {
     var anthropicHeaders = new AnthropicHeaders(response.Headers);
-    var responseContent = await response.Content.ReadAsStringAsync();
+    var responseContent = await response.Content.ReadAsStringAsync(cancellationToken);
 
     if (response.IsSuccessStatusCode is false)
     {
@@ -419,18 +406,17 @@ public class AnthropicApiClient : IAnthropicApiClient
     var model = Deserialize<T>(responseContent) ?? new T();
     return AnthropicResult<T>.Success(model, anthropicHeaders);
   }
-
-  private async Task<HttpResponseMessage> SendRequestAsync(string endpoint, HttpMethod? method = null)
+  private async Task<HttpResponseMessage> SendRequestAsync(string endpoint, HttpMethod? method = null, CancellationToken cancellationToken = default)
   {
     var request = new HttpRequestMessage(method ?? HttpMethod.Get, endpoint);
-    return await _httpClient.SendAsync(request);
+    return await _httpClient.SendAsync(request, cancellationToken);
   }
 
-  private async Task<HttpResponseMessage> SendRequestAsync<T>(string endpoint, T request)
+  private async Task<HttpResponseMessage> SendRequestAsync<T>(string endpoint, T request, CancellationToken cancellationToken = default)
   {
     var requestJson = Serialize(request);
     var requestContent = new StringContent(requestJson, Encoding.UTF8, JsonContentType);
-    return await _httpClient.PostAsync(endpoint, requestContent);
+    return await _httpClient.PostAsync(endpoint, requestContent, cancellationToken);
   }
 
   private string Serialize<T>(T obj) => JsonSerializer.Serialize(obj, JsonSerializationOptions.DefaultOptions);

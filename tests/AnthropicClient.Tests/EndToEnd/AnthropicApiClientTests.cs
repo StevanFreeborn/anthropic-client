@@ -287,6 +287,35 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
   }
 
   [Fact]
+  public async Task CreateMessageAsync_WhenCitationsAreEnabled_ItShouldReturnCitationsInResponse()
+  {
+    var request = new MessageRequest(
+      model: AnthropicModels.Claude3Haiku,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent(
+              new TextDocumentSource("The grass is green. The sky is blue.")
+            )
+            {
+              Title = "My Document",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("What color is the grass and sky?"),
+          ]
+        )
+      ]
+    );
+
+    var result = await _client.CreateMessageAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Content.OfType<TextContent>().SelectMany(c => c.Citations).Should().NotBeEmpty();
+  }
+
+  [Fact]
   public async Task CountMessageTokensAsync_WhenCalled_ItShouldReturnResponse()
   {
     var request = new CountMessageTokensRequest(

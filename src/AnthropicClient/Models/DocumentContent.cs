@@ -14,6 +14,12 @@ public class DocumentContent : Content
   /// </summary>
   public DocumentSource Source { get; init; } = new();
 
+  public string Title { get; init; } = string.Empty;
+
+  public string Context { get; init; } = string.Empty;
+
+  public CitationOption Citations { get; init; } = new CitationOption();
+
   [JsonConstructor]
   internal DocumentContent()
   {
@@ -53,4 +59,24 @@ public class DocumentContent : Content
 
     Source = new(mediaType, data);
   }
+
+  public DocumentContent(DocumentSource source) : base(ContentType.Document)
+  {
+    ArgumentValidator.ThrowIfNull(source, nameof(source));
+
+    Source = source;
+  }
+
+  public DocumentContent(DocumentSource source, CacheControl cacheControl) : base(ContentType.Document, cacheControl)
+  {
+    ArgumentValidator.ThrowIfNull(source, nameof(source));
+
+    Source = source;
+  }
+}
+
+
+public class CitationOption
+{
+  public bool Enabled { get; init; }
 }

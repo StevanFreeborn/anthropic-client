@@ -83,7 +83,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.Value.Should().BeOfType<MessageResponse>();
     result.Value.Content.Should().NotBeNullOrEmpty();
 
-    var text = result.Value.Content.Aggregate("", (acc, content) =>
+    var text = result.Value.Content.Aggregate("", static (acc, content) =>
     {
       if (content is TextContent textContent)
       {
@@ -122,7 +122,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     resultOne.IsSuccess.Should().BeTrue();
     resultOne.Value.Should().BeOfType<MessageResponse>();
     resultOne.Value.Content.Should().NotBeNullOrEmpty();
-    resultOne.Value.Usage.Should().Match<Usage>(u => u.CacheCreationInputTokens > 0 || u.CacheReadInputTokens > 0);
+    resultOne.Value.Usage.Should().Match<Usage>(static u => u.CacheCreationInputTokens > 0 || u.CacheReadInputTokens > 0);
 
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("What is the main theme of this story?")]));
@@ -158,7 +158,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     resultOne.IsSuccess.Should().BeTrue();
     resultOne.Value.Should().BeOfType<MessageResponse>();
     resultOne.Value.Content.Should().NotBeNullOrEmpty();
-    resultOne.Value.Usage.Should().Match<Usage>(u => u.CacheCreationInputTokens > 0 || u.CacheReadInputTokens > 0);
+    resultOne.Value.Usage.Should().Match<Usage>(static u => u.CacheCreationInputTokens > 0 || u.CacheReadInputTokens > 0);
 
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("What is the main theme of this story?")]));
@@ -236,7 +236,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.Value.Should().BeOfType<MessageResponse>();
     result.Value.Content.Should().NotBeNullOrEmpty();
 
-    var text = result.Value.Content.Aggregate("", (acc, content) =>
+    var text = result.Value.Content.Aggregate("", static (acc, content) =>
     {
       if (content is TextContent textContent)
       {
@@ -273,7 +273,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     resultOne.IsSuccess.Should().BeTrue();
     resultOne.Value.Should().BeOfType<MessageResponse>();
     resultOne.Value.Content.Should().NotBeNullOrEmpty();
-    resultOne.Value.Usage.Should().Match<Usage>(u => u.CacheCreationInputTokens > 0 || u.CacheReadInputTokens > 0);
+    resultOne.Value.Usage.Should().Match<Usage>(static u => u.CacheCreationInputTokens > 0 || u.CacheReadInputTokens > 0);
 
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("What is the main theme of this paper?")]));
@@ -312,7 +312,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     var result = await _client.CreateMessageAsync(request);
 
     result.IsSuccess.Should().BeTrue();
-    result.Value.Content.OfType<TextContent>().SelectMany(c => c.Citations).Should().NotBeEmpty();
+    result.Value.Content.OfType<TextContent>().SelectMany(static c => c.Citations).Should().NotBeEmpty();
   }
 
   [Fact]

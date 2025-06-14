@@ -74,7 +74,7 @@ public class MessageRequestTests : SerializationTest
         ""content"": [
           { 
             ""type"": ""image"", 
-            ""source"": { ""media_type"": ""image/jpeg"", ""data"": ""data"" } 
+            ""source"": { ""type"": ""base64"", ""media_type"": ""image/jpeg"", ""data"": ""data"" } 
           }
         ] 
       }

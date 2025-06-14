@@ -7,26 +7,10 @@ namespace AnthropicClient.Models;
 /// <summary>
 /// Represents an image source.
 /// </summary>
-public class ImageSource
+public class ImageSource : Base64Source
 {
-  /// <summary>
-  /// Gets the media type of the image.
-  /// </summary>
-  [JsonPropertyName("media_type")]
-  public string MediaType { get; init; } = string.Empty;
-
-  /// <summary>
-  /// Gets the data of the image.
-  /// </summary>
-  public string Data { get; init; } = string.Empty;
-
-  /// <summary>
-  /// Gets the type of encoding of the image data.
-  /// </summary>
-  public string Type { get; init; } = "base64";
-
   [JsonConstructor]
-  internal ImageSource()
+  internal ImageSource() : base(string.Empty, string.Empty)
   {
   }
 
@@ -38,16 +22,12 @@ public class ImageSource
   /// <exception cref="ArgumentException">Thrown when the media type is invalid.</exception>
   /// <exception cref="ArgumentNullException">Thrown when the media type or data is null.</exception>
   /// <returns>A new instance of the <see cref="ImageSource"/> class.</returns>
-  public ImageSource(string mediaType, string data)
+  public ImageSource(string mediaType, string data) : base(mediaType, data)
   {
-    ArgumentValidator.ThrowIfNull(mediaType, nameof(mediaType));
-
     if (ImageType.IsValidImageType(mediaType) is false)
     {
       throw new ArgumentException($"Invalid media type: {mediaType}");
     }
-
-    ArgumentValidator.ThrowIfNull(data, nameof(data));
 
     MediaType = mediaType;
     Data = data;

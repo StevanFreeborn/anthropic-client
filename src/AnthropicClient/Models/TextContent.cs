@@ -14,7 +14,10 @@ public class TextContent : Content
   /// </summary>
   public string Text { get; init; } = string.Empty;
 
-  public Citation[] Citations { get; init; } = [];
+  /// <summary>
+  /// Gets the citations associated with the text content.
+  /// </summary>
+  public Citation[]? Citations { get; init; }
 
   [JsonConstructor]
   internal TextContent() : base(ContentType.Text)
@@ -52,45 +55,4 @@ public class TextContent : Content
 
     Text = text;
   }
-}
-
-public abstract class Citation
-{
-  public string Type { get; init; } = string.Empty;
-
-  [JsonPropertyName("cited_text")]
-  public string CitedText { get; init; } = string.Empty;
-
-  [JsonPropertyName("document_index")]
-  public int DocumentIndex { get; init; }
-
-  [JsonPropertyName("document_title")]
-  public string DocumentTitle { get; init; } = string.Empty;
-}
-
-public class CharacterLocationCitation : Citation
-{
-  [JsonPropertyName("start_char_index")]
-  public int StartCharIndex { get; init; }
-
-  [JsonPropertyName("end_char_index")]
-  public int EndCharIndex { get; init; }
-}
-
-public class PageLocationCitation : Citation
-{
-  [JsonPropertyName("start_page_number")]
-  public int StartPageNumber { get; init; }
-
-  [JsonPropertyName("end_page_number")]
-  public int EndPageNumber { get; init; }
-}
-
-public class ContentBlockLocationCitation : Citation
-{
-  [JsonPropertyName("start_block_index")]
-  public int StartBlockIndex { get; init; }
-
-  [JsonPropertyName("end_block_index")]
-  public int EndBlockIndex { get; init; }
 }

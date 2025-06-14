@@ -287,16 +287,16 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
   }
 
   [Fact]
-  public async Task CreateMessageAsync_WhenCitationsAreEnabled_ItShouldReturnCitationsInResponse()
+  public async Task CreateMessageAsync_WhenCitationsAreEnabledForTextDocumentSource_ItShouldReturnCitationsInResponse()
   {
     var request = new MessageRequest(
-      model: AnthropicModels.Claude3Haiku,
+      model: AnthropicModels.Claude35HaikuLatest,
       messages: [
         new(
           MessageRole.User,
           [
             new DocumentContent(
-              new TextDocumentSource("The grass is green. The sky is blue.")
+              new TextSource("The grass is green. The sky is blue.")
             )
             {
               Title = "My Document",
@@ -312,7 +312,90 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     var result = await _client.CreateMessageAsync(request);
 
     result.IsSuccess.Should().BeTrue();
-    result.Value.Content.OfType<TextContent>().SelectMany(static c => c.Citations).Should().NotBeEmpty();
+
+    var citations = result.Value
+      .Content
+      .OfType<TextContent>()
+      .SelectMany(static c =>
+      {
+        return c.Citations is null ? [] : c.Citations;
+      });
+
+    citations.OfType<CharacterLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenCitationsAreEnabledForPDFDocumentSource_ItShouldReturnCitationsInResponse()
+  {
+    var pdfPath = TestFileHelper.GetTestFilePath("addendum.pdf");
+    var bytes = await File.ReadAllBytesAsync(pdfPath);
+    var base64Data = Convert.ToBase64String(bytes);
+
+    var request = new MessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent("application/pdf", base64Data)
+            {
+              Title = "My PDF Document",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("What is the title of this paper?"),
+          ]
+        )
+      ]
+    );
+
+    var result = await _client.CreateMessageAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+
+    var citations = result.Value
+      .Content
+      .OfType<TextContent>()
+      .SelectMany(static c => c.Citations is null ? [] : c.Citations);
+
+    citations.OfType<PageLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenCitationsAreEnabledForCustomDocumentSource_ItShouldReturnCitationsInResponse()
+  {
+    var request = new MessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent(
+              new CustomSource([
+                new TextContent("The grass is green. The sky is blue.")
+              ])
+            )
+            {
+              Title = "My Custom Document",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("What color is the grass and sky?"),
+          ]
+        )
+      ]
+    );
+
+    var result = await _client.CreateMessageAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+
+    var citations = result.Value
+      .Content
+      .OfType<TextContent>()
+      .SelectMany(static c => c.Citations is null ? [] : c.Citations);
+
+    citations.OfType<ContentBlockLocationCitation>().Should().NotBeEmpty();
   }
 
   [Fact]

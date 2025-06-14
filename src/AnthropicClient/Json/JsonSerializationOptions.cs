@@ -19,6 +19,7 @@ static class JsonSerializationOptions
       new JsonStringEnumConverter(),
       new MessageBatchResultConverter(),
       new CitationConverter(),
+      new SourceConverter(),
     },
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
   };

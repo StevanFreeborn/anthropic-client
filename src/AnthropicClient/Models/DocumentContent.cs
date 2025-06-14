@@ -12,13 +12,22 @@ public class DocumentContent : Content
   /// <summary>
   /// Gets the source of the document.
   /// </summary>
-  public DocumentSource Source { get; init; } = new();
+  public Source Source { get; init; } = new DocumentSource();
 
-  public string Title { get; init; } = string.Empty;
+  /// <summary>
+  /// Gets the title of the document.
+  /// </summary>
+  public string? Title { get; init; }
 
-  public string Context { get; init; } = string.Empty;
+  /// <summary>
+  /// Gets the context of the document.
+  /// </summary>
+  public string? Context { get; init; }
 
-  public CitationOption Citations { get; init; } = new CitationOption();
+  /// <summary>
+  /// Gets whether citations are enabled for the document.
+  /// </summary>
+  public CitationOption? Citations { get; init; }
 
   [JsonConstructor]
   internal DocumentContent()
@@ -42,7 +51,7 @@ public class DocumentContent : Content
   {
     Validate(mediaType, data);
 
-    Source = new(mediaType, data);
+    Source = new DocumentSource(mediaType, data);
   }
 
   /// <summary>
@@ -57,26 +66,33 @@ public class DocumentContent : Content
   {
     Validate(mediaType, data);
 
-    Source = new(mediaType, data);
+    Source = new DocumentSource(mediaType, data);
   }
 
-  public DocumentContent(DocumentSource source) : base(ContentType.Document)
+  /// <summary>
+  /// Initializes a new instance of the <see cref="DocumentContent"/> class with a document source.
+  /// </summary>
+  /// <param name="source">The document source.</param>
+  /// <returns>A new instance of the <see cref="DocumentContent"/> class.</returns>
+  /// <exception cref="ArgumentNullException">Thrown when the source is null.</exception>
+  public DocumentContent(Source source) : base(ContentType.Document)
   {
     ArgumentValidator.ThrowIfNull(source, nameof(source));
 
     Source = source;
   }
 
-  public DocumentContent(DocumentSource source, CacheControl cacheControl) : base(ContentType.Document, cacheControl)
+  /// <summary>
+  /// Initializes a new instance of the <see cref="DocumentContent"/> class with a document source and cache control.
+  /// </summary>
+  /// <param name="source">The document source.</param>
+  /// <param name="cacheControl">The cache control to be used for the content.</param>
+  /// <returns>A new instance of the <see cref="DocumentContent"/> class.</returns>
+  /// <exception cref="ArgumentNullException">Thrown when the source is null.</exception>
+  public DocumentContent(Source source, CacheControl cacheControl) : base(ContentType.Document, cacheControl)
   {
     ArgumentValidator.ThrowIfNull(source, nameof(source));
 
     Source = source;
   }
-}
-
-
-public class CitationOption
-{
-  public bool Enabled { get; init; }
 }

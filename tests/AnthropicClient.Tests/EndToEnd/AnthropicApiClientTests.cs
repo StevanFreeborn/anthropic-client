@@ -316,10 +316,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     var citations = result.Value
       .Content
       .OfType<TextContent>()
-      .SelectMany(static c =>
-      {
-        return c.Citations is null ? [] : c.Citations;
-      });
+      .SelectMany(static c => c.Citations is null ? [] : c.Citations);
 
     citations.OfType<CharacterLocationCitation>().Should().NotBeEmpty();
   }
@@ -391,6 +388,127 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.IsSuccess.Should().BeTrue();
 
     var citations = result.Value
+      .Content
+      .OfType<TextContent>()
+      .SelectMany(static c => c.Citations is null ? [] : c.Citations);
+
+    citations.OfType<ContentBlockLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenStreamingAndCitationsAreEnabledForTextDocumentSource_ItShouldReturnCitationsInResponse()
+  {
+    var request = new StreamMessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent(
+              new TextSource("The grass is green. The sky is blue.")
+            )
+            {
+              Title = "My Document",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("What color is the grass and sky?"),
+          ]
+        )
+      ]
+    );
+
+    var result = _client.CreateMessageAsync(request);
+
+    var messageCompleteEvent = await result
+      .Where(e => e.Type is EventType.MessageComplete)
+      .FirstAsync();
+
+    var citations = messageCompleteEvent.Data
+      .As<MessageCompleteEventData>()
+      .Message
+      .Content
+      .OfType<TextContent>()
+      .SelectMany(static c => c.Citations is null ? [] : c.Citations);
+
+    citations.OfType<CharacterLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenStreamingAndCitationsAreEnabledForPDFDocumentSource_ItShouldReturnCitationsInResponse()
+  {
+    var pdfPath = TestFileHelper.GetTestFilePath("addendum.pdf");
+    var bytes = await File.ReadAllBytesAsync(pdfPath);
+    var base64Data = Convert.ToBase64String(bytes);
+
+    var request = new StreamMessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent("application/pdf", base64Data)
+            {
+              Title = "My PDF Document",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("What is the title of this paper?"),
+          ]
+        )
+      ]
+    );
+
+    var result = _client.CreateMessageAsync(request);
+
+    var messageCompleteEvent = await result
+      .Where(e => e.Type is EventType.MessageComplete)
+      .FirstAsync();
+
+    var citations = messageCompleteEvent.Data
+      .As<MessageCompleteEventData>()
+      .Message
+      .Content
+      .OfType<TextContent>()
+      .SelectMany(static c => c.Citations is null ? [] : c.Citations);
+
+    citations.OfType<PageLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenStreamingAndCitationsAreEnabledForCustomDocumentSource_ItShouldReturnCitationsInResponse()
+  {
+    var request = new StreamMessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent(
+              new CustomSource([
+                new TextContent("The grass is green. The sky is blue.")
+              ])
+            )
+            {
+              Title = "My Custom Document",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("What color is the grass and sky?"),
+          ]
+        )
+      ]
+    );
+
+    var result = _client.CreateMessageAsync(request);
+
+    var messageCompleteEvent = await result
+      .Where(e => e.Type is EventType.MessageComplete)
+      .FirstAsync();
+
+    var citations = messageCompleteEvent.Data
+      .As<MessageCompleteEventData>()
+      .Message
       .Content
       .OfType<TextContent>()
       .SelectMany(static c => c.Citations is null ? [] : c.Citations);

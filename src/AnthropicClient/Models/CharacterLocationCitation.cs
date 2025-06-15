@@ -18,4 +18,12 @@ public class CharacterLocationCitation : Citation
   /// </summary>
   [JsonPropertyName("end_char_index")]
   public int EndCharIndex { get; init; }
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="CharacterLocationCitation"/> class.
+  /// </summary>
+  /// <returns>A new instance of <see cref="CharacterLocationCitation"/>.</returns>
+  public CharacterLocationCitation() : base(CitationType.CharacterLocation)
+  {
+  }
 }

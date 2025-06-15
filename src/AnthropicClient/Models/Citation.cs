@@ -29,4 +29,19 @@ public abstract class Citation
   /// </summary>
   [JsonPropertyName("document_title")]
   public string DocumentTitle { get; init; } = string.Empty;
+
+  [JsonConstructor]
+  internal Citation()
+  {
+  }
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="Citation"/> class with a specified type.
+  /// </summary>
+  /// <param name="type">The type of the citation.</param>
+  /// <returns>A new instance of <see cref="Citation"/>.</returns>
+  protected Citation(string type)
+  {
+    Type = type;
+  }
 }

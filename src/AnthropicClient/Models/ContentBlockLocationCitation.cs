@@ -18,4 +18,12 @@ public class ContentBlockLocationCitation : Citation
   /// </summary>
   [JsonPropertyName("end_block_index")]
   public int EndBlockIndex { get; init; }
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="ContentBlockLocationCitation"/> class.
+  /// </summary>
+  /// <returns>A new instance of <see cref="ContentBlockLocationCitation"/>.</returns>
+  public ContentBlockLocationCitation() : base(CitationType.ContentBlockLocation)
+  {
+  }
 }

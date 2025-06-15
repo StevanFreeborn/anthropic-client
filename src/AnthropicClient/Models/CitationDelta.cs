@@ -22,6 +22,9 @@ public class CitationDelta : ContentDelta
   /// <summary>
   /// Initializes a new instance of the <see cref="CitationDelta"/> class.
   /// </summary>
+  /// <param name="citation">The citation to associate with this delta.</param>
+  /// <exception cref="ArgumentNullException">Thrown when <paramref name="citation"/> is null.</exception>
+  /// <returns>A new instance of <see cref="CitationDelta"/>.</returns>
   public CitationDelta(Citation citation) : base(ContentDeltaType.CitationDelta)
   {
     ArgumentValidator.ThrowIfNull(citation, nameof(citation));

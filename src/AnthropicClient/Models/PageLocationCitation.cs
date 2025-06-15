@@ -18,4 +18,12 @@ public class PageLocationCitation : Citation
   /// </summary>
   [JsonPropertyName("end_page_number")]
   public int EndPageNumber { get; init; }
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="PageLocationCitation"/> class.
+  /// </summary>
+  /// <returns>A new instance of <see cref="PageLocationCitation"/>.</returns>
+  public PageLocationCitation() : base(CitationType.PageLocation)
+  {
+  }
 }

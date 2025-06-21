@@ -88,6 +88,18 @@ public class DocumentContentTests : SerializationTest
   }
 
   [Fact]
+  public void Constructor_WhenCalledWithSourceAndCacheControl_ItShouldInitializeSourceAndCacheControl()
+  {
+    var source = new DocumentSource("application/pdf", "data");
+    var cacheControl = new EphemeralCacheControl();
+
+    var result = new DocumentContent(source, cacheControl);
+
+    result.Source.Should().BeSameAs(source);
+    result.CacheControl.Should().BeSameAs(cacheControl);
+  }
+
+  [Fact]
   public void JsonSerialization_WhenSerialized_ItShouldHaveExpectedShape()
   {
     var content = new DocumentContent("application/pdf", "data");

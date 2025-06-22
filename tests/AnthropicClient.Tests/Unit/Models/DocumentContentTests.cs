@@ -88,6 +88,16 @@ public class DocumentContentTests : SerializationTest
   }
 
   [Fact]
+  public void Constructor_WhenCalledWithSource_ItShouldInitializeSource()
+  {
+    var source = new DocumentSource("application/pdf", "data");
+
+    var result = new DocumentContent(source);
+
+    result.Source.Should().BeSameAs(source);
+  }
+
+  [Fact]
   public void Constructor_WhenCalledWithSourceAndCacheControl_ItShouldInitializeSourceAndCacheControl()
   {
     var source = new DocumentSource("application/pdf", "data");

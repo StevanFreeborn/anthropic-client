@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ContentDeltaType | AnthropicClient </title>
+      <title>Class Citation | AnthropicClient </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ContentDeltaType | AnthropicClient ">
+      <meta name="title" content="Class Citation | AnthropicClient ">
       
-      <meta name="description" content="Provides constants for content delta types.">
+      <meta name="description" content="Represents a citation">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/StevanFreeborn/anthropic-client/new/main/apiSpec/new?filename=AnthropicClient_Models_ContentDeltaType.md&amp;value=---%0Auid%3A%20AnthropicClient.Models.ContentDeltaType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/StevanFreeborn/anthropic-client/new/main/apiSpec/new?filename=AnthropicClient_Models_Citation.md&amp;value=---%0Auid%3A%20AnthropicClient.Models.Citation%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="AnthropicClient.Models.ContentDeltaType">
+        <article data-uid="AnthropicClient.Models.Citation">
 
 
 
-  <h1 id="AnthropicClient_Models_ContentDeltaType" data-uid="AnthropicClient.Models.ContentDeltaType" class="text-break">
-Class ContentDeltaType  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/ContentDeltaType.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h1 id="AnthropicClient_Models_Citation" data-uid="AnthropicClient.Models.Citation" class="text-break">
+Class Citation  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class ContentDeltaType  <a class="header-action link-secondary" title="View sour
   <dl><dt>Assembly</dt><dd>AnthropicClient.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides constants for content delta types.</p>
+  <div class="markdown summary"><p>Represents a citation</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ContentDeltaType</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Citation</code></pre>
   </div>
 
 
@@ -112,11 +112,19 @@ Class ContentDeltaType  <a class="header-action link-secondary" title="View sour
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">ContentDeltaType</span></div>
+      <div><span class="xref">Citation</span></div>
     </dd>
   </dl>
 
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="AnthropicClient.Models.CharacterLocationCitation.html">CharacterLocationCitation</a></div>
+      <div><a class="xref" href="AnthropicClient.Models.ContentBlockLocationCitation.html">ContentBlockLocationCitation</a></div>
+      <div><a class="xref" href="AnthropicClient.Models.PageLocationCitation.html">PageLocationCitation</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -149,28 +157,68 @@ Class ContentDeltaType  <a class="header-action link-secondary" title="View sour
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
+  <a id="AnthropicClient_Models_Citation__ctor_" data-uid="AnthropicClient.Models.Citation.#ctor*"></a>
 
-  <h3 id="AnthropicClient_Models_ContentDeltaType_CitationDelta" data-uid="AnthropicClient.Models.ContentDeltaType.CitationDelta">
-  CitationDelta
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/ContentDeltaType.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_Models_Citation__ctor_System_String_" data-uid="AnthropicClient.Models.Citation.#ctor(System.String)">
+  Citation(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The citation_delta.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="AnthropicClient.Models.Citation.html">Citation</a> class with a specified type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string CitationDelta = &quot;citations_delta&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Citation(string type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The type of the citation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="AnthropicClient_Models_Citation_CitedText_" data-uid="AnthropicClient.Models.Citation.CitedText*"></a>
+
+  <h3 id="AnthropicClient_Models_Citation_CitedText" data-uid="AnthropicClient.Models.Citation.CitedText">
+  CitedText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the text that is cited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;cited_text&quot;)]
+public string CitedText { get; init; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
@@ -183,25 +231,60 @@ Class ContentDeltaType  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="AnthropicClient_Models_Citation_DocumentIndex_" data-uid="AnthropicClient.Models.Citation.DocumentIndex*"></a>
 
-
-  <h3 id="AnthropicClient_Models_ContentDeltaType_JsonDelta" data-uid="AnthropicClient.Models.ContentDeltaType.JsonDelta">
-  JsonDelta
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/ContentDeltaType.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_Models_Citation_DocumentIndex" data-uid="AnthropicClient.Models.Citation.DocumentIndex">
+  DocumentIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The input_json_delta.</p>
+  <div class="markdown level1 summary"><p>Gets the document index of the citation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string JsonDelta = &quot;input_json_delta&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;document_index&quot;)]
+public int DocumentIndex { get; init; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="AnthropicClient_Models_Citation_DocumentTitle_" data-uid="AnthropicClient.Models.Citation.DocumentTitle*"></a>
+
+  <h3 id="AnthropicClient_Models_Citation_DocumentTitle" data-uid="AnthropicClient.Models.Citation.DocumentTitle">
+  DocumentTitle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the title of the document from which the citation is made.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;document_title&quot;)]
+public string DocumentTitle { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
@@ -214,30 +297,30 @@ Class ContentDeltaType  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="AnthropicClient_Models_Citation_Type_" data-uid="AnthropicClient.Models.Citation.Type*"></a>
 
-
-  <h3 id="AnthropicClient_Models_ContentDeltaType_TextDelta" data-uid="AnthropicClient.Models.ContentDeltaType.TextDelta">
-  TextDelta
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/ContentDeltaType.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_Models_Citation_Type" data-uid="AnthropicClient.Models.Citation.Type">
+  Type
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>The text_delta.</p>
+  <div class="markdown level1 summary"><p>Gets the type of the citation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string TextDelta = &quot;text_delta&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public string Type { get; init; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
-
 
 
 
@@ -250,7 +333,7 @@ Class ContentDeltaType  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/ContentDeltaType.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/Citation.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

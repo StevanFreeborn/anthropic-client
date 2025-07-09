@@ -927,6 +927,57 @@ references:
   fullName.vb: AnthropicClient.Models.AutoToolChoice.New
   nameWithType: AutoToolChoice.AutoToolChoice
   nameWithType.vb: AutoToolChoice.New
+- uid: AnthropicClient.Models.Base64Source
+  name: Base64Source
+  href: api/AnthropicClient.Models.Base64Source.html
+  commentId: T:AnthropicClient.Models.Base64Source
+  fullName: AnthropicClient.Models.Base64Source
+  nameWithType: Base64Source
+- uid: AnthropicClient.Models.Base64Source.#ctor(System.String,System.String)
+  name: Base64Source(string, string)
+  href: api/AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source__ctor_System_String_System_String_
+  commentId: M:AnthropicClient.Models.Base64Source.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: AnthropicClient.Models.Base64Source.Base64Source(string, string)
+  fullName.vb: AnthropicClient.Models.Base64Source.New(String, String)
+  nameWithType: Base64Source.Base64Source(string, string)
+  nameWithType.vb: Base64Source.New(String, String)
+- uid: AnthropicClient.Models.Base64Source.#ctor*
+  name: Base64Source
+  href: api/AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source__ctor_
+  commentId: Overload:AnthropicClient.Models.Base64Source.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.Base64Source.Base64Source
+  fullName.vb: AnthropicClient.Models.Base64Source.New
+  nameWithType: Base64Source.Base64Source
+  nameWithType.vb: Base64Source.New
+- uid: AnthropicClient.Models.Base64Source.Data
+  name: Data
+  href: api/AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source_Data
+  commentId: P:AnthropicClient.Models.Base64Source.Data
+  fullName: AnthropicClient.Models.Base64Source.Data
+  nameWithType: Base64Source.Data
+- uid: AnthropicClient.Models.Base64Source.Data*
+  name: Data
+  href: api/AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source_Data_
+  commentId: Overload:AnthropicClient.Models.Base64Source.Data
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Base64Source.Data
+  nameWithType: Base64Source.Data
+- uid: AnthropicClient.Models.Base64Source.MediaType
+  name: MediaType
+  href: api/AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source_MediaType
+  commentId: P:AnthropicClient.Models.Base64Source.MediaType
+  fullName: AnthropicClient.Models.Base64Source.MediaType
+  nameWithType: Base64Source.MediaType
+- uid: AnthropicClient.Models.Base64Source.MediaType*
+  name: MediaType
+  href: api/AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source_MediaType_
+  commentId: Overload:AnthropicClient.Models.Base64Source.MediaType
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Base64Source.MediaType
+  nameWithType: Base64Source.MediaType
 - uid: AnthropicClient.Models.BaseMessageRequest
   name: BaseMessageRequest
   href: api/AnthropicClient.Models.BaseMessageRequest.html
@@ -1209,6 +1260,215 @@ references:
   fullName.vb: AnthropicClient.Models.CanceledMessageBatchResult.New
   nameWithType: CanceledMessageBatchResult.CanceledMessageBatchResult
   nameWithType.vb: CanceledMessageBatchResult.New
+- uid: AnthropicClient.Models.CharacterLocationCitation
+  name: CharacterLocationCitation
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html
+  commentId: T:AnthropicClient.Models.CharacterLocationCitation
+  fullName: AnthropicClient.Models.CharacterLocationCitation
+  nameWithType: CharacterLocationCitation
+- uid: AnthropicClient.Models.CharacterLocationCitation.#ctor
+  name: CharacterLocationCitation()
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html#AnthropicClient_Models_CharacterLocationCitation__ctor
+  commentId: M:AnthropicClient.Models.CharacterLocationCitation.#ctor
+  name.vb: New()
+  fullName: AnthropicClient.Models.CharacterLocationCitation.CharacterLocationCitation()
+  fullName.vb: AnthropicClient.Models.CharacterLocationCitation.New()
+  nameWithType: CharacterLocationCitation.CharacterLocationCitation()
+  nameWithType.vb: CharacterLocationCitation.New()
+- uid: AnthropicClient.Models.CharacterLocationCitation.#ctor*
+  name: CharacterLocationCitation
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html#AnthropicClient_Models_CharacterLocationCitation__ctor_
+  commentId: Overload:AnthropicClient.Models.CharacterLocationCitation.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.CharacterLocationCitation.CharacterLocationCitation
+  fullName.vb: AnthropicClient.Models.CharacterLocationCitation.New
+  nameWithType: CharacterLocationCitation.CharacterLocationCitation
+  nameWithType.vb: CharacterLocationCitation.New
+- uid: AnthropicClient.Models.CharacterLocationCitation.EndCharIndex
+  name: EndCharIndex
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html#AnthropicClient_Models_CharacterLocationCitation_EndCharIndex
+  commentId: P:AnthropicClient.Models.CharacterLocationCitation.EndCharIndex
+  fullName: AnthropicClient.Models.CharacterLocationCitation.EndCharIndex
+  nameWithType: CharacterLocationCitation.EndCharIndex
+- uid: AnthropicClient.Models.CharacterLocationCitation.EndCharIndex*
+  name: EndCharIndex
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html#AnthropicClient_Models_CharacterLocationCitation_EndCharIndex_
+  commentId: Overload:AnthropicClient.Models.CharacterLocationCitation.EndCharIndex
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CharacterLocationCitation.EndCharIndex
+  nameWithType: CharacterLocationCitation.EndCharIndex
+- uid: AnthropicClient.Models.CharacterLocationCitation.StartCharIndex
+  name: StartCharIndex
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html#AnthropicClient_Models_CharacterLocationCitation_StartCharIndex
+  commentId: P:AnthropicClient.Models.CharacterLocationCitation.StartCharIndex
+  fullName: AnthropicClient.Models.CharacterLocationCitation.StartCharIndex
+  nameWithType: CharacterLocationCitation.StartCharIndex
+- uid: AnthropicClient.Models.CharacterLocationCitation.StartCharIndex*
+  name: StartCharIndex
+  href: api/AnthropicClient.Models.CharacterLocationCitation.html#AnthropicClient_Models_CharacterLocationCitation_StartCharIndex_
+  commentId: Overload:AnthropicClient.Models.CharacterLocationCitation.StartCharIndex
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CharacterLocationCitation.StartCharIndex
+  nameWithType: CharacterLocationCitation.StartCharIndex
+- uid: AnthropicClient.Models.Citation
+  name: Citation
+  href: api/AnthropicClient.Models.Citation.html
+  commentId: T:AnthropicClient.Models.Citation
+  fullName: AnthropicClient.Models.Citation
+  nameWithType: Citation
+- uid: AnthropicClient.Models.Citation.#ctor(System.String)
+  name: Citation(string)
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation__ctor_System_String_
+  commentId: M:AnthropicClient.Models.Citation.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AnthropicClient.Models.Citation.Citation(string)
+  fullName.vb: AnthropicClient.Models.Citation.New(String)
+  nameWithType: Citation.Citation(string)
+  nameWithType.vb: Citation.New(String)
+- uid: AnthropicClient.Models.Citation.#ctor*
+  name: Citation
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation__ctor_
+  commentId: Overload:AnthropicClient.Models.Citation.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.Citation.Citation
+  fullName.vb: AnthropicClient.Models.Citation.New
+  nameWithType: Citation.Citation
+  nameWithType.vb: Citation.New
+- uid: AnthropicClient.Models.Citation.CitedText
+  name: CitedText
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_CitedText
+  commentId: P:AnthropicClient.Models.Citation.CitedText
+  fullName: AnthropicClient.Models.Citation.CitedText
+  nameWithType: Citation.CitedText
+- uid: AnthropicClient.Models.Citation.CitedText*
+  name: CitedText
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_CitedText_
+  commentId: Overload:AnthropicClient.Models.Citation.CitedText
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Citation.CitedText
+  nameWithType: Citation.CitedText
+- uid: AnthropicClient.Models.Citation.DocumentIndex
+  name: DocumentIndex
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_DocumentIndex
+  commentId: P:AnthropicClient.Models.Citation.DocumentIndex
+  fullName: AnthropicClient.Models.Citation.DocumentIndex
+  nameWithType: Citation.DocumentIndex
+- uid: AnthropicClient.Models.Citation.DocumentIndex*
+  name: DocumentIndex
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_DocumentIndex_
+  commentId: Overload:AnthropicClient.Models.Citation.DocumentIndex
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Citation.DocumentIndex
+  nameWithType: Citation.DocumentIndex
+- uid: AnthropicClient.Models.Citation.DocumentTitle
+  name: DocumentTitle
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_DocumentTitle
+  commentId: P:AnthropicClient.Models.Citation.DocumentTitle
+  fullName: AnthropicClient.Models.Citation.DocumentTitle
+  nameWithType: Citation.DocumentTitle
+- uid: AnthropicClient.Models.Citation.DocumentTitle*
+  name: DocumentTitle
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_DocumentTitle_
+  commentId: Overload:AnthropicClient.Models.Citation.DocumentTitle
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Citation.DocumentTitle
+  nameWithType: Citation.DocumentTitle
+- uid: AnthropicClient.Models.Citation.Type
+  name: Type
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_Type
+  commentId: P:AnthropicClient.Models.Citation.Type
+  fullName: AnthropicClient.Models.Citation.Type
+  nameWithType: Citation.Type
+- uid: AnthropicClient.Models.Citation.Type*
+  name: Type
+  href: api/AnthropicClient.Models.Citation.html#AnthropicClient_Models_Citation_Type_
+  commentId: Overload:AnthropicClient.Models.Citation.Type
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Citation.Type
+  nameWithType: Citation.Type
+- uid: AnthropicClient.Models.CitationDelta
+  name: CitationDelta
+  href: api/AnthropicClient.Models.CitationDelta.html
+  commentId: T:AnthropicClient.Models.CitationDelta
+  fullName: AnthropicClient.Models.CitationDelta
+  nameWithType: CitationDelta
+- uid: AnthropicClient.Models.CitationDelta.#ctor(AnthropicClient.Models.Citation)
+  name: CitationDelta(Citation)
+  href: api/AnthropicClient.Models.CitationDelta.html#AnthropicClient_Models_CitationDelta__ctor_AnthropicClient_Models_Citation_
+  commentId: M:AnthropicClient.Models.CitationDelta.#ctor(AnthropicClient.Models.Citation)
+  name.vb: New(Citation)
+  fullName: AnthropicClient.Models.CitationDelta.CitationDelta(AnthropicClient.Models.Citation)
+  fullName.vb: AnthropicClient.Models.CitationDelta.New(AnthropicClient.Models.Citation)
+  nameWithType: CitationDelta.CitationDelta(Citation)
+  nameWithType.vb: CitationDelta.New(Citation)
+- uid: AnthropicClient.Models.CitationDelta.#ctor*
+  name: CitationDelta
+  href: api/AnthropicClient.Models.CitationDelta.html#AnthropicClient_Models_CitationDelta__ctor_
+  commentId: Overload:AnthropicClient.Models.CitationDelta.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.CitationDelta.CitationDelta
+  fullName.vb: AnthropicClient.Models.CitationDelta.New
+  nameWithType: CitationDelta.CitationDelta
+  nameWithType.vb: CitationDelta.New
+- uid: AnthropicClient.Models.CitationDelta.Citation
+  name: Citation
+  href: api/AnthropicClient.Models.CitationDelta.html#AnthropicClient_Models_CitationDelta_Citation
+  commentId: P:AnthropicClient.Models.CitationDelta.Citation
+  fullName: AnthropicClient.Models.CitationDelta.Citation
+  nameWithType: CitationDelta.Citation
+- uid: AnthropicClient.Models.CitationDelta.Citation*
+  name: Citation
+  href: api/AnthropicClient.Models.CitationDelta.html#AnthropicClient_Models_CitationDelta_Citation_
+  commentId: Overload:AnthropicClient.Models.CitationDelta.Citation
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CitationDelta.Citation
+  nameWithType: CitationDelta.Citation
+- uid: AnthropicClient.Models.CitationOption
+  name: CitationOption
+  href: api/AnthropicClient.Models.CitationOption.html
+  commentId: T:AnthropicClient.Models.CitationOption
+  fullName: AnthropicClient.Models.CitationOption
+  nameWithType: CitationOption
+- uid: AnthropicClient.Models.CitationOption.Enabled
+  name: Enabled
+  href: api/AnthropicClient.Models.CitationOption.html#AnthropicClient_Models_CitationOption_Enabled
+  commentId: P:AnthropicClient.Models.CitationOption.Enabled
+  fullName: AnthropicClient.Models.CitationOption.Enabled
+  nameWithType: CitationOption.Enabled
+- uid: AnthropicClient.Models.CitationOption.Enabled*
+  name: Enabled
+  href: api/AnthropicClient.Models.CitationOption.html#AnthropicClient_Models_CitationOption_Enabled_
+  commentId: Overload:AnthropicClient.Models.CitationOption.Enabled
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CitationOption.Enabled
+  nameWithType: CitationOption.Enabled
+- uid: AnthropicClient.Models.CitationType
+  name: CitationType
+  href: api/AnthropicClient.Models.CitationType.html
+  commentId: T:AnthropicClient.Models.CitationType
+  fullName: AnthropicClient.Models.CitationType
+  nameWithType: CitationType
+- uid: AnthropicClient.Models.CitationType.CharacterLocation
+  name: CharacterLocation
+  href: api/AnthropicClient.Models.CitationType.html#AnthropicClient_Models_CitationType_CharacterLocation
+  commentId: F:AnthropicClient.Models.CitationType.CharacterLocation
+  fullName: AnthropicClient.Models.CitationType.CharacterLocation
+  nameWithType: CitationType.CharacterLocation
+- uid: AnthropicClient.Models.CitationType.ContentBlockLocation
+  name: ContentBlockLocation
+  href: api/AnthropicClient.Models.CitationType.html#AnthropicClient_Models_CitationType_ContentBlockLocation
+  commentId: F:AnthropicClient.Models.CitationType.ContentBlockLocation
+  fullName: AnthropicClient.Models.CitationType.ContentBlockLocation
+  nameWithType: CitationType.ContentBlockLocation
+- uid: AnthropicClient.Models.CitationType.PageLocation
+  name: PageLocation
+  href: api/AnthropicClient.Models.CitationType.html#AnthropicClient_Models_CitationType_PageLocation
+  commentId: F:AnthropicClient.Models.CitationType.PageLocation
+  fullName: AnthropicClient.Models.CitationType.PageLocation
+  nameWithType: CitationType.PageLocation
 - uid: AnthropicClient.Models.Content
   name: Content
   href: api/AnthropicClient.Models.Content.html
@@ -1269,6 +1529,57 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.Content.Type
   nameWithType: Content.Type
+- uid: AnthropicClient.Models.ContentBlockLocationCitation
+  name: ContentBlockLocationCitation
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html
+  commentId: T:AnthropicClient.Models.ContentBlockLocationCitation
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation
+  nameWithType: ContentBlockLocationCitation
+- uid: AnthropicClient.Models.ContentBlockLocationCitation.#ctor
+  name: ContentBlockLocationCitation()
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html#AnthropicClient_Models_ContentBlockLocationCitation__ctor
+  commentId: M:AnthropicClient.Models.ContentBlockLocationCitation.#ctor
+  name.vb: New()
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation.ContentBlockLocationCitation()
+  fullName.vb: AnthropicClient.Models.ContentBlockLocationCitation.New()
+  nameWithType: ContentBlockLocationCitation.ContentBlockLocationCitation()
+  nameWithType.vb: ContentBlockLocationCitation.New()
+- uid: AnthropicClient.Models.ContentBlockLocationCitation.#ctor*
+  name: ContentBlockLocationCitation
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html#AnthropicClient_Models_ContentBlockLocationCitation__ctor_
+  commentId: Overload:AnthropicClient.Models.ContentBlockLocationCitation.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation.ContentBlockLocationCitation
+  fullName.vb: AnthropicClient.Models.ContentBlockLocationCitation.New
+  nameWithType: ContentBlockLocationCitation.ContentBlockLocationCitation
+  nameWithType.vb: ContentBlockLocationCitation.New
+- uid: AnthropicClient.Models.ContentBlockLocationCitation.EndBlockIndex
+  name: EndBlockIndex
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html#AnthropicClient_Models_ContentBlockLocationCitation_EndBlockIndex
+  commentId: P:AnthropicClient.Models.ContentBlockLocationCitation.EndBlockIndex
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation.EndBlockIndex
+  nameWithType: ContentBlockLocationCitation.EndBlockIndex
+- uid: AnthropicClient.Models.ContentBlockLocationCitation.EndBlockIndex*
+  name: EndBlockIndex
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html#AnthropicClient_Models_ContentBlockLocationCitation_EndBlockIndex_
+  commentId: Overload:AnthropicClient.Models.ContentBlockLocationCitation.EndBlockIndex
+  isSpec: "True"
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation.EndBlockIndex
+  nameWithType: ContentBlockLocationCitation.EndBlockIndex
+- uid: AnthropicClient.Models.ContentBlockLocationCitation.StartBlockIndex
+  name: StartBlockIndex
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html#AnthropicClient_Models_ContentBlockLocationCitation_StartBlockIndex
+  commentId: P:AnthropicClient.Models.ContentBlockLocationCitation.StartBlockIndex
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation.StartBlockIndex
+  nameWithType: ContentBlockLocationCitation.StartBlockIndex
+- uid: AnthropicClient.Models.ContentBlockLocationCitation.StartBlockIndex*
+  name: StartBlockIndex
+  href: api/AnthropicClient.Models.ContentBlockLocationCitation.html#AnthropicClient_Models_ContentBlockLocationCitation_StartBlockIndex_
+  commentId: Overload:AnthropicClient.Models.ContentBlockLocationCitation.StartBlockIndex
+  isSpec: "True"
+  fullName: AnthropicClient.Models.ContentBlockLocationCitation.StartBlockIndex
+  nameWithType: ContentBlockLocationCitation.StartBlockIndex
 - uid: AnthropicClient.Models.ContentDelta
   name: ContentDelta
   href: api/AnthropicClient.Models.ContentDelta.html
@@ -1364,6 +1675,12 @@ references:
   commentId: T:AnthropicClient.Models.ContentDeltaType
   fullName: AnthropicClient.Models.ContentDeltaType
   nameWithType: ContentDeltaType
+- uid: AnthropicClient.Models.ContentDeltaType.CitationDelta
+  name: CitationDelta
+  href: api/AnthropicClient.Models.ContentDeltaType.html#AnthropicClient_Models_ContentDeltaType_CitationDelta
+  commentId: F:AnthropicClient.Models.ContentDeltaType.CitationDelta
+  fullName: AnthropicClient.Models.ContentDeltaType.CitationDelta
+  nameWithType: ContentDeltaType.CitationDelta
 - uid: AnthropicClient.Models.ContentDeltaType.JsonDelta
   name: JsonDelta
   href: api/AnthropicClient.Models.ContentDeltaType.html#AnthropicClient_Models_ContentDeltaType_JsonDelta
@@ -1591,12 +1908,68 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.CountMessageTokensRequest.Tools
   nameWithType: CountMessageTokensRequest.Tools
+- uid: AnthropicClient.Models.CustomSource
+  name: CustomSource
+  href: api/AnthropicClient.Models.CustomSource.html
+  commentId: T:AnthropicClient.Models.CustomSource
+  fullName: AnthropicClient.Models.CustomSource
+  nameWithType: CustomSource
+- uid: AnthropicClient.Models.CustomSource.#ctor(System.Collections.Generic.List{AnthropicClient.Models.TextContent})
+  name: CustomSource(List<TextContent>)
+  href: api/AnthropicClient.Models.CustomSource.html#AnthropicClient_Models_CustomSource__ctor_System_Collections_Generic_List_AnthropicClient_Models_TextContent__
+  commentId: M:AnthropicClient.Models.CustomSource.#ctor(System.Collections.Generic.List{AnthropicClient.Models.TextContent})
+  name.vb: New(List(Of TextContent))
+  fullName: AnthropicClient.Models.CustomSource.CustomSource(System.Collections.Generic.List<AnthropicClient.Models.TextContent>)
+  fullName.vb: AnthropicClient.Models.CustomSource.New(System.Collections.Generic.List(Of AnthropicClient.Models.TextContent))
+  nameWithType: CustomSource.CustomSource(List<TextContent>)
+  nameWithType.vb: CustomSource.New(List(Of TextContent))
+- uid: AnthropicClient.Models.CustomSource.#ctor*
+  name: CustomSource
+  href: api/AnthropicClient.Models.CustomSource.html#AnthropicClient_Models_CustomSource__ctor_
+  commentId: Overload:AnthropicClient.Models.CustomSource.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.CustomSource.CustomSource
+  fullName.vb: AnthropicClient.Models.CustomSource.New
+  nameWithType: CustomSource.CustomSource
+  nameWithType.vb: CustomSource.New
+- uid: AnthropicClient.Models.CustomSource.Content
+  name: Content
+  href: api/AnthropicClient.Models.CustomSource.html#AnthropicClient_Models_CustomSource_Content
+  commentId: P:AnthropicClient.Models.CustomSource.Content
+  fullName: AnthropicClient.Models.CustomSource.Content
+  nameWithType: CustomSource.Content
+- uid: AnthropicClient.Models.CustomSource.Content*
+  name: Content
+  href: api/AnthropicClient.Models.CustomSource.html#AnthropicClient_Models_CustomSource_Content_
+  commentId: Overload:AnthropicClient.Models.CustomSource.Content
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CustomSource.Content
+  nameWithType: CustomSource.Content
 - uid: AnthropicClient.Models.DocumentContent
   name: DocumentContent
   href: api/AnthropicClient.Models.DocumentContent.html
   commentId: T:AnthropicClient.Models.DocumentContent
   fullName: AnthropicClient.Models.DocumentContent
   nameWithType: DocumentContent
+- uid: AnthropicClient.Models.DocumentContent.#ctor(AnthropicClient.Models.Source)
+  name: DocumentContent(Source)
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent__ctor_AnthropicClient_Models_Source_
+  commentId: M:AnthropicClient.Models.DocumentContent.#ctor(AnthropicClient.Models.Source)
+  name.vb: New(Source)
+  fullName: AnthropicClient.Models.DocumentContent.DocumentContent(AnthropicClient.Models.Source)
+  fullName.vb: AnthropicClient.Models.DocumentContent.New(AnthropicClient.Models.Source)
+  nameWithType: DocumentContent.DocumentContent(Source)
+  nameWithType.vb: DocumentContent.New(Source)
+- uid: AnthropicClient.Models.DocumentContent.#ctor(AnthropicClient.Models.Source,AnthropicClient.Models.CacheControl)
+  name: DocumentContent(Source, CacheControl)
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent__ctor_AnthropicClient_Models_Source_AnthropicClient_Models_CacheControl_
+  commentId: M:AnthropicClient.Models.DocumentContent.#ctor(AnthropicClient.Models.Source,AnthropicClient.Models.CacheControl)
+  name.vb: New(Source, CacheControl)
+  fullName: AnthropicClient.Models.DocumentContent.DocumentContent(AnthropicClient.Models.Source, AnthropicClient.Models.CacheControl)
+  fullName.vb: AnthropicClient.Models.DocumentContent.New(AnthropicClient.Models.Source, AnthropicClient.Models.CacheControl)
+  nameWithType: DocumentContent.DocumentContent(Source, CacheControl)
+  nameWithType.vb: DocumentContent.New(Source, CacheControl)
 - uid: AnthropicClient.Models.DocumentContent.#ctor(System.String,System.String)
   name: DocumentContent(string, string)
   href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent__ctor_System_String_System_String_
@@ -1625,6 +1998,32 @@ references:
   fullName.vb: AnthropicClient.Models.DocumentContent.New
   nameWithType: DocumentContent.DocumentContent
   nameWithType.vb: DocumentContent.New
+- uid: AnthropicClient.Models.DocumentContent.Citations
+  name: Citations
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Citations
+  commentId: P:AnthropicClient.Models.DocumentContent.Citations
+  fullName: AnthropicClient.Models.DocumentContent.Citations
+  nameWithType: DocumentContent.Citations
+- uid: AnthropicClient.Models.DocumentContent.Citations*
+  name: Citations
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Citations_
+  commentId: Overload:AnthropicClient.Models.DocumentContent.Citations
+  isSpec: "True"
+  fullName: AnthropicClient.Models.DocumentContent.Citations
+  nameWithType: DocumentContent.Citations
+- uid: AnthropicClient.Models.DocumentContent.Context
+  name: Context
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Context
+  commentId: P:AnthropicClient.Models.DocumentContent.Context
+  fullName: AnthropicClient.Models.DocumentContent.Context
+  nameWithType: DocumentContent.Context
+- uid: AnthropicClient.Models.DocumentContent.Context*
+  name: Context
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Context_
+  commentId: Overload:AnthropicClient.Models.DocumentContent.Context
+  isSpec: "True"
+  fullName: AnthropicClient.Models.DocumentContent.Context
+  nameWithType: DocumentContent.Context
 - uid: AnthropicClient.Models.DocumentContent.Source
   name: Source
   href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Source
@@ -1638,6 +2037,19 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.DocumentContent.Source
   nameWithType: DocumentContent.Source
+- uid: AnthropicClient.Models.DocumentContent.Title
+  name: Title
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Title
+  commentId: P:AnthropicClient.Models.DocumentContent.Title
+  fullName: AnthropicClient.Models.DocumentContent.Title
+  nameWithType: DocumentContent.Title
+- uid: AnthropicClient.Models.DocumentContent.Title*
+  name: Title
+  href: api/AnthropicClient.Models.DocumentContent.html#AnthropicClient_Models_DocumentContent_Title_
+  commentId: Overload:AnthropicClient.Models.DocumentContent.Title
+  isSpec: "True"
+  fullName: AnthropicClient.Models.DocumentContent.Title
+  nameWithType: DocumentContent.Title
 - uid: AnthropicClient.Models.DocumentSource
   name: DocumentSource
   href: api/AnthropicClient.Models.DocumentSource.html
@@ -1663,45 +2075,6 @@ references:
   fullName.vb: AnthropicClient.Models.DocumentSource.New
   nameWithType: DocumentSource.DocumentSource
   nameWithType.vb: DocumentSource.New
-- uid: AnthropicClient.Models.DocumentSource.Data
-  name: Data
-  href: api/AnthropicClient.Models.DocumentSource.html#AnthropicClient_Models_DocumentSource_Data
-  commentId: P:AnthropicClient.Models.DocumentSource.Data
-  fullName: AnthropicClient.Models.DocumentSource.Data
-  nameWithType: DocumentSource.Data
-- uid: AnthropicClient.Models.DocumentSource.Data*
-  name: Data
-  href: api/AnthropicClient.Models.DocumentSource.html#AnthropicClient_Models_DocumentSource_Data_
-  commentId: Overload:AnthropicClient.Models.DocumentSource.Data
-  isSpec: "True"
-  fullName: AnthropicClient.Models.DocumentSource.Data
-  nameWithType: DocumentSource.Data
-- uid: AnthropicClient.Models.DocumentSource.MediaType
-  name: MediaType
-  href: api/AnthropicClient.Models.DocumentSource.html#AnthropicClient_Models_DocumentSource_MediaType
-  commentId: P:AnthropicClient.Models.DocumentSource.MediaType
-  fullName: AnthropicClient.Models.DocumentSource.MediaType
-  nameWithType: DocumentSource.MediaType
-- uid: AnthropicClient.Models.DocumentSource.MediaType*
-  name: MediaType
-  href: api/AnthropicClient.Models.DocumentSource.html#AnthropicClient_Models_DocumentSource_MediaType_
-  commentId: Overload:AnthropicClient.Models.DocumentSource.MediaType
-  isSpec: "True"
-  fullName: AnthropicClient.Models.DocumentSource.MediaType
-  nameWithType: DocumentSource.MediaType
-- uid: AnthropicClient.Models.DocumentSource.Type
-  name: Type
-  href: api/AnthropicClient.Models.DocumentSource.html#AnthropicClient_Models_DocumentSource_Type
-  commentId: P:AnthropicClient.Models.DocumentSource.Type
-  fullName: AnthropicClient.Models.DocumentSource.Type
-  nameWithType: DocumentSource.Type
-- uid: AnthropicClient.Models.DocumentSource.Type*
-  name: Type
-  href: api/AnthropicClient.Models.DocumentSource.html#AnthropicClient_Models_DocumentSource_Type_
-  commentId: Overload:AnthropicClient.Models.DocumentSource.Type
-  isSpec: "True"
-  fullName: AnthropicClient.Models.DocumentSource.Type
-  nameWithType: DocumentSource.Type
 - uid: AnthropicClient.Models.EphemeralCacheControl
   name: EphemeralCacheControl
   href: api/AnthropicClient.Models.EphemeralCacheControl.html
@@ -2283,45 +2656,6 @@ references:
   fullName.vb: AnthropicClient.Models.ImageSource.New
   nameWithType: ImageSource.ImageSource
   nameWithType.vb: ImageSource.New
-- uid: AnthropicClient.Models.ImageSource.Data
-  name: Data
-  href: api/AnthropicClient.Models.ImageSource.html#AnthropicClient_Models_ImageSource_Data
-  commentId: P:AnthropicClient.Models.ImageSource.Data
-  fullName: AnthropicClient.Models.ImageSource.Data
-  nameWithType: ImageSource.Data
-- uid: AnthropicClient.Models.ImageSource.Data*
-  name: Data
-  href: api/AnthropicClient.Models.ImageSource.html#AnthropicClient_Models_ImageSource_Data_
-  commentId: Overload:AnthropicClient.Models.ImageSource.Data
-  isSpec: "True"
-  fullName: AnthropicClient.Models.ImageSource.Data
-  nameWithType: ImageSource.Data
-- uid: AnthropicClient.Models.ImageSource.MediaType
-  name: MediaType
-  href: api/AnthropicClient.Models.ImageSource.html#AnthropicClient_Models_ImageSource_MediaType
-  commentId: P:AnthropicClient.Models.ImageSource.MediaType
-  fullName: AnthropicClient.Models.ImageSource.MediaType
-  nameWithType: ImageSource.MediaType
-- uid: AnthropicClient.Models.ImageSource.MediaType*
-  name: MediaType
-  href: api/AnthropicClient.Models.ImageSource.html#AnthropicClient_Models_ImageSource_MediaType_
-  commentId: Overload:AnthropicClient.Models.ImageSource.MediaType
-  isSpec: "True"
-  fullName: AnthropicClient.Models.ImageSource.MediaType
-  nameWithType: ImageSource.MediaType
-- uid: AnthropicClient.Models.ImageSource.Type
-  name: Type
-  href: api/AnthropicClient.Models.ImageSource.html#AnthropicClient_Models_ImageSource_Type
-  commentId: P:AnthropicClient.Models.ImageSource.Type
-  fullName: AnthropicClient.Models.ImageSource.Type
-  nameWithType: ImageSource.Type
-- uid: AnthropicClient.Models.ImageSource.Type*
-  name: Type
-  href: api/AnthropicClient.Models.ImageSource.html#AnthropicClient_Models_ImageSource_Type_
-  commentId: Overload:AnthropicClient.Models.ImageSource.Type
-  isSpec: "True"
-  fullName: AnthropicClient.Models.ImageSource.Type
-  nameWithType: ImageSource.Type
 - uid: AnthropicClient.Models.ImageType
   name: ImageType
   href: api/AnthropicClient.Models.ImageType.html
@@ -3510,6 +3844,57 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.Page.LastId
   nameWithType: Page.LastId
+- uid: AnthropicClient.Models.PageLocationCitation
+  name: PageLocationCitation
+  href: api/AnthropicClient.Models.PageLocationCitation.html
+  commentId: T:AnthropicClient.Models.PageLocationCitation
+  fullName: AnthropicClient.Models.PageLocationCitation
+  nameWithType: PageLocationCitation
+- uid: AnthropicClient.Models.PageLocationCitation.#ctor
+  name: PageLocationCitation()
+  href: api/AnthropicClient.Models.PageLocationCitation.html#AnthropicClient_Models_PageLocationCitation__ctor
+  commentId: M:AnthropicClient.Models.PageLocationCitation.#ctor
+  name.vb: New()
+  fullName: AnthropicClient.Models.PageLocationCitation.PageLocationCitation()
+  fullName.vb: AnthropicClient.Models.PageLocationCitation.New()
+  nameWithType: PageLocationCitation.PageLocationCitation()
+  nameWithType.vb: PageLocationCitation.New()
+- uid: AnthropicClient.Models.PageLocationCitation.#ctor*
+  name: PageLocationCitation
+  href: api/AnthropicClient.Models.PageLocationCitation.html#AnthropicClient_Models_PageLocationCitation__ctor_
+  commentId: Overload:AnthropicClient.Models.PageLocationCitation.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.PageLocationCitation.PageLocationCitation
+  fullName.vb: AnthropicClient.Models.PageLocationCitation.New
+  nameWithType: PageLocationCitation.PageLocationCitation
+  nameWithType.vb: PageLocationCitation.New
+- uid: AnthropicClient.Models.PageLocationCitation.EndPageNumber
+  name: EndPageNumber
+  href: api/AnthropicClient.Models.PageLocationCitation.html#AnthropicClient_Models_PageLocationCitation_EndPageNumber
+  commentId: P:AnthropicClient.Models.PageLocationCitation.EndPageNumber
+  fullName: AnthropicClient.Models.PageLocationCitation.EndPageNumber
+  nameWithType: PageLocationCitation.EndPageNumber
+- uid: AnthropicClient.Models.PageLocationCitation.EndPageNumber*
+  name: EndPageNumber
+  href: api/AnthropicClient.Models.PageLocationCitation.html#AnthropicClient_Models_PageLocationCitation_EndPageNumber_
+  commentId: Overload:AnthropicClient.Models.PageLocationCitation.EndPageNumber
+  isSpec: "True"
+  fullName: AnthropicClient.Models.PageLocationCitation.EndPageNumber
+  nameWithType: PageLocationCitation.EndPageNumber
+- uid: AnthropicClient.Models.PageLocationCitation.StartPageNumber
+  name: StartPageNumber
+  href: api/AnthropicClient.Models.PageLocationCitation.html#AnthropicClient_Models_PageLocationCitation_StartPageNumber
+  commentId: P:AnthropicClient.Models.PageLocationCitation.StartPageNumber
+  fullName: AnthropicClient.Models.PageLocationCitation.StartPageNumber
+  nameWithType: PageLocationCitation.StartPageNumber
+- uid: AnthropicClient.Models.PageLocationCitation.StartPageNumber*
+  name: StartPageNumber
+  href: api/AnthropicClient.Models.PageLocationCitation.html#AnthropicClient_Models_PageLocationCitation_StartPageNumber_
+  commentId: Overload:AnthropicClient.Models.PageLocationCitation.StartPageNumber
+  isSpec: "True"
+  fullName: AnthropicClient.Models.PageLocationCitation.StartPageNumber
+  nameWithType: PageLocationCitation.StartPageNumber
 - uid: AnthropicClient.Models.Page`1
   name: Page<T>
   href: api/AnthropicClient.Models.Page-1.html
@@ -3688,6 +4073,68 @@ references:
   fullName.vb: AnthropicClient.Models.RateLimitError.New
   nameWithType: RateLimitError.RateLimitError
   nameWithType.vb: RateLimitError.New
+- uid: AnthropicClient.Models.Source
+  name: Source
+  href: api/AnthropicClient.Models.Source.html
+  commentId: T:AnthropicClient.Models.Source
+  fullName: AnthropicClient.Models.Source
+  nameWithType: Source
+- uid: AnthropicClient.Models.Source.#ctor(System.String)
+  name: Source(string)
+  href: api/AnthropicClient.Models.Source.html#AnthropicClient_Models_Source__ctor_System_String_
+  commentId: M:AnthropicClient.Models.Source.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AnthropicClient.Models.Source.Source(string)
+  fullName.vb: AnthropicClient.Models.Source.New(String)
+  nameWithType: Source.Source(string)
+  nameWithType.vb: Source.New(String)
+- uid: AnthropicClient.Models.Source.#ctor*
+  name: Source
+  href: api/AnthropicClient.Models.Source.html#AnthropicClient_Models_Source__ctor_
+  commentId: Overload:AnthropicClient.Models.Source.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.Source.Source
+  fullName.vb: AnthropicClient.Models.Source.New
+  nameWithType: Source.Source
+  nameWithType.vb: Source.New
+- uid: AnthropicClient.Models.Source.Type
+  name: Type
+  href: api/AnthropicClient.Models.Source.html#AnthropicClient_Models_Source_Type
+  commentId: P:AnthropicClient.Models.Source.Type
+  fullName: AnthropicClient.Models.Source.Type
+  nameWithType: Source.Type
+- uid: AnthropicClient.Models.Source.Type*
+  name: Type
+  href: api/AnthropicClient.Models.Source.html#AnthropicClient_Models_Source_Type_
+  commentId: Overload:AnthropicClient.Models.Source.Type
+  isSpec: "True"
+  fullName: AnthropicClient.Models.Source.Type
+  nameWithType: Source.Type
+- uid: AnthropicClient.Models.SourceType
+  name: SourceType
+  href: api/AnthropicClient.Models.SourceType.html
+  commentId: T:AnthropicClient.Models.SourceType
+  fullName: AnthropicClient.Models.SourceType
+  nameWithType: SourceType
+- uid: AnthropicClient.Models.SourceType.Base64
+  name: Base64
+  href: api/AnthropicClient.Models.SourceType.html#AnthropicClient_Models_SourceType_Base64
+  commentId: F:AnthropicClient.Models.SourceType.Base64
+  fullName: AnthropicClient.Models.SourceType.Base64
+  nameWithType: SourceType.Base64
+- uid: AnthropicClient.Models.SourceType.Content
+  name: Content
+  href: api/AnthropicClient.Models.SourceType.html#AnthropicClient_Models_SourceType_Content
+  commentId: F:AnthropicClient.Models.SourceType.Content
+  fullName: AnthropicClient.Models.SourceType.Content
+  nameWithType: SourceType.Content
+- uid: AnthropicClient.Models.SourceType.Text
+  name: Text
+  href: api/AnthropicClient.Models.SourceType.html#AnthropicClient_Models_SourceType_Text
+  commentId: F:AnthropicClient.Models.SourceType.Text
+  fullName: AnthropicClient.Models.SourceType.Text
+  nameWithType: SourceType.Text
 - uid: AnthropicClient.Models.SpecificToolChoice
   name: SpecificToolChoice
   href: api/AnthropicClient.Models.SpecificToolChoice.html
@@ -3853,6 +4300,19 @@ references:
   fullName.vb: AnthropicClient.Models.TextContent.New
   nameWithType: TextContent.TextContent
   nameWithType.vb: TextContent.New
+- uid: AnthropicClient.Models.TextContent.Citations
+  name: Citations
+  href: api/AnthropicClient.Models.TextContent.html#AnthropicClient_Models_TextContent_Citations
+  commentId: P:AnthropicClient.Models.TextContent.Citations
+  fullName: AnthropicClient.Models.TextContent.Citations
+  nameWithType: TextContent.Citations
+- uid: AnthropicClient.Models.TextContent.Citations*
+  name: Citations
+  href: api/AnthropicClient.Models.TextContent.html#AnthropicClient_Models_TextContent_Citations_
+  commentId: Overload:AnthropicClient.Models.TextContent.Citations
+  isSpec: "True"
+  fullName: AnthropicClient.Models.TextContent.Citations
+  nameWithType: TextContent.Citations
 - uid: AnthropicClient.Models.TextContent.Text
   name: Text
   href: api/AnthropicClient.Models.TextContent.html#AnthropicClient_Models_TextContent_Text
@@ -3904,6 +4364,57 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.TextDelta.Text
   nameWithType: TextDelta.Text
+- uid: AnthropicClient.Models.TextSource
+  name: TextSource
+  href: api/AnthropicClient.Models.TextSource.html
+  commentId: T:AnthropicClient.Models.TextSource
+  fullName: AnthropicClient.Models.TextSource
+  nameWithType: TextSource
+- uid: AnthropicClient.Models.TextSource.#ctor(System.String)
+  name: TextSource(string)
+  href: api/AnthropicClient.Models.TextSource.html#AnthropicClient_Models_TextSource__ctor_System_String_
+  commentId: M:AnthropicClient.Models.TextSource.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AnthropicClient.Models.TextSource.TextSource(string)
+  fullName.vb: AnthropicClient.Models.TextSource.New(String)
+  nameWithType: TextSource.TextSource(string)
+  nameWithType.vb: TextSource.New(String)
+- uid: AnthropicClient.Models.TextSource.#ctor*
+  name: TextSource
+  href: api/AnthropicClient.Models.TextSource.html#AnthropicClient_Models_TextSource__ctor_
+  commentId: Overload:AnthropicClient.Models.TextSource.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.TextSource.TextSource
+  fullName.vb: AnthropicClient.Models.TextSource.New
+  nameWithType: TextSource.TextSource
+  nameWithType.vb: TextSource.New
+- uid: AnthropicClient.Models.TextSource.Data
+  name: Data
+  href: api/AnthropicClient.Models.TextSource.html#AnthropicClient_Models_TextSource_Data
+  commentId: P:AnthropicClient.Models.TextSource.Data
+  fullName: AnthropicClient.Models.TextSource.Data
+  nameWithType: TextSource.Data
+- uid: AnthropicClient.Models.TextSource.Data*
+  name: Data
+  href: api/AnthropicClient.Models.TextSource.html#AnthropicClient_Models_TextSource_Data_
+  commentId: Overload:AnthropicClient.Models.TextSource.Data
+  isSpec: "True"
+  fullName: AnthropicClient.Models.TextSource.Data
+  nameWithType: TextSource.Data
+- uid: AnthropicClient.Models.TextSource.MediaType
+  name: MediaType
+  href: api/AnthropicClient.Models.TextSource.html#AnthropicClient_Models_TextSource_MediaType
+  commentId: P:AnthropicClient.Models.TextSource.MediaType
+  fullName: AnthropicClient.Models.TextSource.MediaType
+  nameWithType: TextSource.MediaType
+- uid: AnthropicClient.Models.TextSource.MediaType*
+  name: MediaType
+  href: api/AnthropicClient.Models.TextSource.html#AnthropicClient_Models_TextSource_MediaType_
+  commentId: Overload:AnthropicClient.Models.TextSource.MediaType
+  isSpec: "True"
+  fullName: AnthropicClient.Models.TextSource.MediaType
+  nameWithType: TextSource.MediaType
 - uid: AnthropicClient.Models.TokenCountResponse
   name: TokenCountResponse
   href: api/AnthropicClient.Models.TokenCountResponse.html

@@ -916,6 +916,177 @@ foreach (var content in response.Value.Content)
   }
 }
 </code></pre>
+<h3 id="citations">Citations</h3>
+<p>Anthropic provides a feature called <a href="https://docs.anthropic.com/en/docs/build-with-claude/citations">Citations</a> that allows Claude to provide citations for information extracted from documents. This feature enables Claude to reference specific parts of the source material when answering questions, making it easier to verify information and understand the context of responses.</p>
+<p>Citations can be enabled for documents and will return references to the specific locations in the source material where information was found. This library provides comprehensive support for citations through strongly-typed models that represent different types of citation locations.</p>
+<h4 id="enabling-citations-for-documents">Enabling Citations for Documents</h4>
+<p>You can enable citations for documents by setting the <code>Citations</code> property on <code>DocumentContent</code> instances:</p>
+<pre><code class="lang-csharp">using AnthropicClient;
+using AnthropicClient.Models;
+
+var request = new MessageRequest(
+  model: AnthropicModels.Claude35Sonnet,
+  messages: [
+    new(MessageRole.User, [
+      new DocumentContent(new TextSource(&quot;The grass is green. The sky is blue.&quot;))
+      {
+        Title = &quot;My Document&quot;,
+        Context = &quot;This is a trustworthy document.&quot;,
+        Citations = new() { Enabled = true }
+      },
+      new TextContent(&quot;What color is the grass and sky?&quot;)
+    ])
+  ]
+);
+
+var response = await client.CreateMessageAsync(request);
+
+if (response.IsSuccess is false)
+{
+  Console.WriteLine(&quot;Failed to create message&quot;);
+  Console.WriteLine(&quot;Error Type: {0}&quot;, response.Error.Error.Type);
+  Console.WriteLine(&quot;Error Message: {0}&quot;, response.Error.Error.Message);
+  return;
+}
+
+foreach (var content in response.Value.Content)
+{
+  switch (content)
+  {
+    case TextContent textContent:
+      Console.WriteLine(&quot;Response: {0}&quot;, textContent.Text);
+      
+      if (textContent.Citations is not null)
+      {
+        Console.WriteLine(&quot;Citations:&quot;);
+        foreach (var citation in textContent.Citations)
+        {
+          Console.WriteLine(&quot;  - Cited Text: {0}&quot;, citation.CitedText);
+          Console.WriteLine(&quot;    Document: {0}&quot;, citation.DocumentTitle);
+          Console.WriteLine(&quot;    Type: {0}&quot;, citation.Type);
+          
+          switch (citation)
+          {
+            case CharacterLocationCitation charCitation:
+              Console.WriteLine(
+                &quot;    Character Range: {0}-{1}&quot;, 
+                charCitation.StartCharIndex, charCitation.EndCharIndex
+              );
+              break;
+            case PageLocationCitation pageCitation:
+              Console.WriteLine(
+                &quot;    Page Range: {0}-{1}&quot;, 
+                pageCitation.StartPageNumber, pageCitation.EndPageNumber
+              );
+              break;
+            case ContentBlockLocationCitation blockCitation:
+              Console.WriteLine(
+                &quot;    Block Range: {0}-{1}&quot;, 
+                blockCitation.StartBlockIndex, blockCitation.EndBlockIndex
+              );
+              break;
+          }
+        }
+      }
+      break;
+  }
+}
+</code></pre>
+<h4 id="citations-with-pdf-documents">Citations with PDF Documents</h4>
+<p>Citations work particularly well with PDF documents, providing page-level references:</p>
+<pre><code class="lang-csharp">using AnthropicClient;
+using AnthropicClient.Models;
+
+var pdfBytes = await File.ReadAllBytesAsync(&quot;document.pdf&quot;);
+var base64Data = Convert.ToBase64String(pdfBytes);
+
+var request = new MessageRequest(
+  model: AnthropicModels.Claude35Sonnet,
+  messages: [
+    new(MessageRole.User, [
+      new DocumentContent(&quot;application/pdf&quot;, base64Data)
+      {
+        Title = &quot;Research Paper&quot;,
+        Citations = new() { Enabled = true }
+      },
+      new TextContent(&quot;Summarize the key findings from this research paper.&quot;)
+    ])
+  ]
+);
+
+var response = await client.CreateMessageAsync(request);
+
+if (response.IsSuccess is false)
+{
+  Console.WriteLine(&quot;Failed to create message&quot;);
+  Console.WriteLine(&quot;Error Type: {0}&quot;, response.Error.Error.Type);
+  Console.WriteLine(&quot;Error Message: {0}&quot;, response.Error.Error.Message);
+  return;
+}
+
+foreach (var content in response.Value.Content)
+{
+  switch (content)
+  {
+    case TextContent textContent:
+      Console.WriteLine(&quot;Summary: {0}&quot;, textContent.Text);
+      
+      if (textContent.Citations is not null)
+      {
+        Console.WriteLine(&quot;\nCitations:&quot;);
+        foreach (var citation in textContent.Citations.OfType&lt;PageLocationCitation&gt;())
+        {
+          Console.WriteLine(
+            &quot;  - \&quot;{0}\&quot; (Pages {1}-{2})&quot;, 
+            citation.CitedText, 
+            citation.StartPageNumber, 
+            citation.EndPageNumber
+          );
+        }
+      }
+      break;
+  }
+}
+</code></pre>
+<h4 id="citations-in-streaming-responses">Citations in Streaming Responses</h4>
+<p>Citations are also supported in streaming responses through the <code>CitationDelta</code> events:</p>
+<pre><code class="lang-csharp">using AnthropicClient;
+using AnthropicClient.Models;
+
+var request = new StreamMessageRequest(
+  model: AnthropicModels.Claude35Sonnet,
+  messages: [
+    new(MessageRole.User, [
+      new DocumentContent(new TextSource(&quot;The grass is green. The sky is blue.&quot;))
+      {
+        Citations = new() { Enabled = true }
+      },
+      new TextContent(&quot;What color is the grass?&quot;)
+    ])
+  ]
+);
+
+var events = client.CreateMessageAsync(request);
+
+await foreach (var e in events)
+{
+  switch (e.Data)
+  {
+    case ContentDeltaEventData contentData:
+      switch (contentData.Delta)
+      {
+        case CitationDelta citationDelta:
+          Console.WriteLine(&quot;Citation: {0}&quot;, citationDelta.Citation.CitedText);
+          Console.WriteLine(&quot;Type: {0}&quot;, citationDelta.Citation.Type);
+          break;
+        case TextDelta textDelta:
+          Console.Write(textDelta.Text);
+          break;
+      }
+      break;
+  }
+}
+</code></pre>
 <h3 id="message-batches">Message Batches</h3>
 <p>Anthropic provides a feature called <a href="https://docs.anthropic.com/en/docs/build-with-claude/message-batches">Message Batches</a> that allows you to send multiple messages in a single request. This feature is covered in depth in <a href="https://docs.anthropic.com/en/docs/build-with-claude/message-batches">Anthropic's API Documentation</a>.</p>
 <h4 id="create-a-message-batch">Create a message batch</h4>

@@ -180,6 +180,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.Base64Source.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.Base64Source.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Base64Source",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Base64Source.yml\" sourcestartlinenumber=\"1\">Represents a base64 source.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AnthropicClient.Models.BaseMessageRequest.yml",
       "output": {
         ".html": {
@@ -236,6 +250,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.CharacterLocationCitation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.CharacterLocationCitation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CharacterLocationCitation",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CharacterLocationCitation.yml\" sourcestartlinenumber=\"1\">Represents a citation for specific locations within text content.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.Citation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.Citation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Citation",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Citation.yml\" sourcestartlinenumber=\"1\">Represents a citation</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.CitationDelta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.CitationDelta.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CitationDelta",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CitationDelta.yml\" sourcestartlinenumber=\"1\">Represents a citation delta.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.CitationOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.CitationOption.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CitationOption",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CitationOption.yml\" sourcestartlinenumber=\"1\">Represents whether citations are enabled for a document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.CitationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.CitationType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CitationType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CitationType.yml\" sourcestartlinenumber=\"1\">The types of citations that can be returned by the Anthropic API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AnthropicClient.Models.Content.yml",
       "output": {
         ".html": {
@@ -247,6 +331,20 @@
       "IsMRef": true,
       "Title": "AnthropicClient.Models.Content",
       "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Content.yml\" sourcestartlinenumber=\"1\">Represents part of the content of a message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.ContentBlockLocationCitation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.ContentBlockLocationCitation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.ContentBlockLocationCitation",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ContentBlockLocationCitation.yml\" sourcestartlinenumber=\"1\">Represents a citation for content blocks within custom content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -345,6 +443,20 @@
       "IsMRef": true,
       "Title": "AnthropicClient.Models.CountMessageTokensRequest",
       "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CountMessageTokensRequest.yml\" sourcestartlinenumber=\"1\">Represents a request to count the number of tokens in a message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.CustomSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.CustomSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CustomSource",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CustomSource.yml\" sourcestartlinenumber=\"1\">Represents a custom source that contains a list of text content.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -936,6 +1048,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.PageLocationCitation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.PageLocationCitation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.PageLocationCitation",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.PageLocationCitation.yml\" sourcestartlinenumber=\"1\">Represents a citation for text within a page of a document.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AnthropicClient.Models.PagingRequest.yml",
       "output": {
         ".html": {
@@ -989,6 +1115,34 @@
       "IsMRef": true,
       "Title": "AnthropicClient.Models.RateLimitError",
       "Summary": "<p sourcefile=\"api/AnthropicClient.Models.RateLimitError.yml\" sourcestartlinenumber=\"1\">Represents a rate_limit error.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.Source.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.Source.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.Source",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.Source.yml\" sourcestartlinenumber=\"1\">Represents a base class for sources.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.SourceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.SourceType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.SourceType",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.SourceType.yml\" sourcestartlinenumber=\"1\">Represents the types of document sources that can be used in the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1073,6 +1227,20 @@
       "IsMRef": true,
       "Title": "AnthropicClient.Models.TextDelta",
       "Summary": "<p sourcefile=\"api/AnthropicClient.Models.TextDelta.yml\" sourcestartlinenumber=\"1\">Represents a text delta.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.TextSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.TextSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.TextSource",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.TextSource.yml\" sourcestartlinenumber=\"1\">Represents a text document source.</p>\n"
     },
     {
       "type": "ManagedReference",

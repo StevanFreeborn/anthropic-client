@@ -30,11 +30,6 @@ public abstract class Citation
   [JsonPropertyName("document_title")]
   public string DocumentTitle { get; init; } = string.Empty;
 
-  [JsonConstructor]
-  internal Citation()
-  {
-  }
-
   /// <summary>
   /// Initializes a new instance of the <see cref="Citation"/> class with a specified type.
   /// </summary>

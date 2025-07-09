@@ -23,8 +23,12 @@ class SourceConverter : JsonConverter<Source>
 
   private static Source DeserializeBase64Source(JsonElement root, JsonSerializerOptions options)
   {
-    var mediaType = root.GetProperty("media_type").GetString() ?? throw new JsonException("Missing 'media_type' property");
+    var mediaType = root.TryGetProperty("media_type", out var mediaTypeElement)
+      ? mediaTypeElement.GetString() ?? throw new JsonException("Missing 'media_type' property")
+      : throw new JsonException("Missing 'media_type' property");
+
     var isImage = ImageType.IsValidImageType(mediaType);
+
     return isImage
       ? JsonSerializer.Deserialize<ImageSource>(root.GetRawText(), options)!
       : JsonSerializer.Deserialize<DocumentSource>(root.GetRawText(), options)!;

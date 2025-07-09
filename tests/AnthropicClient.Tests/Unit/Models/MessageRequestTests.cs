@@ -74,7 +74,7 @@ public class MessageRequestTests : SerializationTest
         ""content"": [
           { 
             ""type"": ""image"", 
-            ""source"": { ""media_type"": ""image/jpeg"", ""data"": ""data"" } 
+            ""source"": { ""type"": ""base64"", ""media_type"": ""image/jpeg"", ""data"": ""data"" } 
           }
         ] 
       }
@@ -558,8 +558,9 @@ public class MessageRequestTests : SerializationTest
 
     var imageContent = messageRequest.Messages[0].Content[0] as ImageContent;
     imageContent!.Type.Should().Be("image");
-    imageContent.Source.MediaType.Should().Be("image/jpeg");
-    imageContent.Source.Data.Should().Be("data");
+
+    imageContent.Source.As<ImageSource>().MediaType.Should().Be("image/jpeg");
+    imageContent.Source.As<ImageSource>().Data.Should().Be("data");
   }
 
   [Fact]

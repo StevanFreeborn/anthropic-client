@@ -14,6 +14,11 @@ public class TextContent : Content
   /// </summary>
   public string Text { get; init; } = string.Empty;
 
+  /// <summary>
+  /// Gets the citations associated with the text content.
+  /// </summary>
+  public Citation[]? Citations { get; init; }
+
   [JsonConstructor]
   internal TextContent() : base(ContentType.Text)
   {

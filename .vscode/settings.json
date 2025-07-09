@@ -17,5 +17,8 @@
     "targetdir",
     "typeof"
   ],
-  "dotnet.unitTests.runSettingsPath": "./tests/AnthropicClient.Tests/.runsettings"
+  "dotnet.unitTests.runSettingsPath": "./tests/AnthropicClient.Tests/.runsettings",
+  "search.exclude": {
+    "**/docs": true,
+  }
 }

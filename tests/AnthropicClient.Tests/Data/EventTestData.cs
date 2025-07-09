@@ -24,7 +24,13 @@ public class EventTestData : IEnumerable<object[]>
         Usage = new Usage { InputTokens = 472, OutputTokens = 91 },
         StopReason = "tool_use",
         Content = [
-          new TextContent("Okay, let's check the weather for San Francisco, CA:"),
+          new TextContent("Okay, let's check the weather for San Francisco, CA:")
+          {
+            Citations = [
+              new CharacterLocationCitation(),
+              new CharacterLocationCitation(),
+            ]
+          },
           new ToolUseContent()
           {
             Id = "toolu_01T1x1fJ34qAmk2tNTrN7Up6",
@@ -375,6 +381,46 @@ public class EventTestData : IEnumerable<object[]>
           {
             Type = "text_delta",
             Text = " :",
+          },
+        },
+      },
+    };
+
+    yield return new object[]
+    {
+      """
+      event: content_block_delta
+      data: {"type":"content_block_delta","index":0,"delta":{"type":"citations_delta","citation": {"type":"char_location","start_char_index":0,"end_char_index":0, "cited_text":"","document_index":0,"document_title":""}}}
+      """,
+      new AnthropicEvent()
+      {
+        Type = EventType.ContentBlockDelta,
+        Data = new ContentDeltaEventData()
+        {
+          Index = 0,
+          Delta = new CitationDelta()
+          {
+            Citation = new CharacterLocationCitation()
+          }
+        },
+      },
+    };
+
+    yield return new object[]
+    {
+      """
+      event: content_block_delta
+      data: {"type":"content_block_delta","index":0,"delta":{"type":"citations_delta","citation":{"type":"char_location","start_char_index":0,"end_char_index":0,"cited_text":"","document_index":0,"document_title":""}}}
+      """,
+      new AnthropicEvent()
+      {
+        Type = EventType.ContentBlockDelta,
+        Data = new ContentDeltaEventData()
+        {
+          Index = 0,
+          Delta = new CitationDelta()
+          {
+            Citation = new CharacterLocationCitation()
           },
         },
       },

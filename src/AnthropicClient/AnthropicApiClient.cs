@@ -124,10 +124,37 @@ public class AnthropicApiClient : IAnthropicApiClient
       // current content type and delta type
       if (currentEvent.Type is EventType.ContentBlockDelta && currentEvent.Data is ContentDeltaEventData contentDeltaData)
       {
-        if (content is TextContent textContent && contentDeltaData.Delta is TextDelta textDelta)
+        if (content is TextContent textContent)
         {
-          var newText = textContent.Text + textDelta.Text;
-          content = new TextContent(newText);
+          if (contentDeltaData.Delta is TextDelta textDelta)
+          {
+            var newText = textContent.Text + textDelta.Text;
+
+            content = new TextContent(newText)
+            {
+              Citations = textContent.Citations,
+            };
+          }
+
+          if (contentDeltaData.Delta is CitationDelta citationDelta)
+          {
+            var citations = new List<Citation>()
+            {
+              citationDelta.Citation,
+            };
+
+            if (textContent.Citations is not null)
+            {
+              citations.AddRange(textContent.Citations);
+            }
+
+            var newContent = new TextContent(textContent.Text)
+            {
+              Citations = [.. citations],
+            };
+
+            content = newContent;
+          }
         }
 
         if (content is ToolUseContent toolUseContent && contentDeltaData.Delta is JsonDelta jsonDelta)

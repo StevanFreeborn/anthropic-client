@@ -21,4 +21,14 @@ public class ContentDeltaTypeTests
 
     actual.Should().Be(expected);
   }
+
+  [Fact]
+  public void CitationDelta_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "citations_delta";
+
+    var actual = ContentDeltaType.CitationDelta;
+
+    actual.Should().Be(expected);
+  }
 }

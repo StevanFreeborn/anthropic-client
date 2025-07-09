@@ -972,6 +972,192 @@ foreach (var content in response.Value.Content)
 }
 ```
 
+### Citations
+
+Anthropic provides a feature called [Citations](https://docs.anthropic.com/en/docs/build-with-claude/citations) that allows Claude to provide citations for information extracted from documents. This feature enables Claude to reference specific parts of the source material when answering questions, making it easier to verify information and understand the context of responses.
+
+Citations can be enabled for documents and will return references to the specific locations in the source material where information was found. This library provides comprehensive support for citations through strongly-typed models that represent different types of citation locations.
+
+#### Enabling Citations for Documents
+
+You can enable citations for documents by setting the `Citations` property on `DocumentContent` instances:
+
+```csharp
+using AnthropicClient;
+using AnthropicClient.Models;
+
+var request = new MessageRequest(
+  model: AnthropicModels.Claude35Sonnet,
+  messages: [
+    new(MessageRole.User, [
+      new DocumentContent(new TextSource("The grass is green. The sky is blue."))
+      {
+        Title = "My Document",
+        Context = "This is a trustworthy document.",
+        Citations = new() { Enabled = true }
+      },
+      new TextContent("What color is the grass and sky?")
+    ])
+  ]
+);
+
+var response = await client.CreateMessageAsync(request);
+
+if (response.IsSuccess is false)
+{
+  Console.WriteLine("Failed to create message");
+  Console.WriteLine("Error Type: {0}", response.Error.Error.Type);
+  Console.WriteLine("Error Message: {0}", response.Error.Error.Message);
+  return;
+}
+
+foreach (var content in response.Value.Content)
+{
+  switch (content)
+  {
+    case TextContent textContent:
+      Console.WriteLine("Response: {0}", textContent.Text);
+      
+      if (textContent.Citations is not null)
+      {
+        Console.WriteLine("Citations:");
+        foreach (var citation in textContent.Citations)
+        {
+          Console.WriteLine("  - Cited Text: {0}", citation.CitedText);
+          Console.WriteLine("    Document: {0}", citation.DocumentTitle);
+          Console.WriteLine("    Type: {0}", citation.Type);
+          
+          switch (citation)
+          {
+            case CharacterLocationCitation charCitation:
+              Console.WriteLine(
+                "    Character Range: {0}-{1}", 
+                charCitation.StartCharIndex, charCitation.EndCharIndex
+              );
+              break;
+            case PageLocationCitation pageCitation:
+              Console.WriteLine(
+                "    Page Range: {0}-{1}", 
+                pageCitation.StartPageNumber, pageCitation.EndPageNumber
+              );
+              break;
+            case ContentBlockLocationCitation blockCitation:
+              Console.WriteLine(
+                "    Block Range: {0}-{1}", 
+                blockCitation.StartBlockIndex, blockCitation.EndBlockIndex
+              );
+              break;
+          }
+        }
+      }
+      break;
+  }
+}
+```
+
+#### Citations with PDF Documents
+
+Citations work particularly well with PDF documents, providing page-level references:
+
+```csharp
+using AnthropicClient;
+using AnthropicClient.Models;
+
+var pdfBytes = await File.ReadAllBytesAsync("document.pdf");
+var base64Data = Convert.ToBase64String(pdfBytes);
+
+var request = new MessageRequest(
+  model: AnthropicModels.Claude35Sonnet,
+  messages: [
+    new(MessageRole.User, [
+      new DocumentContent("application/pdf", base64Data)
+      {
+        Title = "Research Paper",
+        Citations = new() { Enabled = true }
+      },
+      new TextContent("Summarize the key findings from this research paper.")
+    ])
+  ]
+);
+
+var response = await client.CreateMessageAsync(request);
+
+if (response.IsSuccess is false)
+{
+  Console.WriteLine("Failed to create message");
+  Console.WriteLine("Error Type: {0}", response.Error.Error.Type);
+  Console.WriteLine("Error Message: {0}", response.Error.Error.Message);
+  return;
+}
+
+foreach (var content in response.Value.Content)
+{
+  switch (content)
+  {
+    case TextContent textContent:
+      Console.WriteLine("Summary: {0}", textContent.Text);
+      
+      if (textContent.Citations is not null)
+      {
+        Console.WriteLine("\nCitations:");
+        foreach (var citation in textContent.Citations.OfType<PageLocationCitation>())
+        {
+          Console.WriteLine(
+            "  - \"{0}\" (Pages {1}-{2})", 
+            citation.CitedText, 
+            citation.StartPageNumber, 
+            citation.EndPageNumber
+          );
+        }
+      }
+      break;
+  }
+}
+```
+
+#### Citations in Streaming Responses
+
+Citations are also supported in streaming responses through the `CitationDelta` events:
+
+```csharp
+using AnthropicClient;
+using AnthropicClient.Models;
+
+var request = new StreamMessageRequest(
+  model: AnthropicModels.Claude35Sonnet,
+  messages: [
+    new(MessageRole.User, [
+      new DocumentContent(new TextSource("The grass is green. The sky is blue."))
+      {
+        Citations = new() { Enabled = true }
+      },
+      new TextContent("What color is the grass?")
+    ])
+  ]
+);
+
+var events = client.CreateMessageAsync(request);
+
+await foreach (var e in events)
+{
+  switch (e.Data)
+  {
+    case ContentDeltaEventData contentData:
+      switch (contentData.Delta)
+      {
+        case CitationDelta citationDelta:
+          Console.WriteLine("Citation: {0}", citationDelta.Citation.CitedText);
+          Console.WriteLine("Type: {0}", citationDelta.Citation.Type);
+          break;
+        case TextDelta textDelta:
+          Console.Write(textDelta.Text);
+          break;
+      }
+      break;
+  }
+}
+```
+
 ### Message Batches
 
 Anthropic provides a feature called [Message Batches](https://docs.anthropic.com/en/docs/build-with-claude/message-batches) that allows you to send multiple messages in a single request. This feature is covered in depth in [Anthropic's API Documentation](https://docs.anthropic.com/en/docs/build-with-claude/message-batches).

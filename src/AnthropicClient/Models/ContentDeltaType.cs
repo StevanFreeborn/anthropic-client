@@ -14,4 +14,9 @@ public static class ContentDeltaType
   /// The input_json_delta.
   /// </summary>
   public const string JsonDelta = "input_json_delta";
+
+  /// <summary>
+  /// The citation_delta.
+  /// </summary>
+  public const string CitationDelta = "citations_delta";
 }

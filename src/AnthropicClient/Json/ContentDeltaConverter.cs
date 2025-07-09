@@ -16,6 +16,7 @@ class ContentDeltaConverter : JsonConverter<ContentDelta>
     {
       ContentDeltaType.TextDelta => JsonSerializer.Deserialize<TextDelta>(root.GetRawText(), options)!,
       ContentDeltaType.JsonDelta => JsonSerializer.Deserialize<JsonDelta>(root.GetRawText(), options)!,
+      ContentDeltaType.CitationDelta => JsonSerializer.Deserialize<CitationDelta>(root.GetRawText(), options)!,
       _ => throw new JsonException($"Unknown content type: {type}")
     };
   }

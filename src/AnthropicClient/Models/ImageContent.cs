@@ -12,7 +12,7 @@ public class ImageContent : Content
   /// <summary>
   /// Gets the source of the image.
   /// </summary>
-  public ImageSource Source { get; init; } = new();
+  public Source Source { get; init; } = new ImageSource();
 
   [JsonConstructor]
   internal ImageContent()
@@ -36,7 +36,7 @@ public class ImageContent : Content
   {
     Validate(mediaType, data);
 
-    Source = new(mediaType, data);
+    Source = new ImageSource(mediaType, data);
   }
 
   /// <summary>
@@ -51,6 +51,6 @@ public class ImageContent : Content
   {
     Validate(mediaType, data);
 
-    Source = new(mediaType, data);
+    Source = new ImageSource(mediaType, data);
   }
 }

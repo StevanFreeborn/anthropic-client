@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <PackageId>AnthropicClient</PackageId>
-    <Version>0.6.1</Version>
+    <Version>1.0.0</Version>
     <Authors>Stevan Freeborn</Authors>
     <Description>Anthropic Client Library</Description>
     <PackageProjectUrl>https://anthropicclient.stevanfreeborn.com/</PackageProjectUrl>

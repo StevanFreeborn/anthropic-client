@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.0.0"></a>
+## [1.0.0](https://www.github.com/StevanFreeborn/anthropic-client/releases/tag/v1.0.0) (2025-07-09)
+
+### Features
+
+* add serialization tests for CharacterLocationCitation, CitationDelta, ContentBlockLocationCitation, PageLocationCitation, and DocumentContent classes ([598eaaa](https://www.github.com/StevanFreeborn/anthropic-client/commit/598eaaad9412c5bbbe9e28d2d87fcb0b38592fd6))
+* add support for citations ([5b8d88a](https://www.github.com/StevanFreeborn/anthropic-client/commit/5b8d88a01d2f1933ddf60bfffa908e8e220bef8c))
+* add support for citations when streaming ([98da138](https://www.github.com/StevanFreeborn/anthropic-client/commit/98da1384c154e0300e44d41cd160c15e522e7dbd))
+* add unit tests for DocumentContent, CustomSource, PageLocationCitation, SourceType, and TextSource classes ([68e91fc](https://www.github.com/StevanFreeborn/anthropic-client/commit/68e91fcdbb032fe333744f4d2f5e696891f0c240))
+* initial pass at citations in request and response ([a9d0dfd](https://www.github.com/StevanFreeborn/anthropic-client/commit/a9d0dfdc7607ff6d6e60afbfbe7c14973ff113a8))
+
+### Bug Fixes
+
+* address copilot comments ([e351823](https://www.github.com/StevanFreeborn/anthropic-client/commit/e351823f37828f93305884d60a5d6601db2eba08))
+* when serializing source use media type to deserialize to image or document source ([74ac1ff](https://www.github.com/StevanFreeborn/anthropic-client/commit/74ac1ffc06327e63571cf89050759747776bce25))
+
+### Breaking Changes
+
+* add support for citations ([5b8d88a](https://www.github.com/StevanFreeborn/anthropic-client/commit/5b8d88a01d2f1933ddf60bfffa908e8e220bef8c))
+
 <a name="0.6.1"></a>
 ## [0.6.1](https://www.github.com/StevanFreeborn/anthropic-client/releases/tag/v0.6.1) (2025-05-19)
 

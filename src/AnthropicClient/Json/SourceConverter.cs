@@ -17,7 +17,7 @@ class SourceConverter : JsonConverter<Source>
       SourceType.Text => JsonSerializer.Deserialize<TextSource>(root.GetRawText(), options)!,
       SourceType.Content => JsonSerializer.Deserialize<CustomSource>(root.GetRawText(), options)!,
       SourceType.Base64 => DeserializeBase64Source(root, options),
-      _ => throw new JsonException($"Unknown content type: {type}")
+      _ => throw new JsonException($"Unknown source type: {type}")
     };
   }
 

@@ -5,7 +5,7 @@ using AnthropicClient.Utils;
 namespace AnthropicClient.Models;
 
 /// <summary>
-/// Represents an base64 source.
+/// Represents a base64 source.
 /// </summary>
 public class Base64Source : Source
 {

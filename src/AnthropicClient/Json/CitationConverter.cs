@@ -17,7 +17,7 @@ class CitationConverter : JsonConverter<Citation>
       CitationType.CharacterLocation => JsonSerializer.Deserialize<CharacterLocationCitation>(root.GetRawText(), options)!,
       CitationType.PageLocation => JsonSerializer.Deserialize<PageLocationCitation>(root.GetRawText(), options)!,
       CitationType.ContentBlockLocation => JsonSerializer.Deserialize<ContentBlockLocationCitation>(root.GetRawText(), options)!,
-      _ => throw new JsonException($"Unknown content type: {type}")
+      _ => throw new JsonException($"Unknown citation type: {type}")
     };
   }
 

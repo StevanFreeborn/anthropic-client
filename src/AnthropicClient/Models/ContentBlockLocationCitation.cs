@@ -9,7 +9,7 @@ public class ContentBlockLocationCitation : Citation
 {
   /// <summary>
   /// Gets the start block index of the citation.
-  /// /// </summary>
+  /// </summary>
   [JsonPropertyName("start_block_index")]
   public int StartBlockIndex { get; init; }
 

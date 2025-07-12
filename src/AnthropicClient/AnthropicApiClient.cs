@@ -18,6 +18,7 @@ public class AnthropicApiClient : IAnthropicApiClient
   private string CountTokensEndpoint => $"{MessagesEndpoint}/count_tokens";
   private string MessageBatchesEndpoint => $"{MessagesEndpoint}/batches";
   private const string ModelsEndpoint = "models";
+  private const string FilesEndpoint = "files";
   private const string JsonContentType = "application/json";
   private const string EventPrefix = "event:";
   private const string DataPrefix = "data:";
@@ -380,6 +381,13 @@ public class AnthropicApiClient : IAnthropicApiClient
     return await CreateResultAsync<AnthropicModel>(response);
   }
 
+  /// <inheritdoc/>
+  public async Task<AnthropicResult<AnthropicFile>> CreateFileAsync(CreateFileRequest request, CancellationToken cancellationToken = default)
+  {
+    var response = await SendFileRequestAsync(FilesEndpoint, request, cancellationToken);
+    return await CreateResultAsync<AnthropicFile>(response);
+  }
+
   private async IAsyncEnumerable<AnthropicResult<Page<T>>> GetAllPagesAsync<T>(string endpoint, int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
     var pagingRequest = new PagingRequest(limit: limit);
@@ -460,6 +468,17 @@ public class AnthropicApiClient : IAnthropicApiClient
     var requestJson = Serialize(request);
     var requestContent = new StringContent(requestJson, Encoding.UTF8, JsonContentType);
     return await _httpClient.PostAsync(endpoint, requestContent, cancellationToken);
+  }
+
+  private async Task<HttpResponseMessage> SendFileRequestAsync(string endpoint, CreateFileRequest request, CancellationToken cancellationToken = default)
+  {
+    using var multipartContent = new MultipartFormDataContent();
+
+    using var fileContent = new ByteArrayContent(request.File);
+    fileContent.Headers.ContentType = new MediaTypeHeaderValue(request.FileType);
+    multipartContent.Add(fileContent, "file", request.FileName);
+
+    return await _httpClient.PostAsync(endpoint, multipartContent, cancellationToken);
   }
 
   private string Serialize<T>(T obj) => JsonSerializer.Serialize(obj, JsonSerializationOptions.DefaultOptions);

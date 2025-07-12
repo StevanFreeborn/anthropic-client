@@ -201,6 +201,72 @@ if (response.IsFailure)
 Console.WriteLine("Model Id: {0}", response.Value.Id);
 ```
 
+### Files API
+
+The `AnthropicApiClient` provides support for the Anthropic Files API, which allows you to upload and manage files for use with the Anthropic API.
+
+#### Create a File
+
+You can create a file using the Files API in several ways:
+
+##### From a Byte Array
+
+```csharp
+using AnthropicClient;
+using AnthropicClient.Models;
+using System.Text;
+
+// Create a file from a byte array
+var content = "This is a sample text file for the Anthropic Files API.";
+var fileBytes = Encoding.UTF8.GetBytes(content);
+
+var request = new CreateFileRequest(fileBytes, "sample.txt", "text/plain");
+var response = await client.CreateFileAsync(request);
+
+if (response.IsSuccess)
+{
+  Console.WriteLine("File created successfully from byte array!");
+  Console.WriteLine("File ID: {0}", response.Value.Id);
+  Console.WriteLine("File Name: {0}", response.Value.FileName);
+  Console.WriteLine("File Type: {0}", response.Value.FileType);
+  Console.WriteLine("File Size: {0} bytes", response.Value.SizeBytes);
+}
+else
+{
+  Console.WriteLine("Failed to create file");
+  Console.WriteLine("Error Type: {0}", response.Error.Error.Type);
+  Console.WriteLine("Error Message: {0}", response.Error.Error.Message);
+}
+```
+
+##### From a Stream
+
+```csharp
+using AnthropicClient;
+using AnthropicClient.Models;
+using System.Text;
+
+// Create a file from a stream
+using var stream = new MemoryStream(Encoding.UTF8.GetBytes("Stream content"));
+var request = new CreateFileRequest(stream, "stream-file.txt", "text/plain");
+var response = await client.CreateFileAsync(request);
+
+if (response.IsSuccess)
+{
+  Console.WriteLine("File created successfully from stream!");
+  Console.WriteLine("File ID: {0}", response.Value.Id);
+}
+else
+{
+  Console.WriteLine("Failed to create file");
+  Console.WriteLine("Error Type: {0}", response.Error.Error.Type);
+  Console.WriteLine("Error Message: {0}", response.Error.Error.Message);
+}
+```
+
+> [!NOTE]
+> The Files API has certain limitations on file size, supported file types, and usage quotas. Please refer to the [Anthropic API Documentation](https://docs.anthropic.com/en/docs/build-with-claude/files) for the most up-to-date information on these limitations.
+
 ### Create a message
 
 The `AnthropicApiClient` exposes a method named `CreateMessageAsync` that can be used to create a message. The method requires a `MessageRequest` or a `StreamMessageRequest` instance as a parameter. The `MessageRequest` class is used to create a message whose response is not streamed and the `StreamMessageRequest` class is used to create a message whose response is streamed. The `MessageRequest` instance's properties can be set to configure how the message is created.

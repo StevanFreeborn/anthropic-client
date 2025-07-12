@@ -111,4 +111,12 @@ public interface IAnthropicApiClient
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
   /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicModel"/>.</returns>
   Task<AnthropicResult<AnthropicModel>> GetModelAsync(string modelId, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Creates a file asynchronously using the Files API.
+  /// </summary>
+  /// <param name="request">The file creation request.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  Task<AnthropicResult<AnthropicFile>> CreateFileAsync(CreateFileRequest request, CancellationToken cancellationToken = default);
 }

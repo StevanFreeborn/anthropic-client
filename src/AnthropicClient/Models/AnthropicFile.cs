@@ -17,7 +17,7 @@ public class AnthropicFile
   /// Object type.
   /// </summary>
   [JsonPropertyName("type")]
-  public string Type { get; init; } = "file";
+  public string Type { get; init; } = string.Empty;
 
   /// <summary>
   /// Original filename of the uploaded file.

@@ -687,4 +687,25 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.Value.Id.Should().Be(createResult.Value.Id);
     result.Value.ProcessingStatus.Should().Be(MessageBatchStatus.Canceling);
   }
+
+  [Fact]
+  public async Task CreateFileAsync_WhenCalled_ItShouldReturnResponse()
+  {
+    var fileName = "story.txt";
+    var fileType = "text/plain";
+    var filePath = TestFileHelper.GetTestFilePath("story.txt");
+    var fileContent = await File.ReadAllBytesAsync(filePath);
+    var request = new CreateFileRequest(fileContent, fileName, fileType);
+
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var result = await client.CreateFileAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<AnthropicFile>();
+    result.Value.Name.Should().Be(fileName);
+    result.Value.MimeType.Should().Be(fileType);
+  }
 }

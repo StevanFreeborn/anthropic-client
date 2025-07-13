@@ -205,6 +205,9 @@ Console.WriteLine("Model Id: {0}", response.Value.Id);
 
 The `AnthropicApiClient` provides support for the Anthropic Files API, which allows you to upload and manage files for use with the Anthropic API.
 
+> [!NOTE]
+> The Files API is currently in beta. To use the Files API, you’ll need to include the beta feature header: `anthropic-beta: files-api-2025-04-14`
+
 #### Create a File
 
 You can create a file using the Files API in several ways:

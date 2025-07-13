@@ -9,14 +9,12 @@ public class AnthropicFile
 {
   /// <summary>
   /// Unique object identifier.
-  /// The format and length of IDs may change over time.
   /// </summary>
   [JsonPropertyName("id")]
   public string Id { get; init; } = string.Empty;
 
   /// <summary>
   /// Object type.
-  /// For files, this is always "file".
   /// </summary>
   [JsonPropertyName("type")]
   public string Type { get; init; } = "file";
@@ -24,26 +22,26 @@ public class AnthropicFile
   /// <summary>
   /// Original filename of the uploaded file.
   /// </summary>
-  [JsonPropertyName("file_name")]
-  public string FileName { get; init; } = string.Empty;
+  [JsonPropertyName("filename")]
+  public string Name { get; init; } = string.Empty;
 
   /// <summary>
-  /// RFC 3339 datetime string representing when the file was created.
+  /// Date file was created.
   /// </summary>
   [JsonPropertyName("created_at")]
-  public string CreatedAt { get; init; } = string.Empty;
+  public DateTimeOffset CreatedAt { get; init; }
 
   /// <summary>
   /// Size of the file in bytes.
   /// </summary>
   [JsonPropertyName("size_bytes")]
-  public long SizeBytes { get; init; }
+  public long Size { get; init; }
 
   /// <summary>
   /// MIME type of the file.
   /// </summary>
-  [JsonPropertyName("file_type")]
-  public string FileType { get; init; } = string.Empty;
+  [JsonPropertyName("mime_type")]
+  public string MimeType { get; init; } = string.Empty;
 
   /// <summary>
   /// Whether the file can be downloaded.

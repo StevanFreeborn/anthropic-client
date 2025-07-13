@@ -1928,4 +1928,41 @@ public class AnthropicApiClientTests : IntegrationTest
     result.Value.Id.Should().Be(batchId);
     result.Value.Type.Should().Be("message_batch_deleted");
   }
+
+  [Fact]
+  public async Task CreateFileAsync_WhenCalled_ItShouldReturnFile()
+  {
+    _mockHttpMessageHandler
+      .WhenCreateFileRequest()
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+          ""created_at"": ""2023-11-07T05:31:56Z"",
+          ""downloadable"": false,
+          ""filename"": ""example.txt"",
+          ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+          ""mime_type"": ""text/plain"",
+          ""size_bytes"": 1234,
+          ""type"": ""file""
+        }"
+      );
+
+    var fileContent = new MemoryStream(Encoding.UTF8.GetBytes("Example file content"));
+    var request = new CreateFileRequest(fileContent, "example.txt", "text/plain");
+
+    var result = await Client.CreateFileAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeEquivalentTo(new AnthropicFile()
+    {
+      CreatedAt = DateTimeOffset.Parse("2023-11-07T05:31:56Z"),
+      Downloadable = false,
+      Name = "example.txt",
+      Id = "file_013Zva2CMHLNnXjNJJKqJ2EF",
+      MimeType = "text/plain",
+      Size = 1234,
+      Type = "file"
+    });
+  }
 }

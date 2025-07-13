@@ -20,6 +20,7 @@ public static class MockHttpMessageHandlerExtensions
   private static readonly string CountTokensEndpoint = $"{BaseUrl}/messages/count_tokens";
   private static readonly string MessageBatchesEndpoint = $"{BaseUrl}/messages/batches";
   private static readonly string ModelsEndpoint = $"{BaseUrl}/models";
+  private static readonly string FilesEndpoint = $"{BaseUrl}/files";
 
   private static MockedRequest SetupBaseRequest(
     this MockHttpMessageHandler mockHttpMessageHandler,
@@ -102,5 +103,11 @@ public static class MockHttpMessageHandlerExtensions
   {
     return mockHttpMessageHandler
       .SetupBaseRequest(HttpMethod.Delete, $"{MessageBatchesEndpoint}/{batchId}");
+  }
+
+  public static MockedRequest WhenCreateFileRequest(this MockHttpMessageHandler mockHttpMessageHandler)
+  {
+    return mockHttpMessageHandler
+      .SetupBaseRequest(HttpMethod.Post, FilesEndpoint);
   }
 }

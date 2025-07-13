@@ -10,17 +10,17 @@ public class CreateFileRequest
   /// <summary>
   /// The file content as a byte array.
   /// </summary>
-  public byte[] File { get; }
+  public byte[] File { get; init; }
 
   /// <summary>
   /// The original filename of the file being uploaded.
   /// </summary>
-  public string FileName { get; }
+  public string FileName { get; init; }
 
   /// <summary>
   /// The MIME type of the file.
   /// </summary>
-  public string FileType { get; }
+  public string FileType { get; init; }
 
   /// <summary>
   /// Initializes a new instance of the <see cref="CreateFileRequest"/> class.
@@ -28,7 +28,8 @@ public class CreateFileRequest
   /// <param name="file">The file content as a byte array.</param>
   /// <param name="fileName">The original filename of the file being uploaded.</param>
   /// <param name="fileType">The MIME type of the file.</param>
-  /// <exception cref="ArgumentNullException">Thrown when <paramref name="file"/>, <paramref name="fileName"/>, or <paramref name="fileType"/> is null.</exception>
+  /// <exception cref="ArgumentNullException">Thrown when <paramref name="file"/> is null.</exception>
+  /// <exception cref="ArgumentException">Thrown when <paramref name="fileName"/> or <paramref name="fileType"/> is null or whitespace.</exception>
   public CreateFileRequest(byte[] file, string fileName, string fileType)
   {
     ArgumentValidator.ThrowIfNull(file, nameof(file));
@@ -46,7 +47,8 @@ public class CreateFileRequest
   /// <param name="stream">The stream containing the file content.</param>
   /// <param name="fileName">The original filename of the file being uploaded.</param>
   /// <param name="fileType">The MIME type of the file.</param>
-  /// <exception cref="ArgumentNullException">Thrown when <paramref name="stream"/>, <paramref name="fileName"/>, or <paramref name="fileType"/> is null.</exception>
+  /// <exception cref="ArgumentNullException">Thrown when <paramref name="stream"/> is null.</exception>
+  /// <exception cref="ArgumentException">Thrown when <paramref name="fileName"/> or <paramref name="fileType"/> is null or whitespace.</exception>
   public CreateFileRequest(Stream stream, string fileName, string fileType)
   {
     ArgumentValidator.ThrowIfNull(stream, nameof(stream));

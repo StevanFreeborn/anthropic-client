@@ -119,4 +119,12 @@ public interface IAnthropicApiClient
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
   /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
   Task<AnthropicResult<AnthropicFile>> CreateFileAsync(CreateFileRequest request, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Lists files asynchronously, returning a single page of results.
+  /// </summary>
+  /// <param name="request">The paging request to use for listing the files.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="Page{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  Task<AnthropicResult<Page<AnthropicFile>>> ListFilesAsync(PagingRequest? request = null, CancellationToken cancellationToken = default);
 }

@@ -708,4 +708,22 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.Value.Name.Should().Be(fileName);
     result.Value.MimeType.Should().Be(fileType);
   }
+
+  [Fact]
+  public async Task ListFilesAsync_WhenCalled_ItShouldReturnPageOfFiles()
+  {
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var fileBytes = await File.ReadAllBytesAsync(TestFileHelper.GetTestFilePath("story.txt"));
+    var createFileRequest = new CreateFileRequest(fileBytes, "story.txt", "text/plain");
+    var createdFile = await client.CreateFileAsync(createFileRequest);
+
+    var result = await client.ListFilesAsync();
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<Page<AnthropicFile>>();
+    result.Value.Data.Should().ContainSingle(f => f.Id == createdFile.Value.Id);
+  }
 }

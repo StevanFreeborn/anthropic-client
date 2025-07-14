@@ -1965,4 +1965,107 @@ public class AnthropicApiClientTests : IntegrationTest
       Type = "file"
     });
   }
+
+  [Fact]
+  public async Task ListFilesAsync_WhenCalled_ItShouldReturnPageOfFiles()
+  {
+    _mockHttpMessageHandler
+      .WhenListFilesRequest()
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+            ""data"": [
+              {
+                ""created_at"": ""2023-11-07T05:31:56Z"",
+                ""downloadable"": false,
+                ""filename"": ""example.txt"",
+                ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+                ""mime_type"": ""text/plain"",
+                ""size_bytes"": 1234,
+                ""type"": ""file""
+              }
+            ],
+            ""has_more"": true,
+            ""first_id"": ""1"",
+            ""last_id"": ""1""
+          }"
+      );
+
+    var result = await Client.ListFilesAsync();
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<Page<AnthropicFile>>();
+    result.Value.HasMore.Should().BeTrue();
+    result.Value.FirstId.Should().Be("1");
+    result.Value.LastId.Should().Be("1");
+    result.Value.Data.Should().BeEquivalentTo(new AnthropicFile[]
+    {
+      new()
+      {
+        CreatedAt = DateTimeOffset.Parse("2023-11-07T05:31:56Z"),
+        Downloadable = false,
+        Name = "example.txt",
+        Id = "file_013Zva2CMHLNnXjNJJKqJ2EF",
+        MimeType = "text/plain",
+        Size = 1234,
+        Type = "file"
+      }
+    });
+  }
+
+  [Fact]
+  public async Task ListFilesAsync_WhenCalledWithPagingRequest_ItShouldReturnPageOfFiles()
+  {
+    var pagingRequest = new PagingRequest(afterId: "next_id", limit: 10);
+
+    _mockHttpMessageHandler
+      .WhenListFilesRequest()
+      .WithQueryString(new Dictionary<string, string>
+      {
+        { "after_id", pagingRequest.AfterId },
+        { "limit", pagingRequest.Limit.ToString() },
+      })
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+            ""data"": [
+              {
+                ""created_at"": ""2023-11-07T05:31:56Z"",
+                ""downloadable"": false,
+                ""filename"": ""example.txt"",
+                ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+                ""mime_type"": ""text/plain"",
+                ""size_bytes"": 1234,
+                ""type"": ""file""
+              }
+            ],
+            ""has_more"": true,
+            ""first_id"": ""1"",
+            ""last_id"": ""1""
+          }"
+      );
+
+    var result = await Client.ListFilesAsync(pagingRequest);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<Page<AnthropicFile>>();
+    result.Value.HasMore.Should().BeTrue();
+    result.Value.FirstId.Should().Be("1");
+    result.Value.LastId.Should().Be("1");
+    result.Value.Data.Should().BeEquivalentTo(new AnthropicFile[]
+    {
+      new()
+      {
+        CreatedAt = DateTimeOffset.Parse("2023-11-07T05:31:56Z"),
+        Downloadable = false,
+        Name = "example.txt",
+        Id = "file_013Zva2CMHLNnXjNJJKqJ2EF",
+        MimeType = "text/plain",
+        Size = 1234,
+        Type = "file"
+      }
+    });
+  }
 }

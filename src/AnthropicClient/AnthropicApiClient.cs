@@ -397,6 +397,15 @@ public class AnthropicApiClient : IAnthropicApiClient
     return await CreateResultAsync<Page<AnthropicFile>>(response);
   }
 
+  /// <inheritdoc/>
+  public async IAsyncEnumerable<AnthropicResult<Page<AnthropicFile>>> ListAllFilesAsync(int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+  {
+    await foreach (var result in GetAllPagesAsync<AnthropicFile>(FilesEndpoint, limit, cancellationToken))
+    {
+      yield return result;
+    }
+  }
+
   private async IAsyncEnumerable<AnthropicResult<Page<T>>> GetAllPagesAsync<T>(string endpoint, int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
     var pagingRequest = new PagingRequest(limit: limit);

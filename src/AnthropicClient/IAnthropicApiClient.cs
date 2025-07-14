@@ -127,4 +127,12 @@ public interface IAnthropicApiClient
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
   /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="Page{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
   Task<AnthropicResult<Page<AnthropicFile>>> ListFilesAsync(PagingRequest? request = null, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Lists all files asynchronously, returning every page of results.
+  /// </summary>
+  /// <param name="limit">The maximum number of files to return in each page.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>An asynchronous enumerable that yields the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="Page{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  IAsyncEnumerable<AnthropicResult<Page<AnthropicFile>>> ListAllFilesAsync(int limit = 20, CancellationToken cancellationToken = default);
 }

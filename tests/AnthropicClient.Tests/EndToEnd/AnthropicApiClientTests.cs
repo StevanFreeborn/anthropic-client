@@ -726,4 +726,22 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.Value.Should().BeOfType<Page<AnthropicFile>>();
     result.Value.Data.Should().ContainSingle(f => f.Id == createdFile.Value.Id);
   }
+
+  [Fact]
+  public async Task ListAllFilesAsync_WhenCalled_ItShouldReturnAllFiles()
+  {
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var fileBytes = await File.ReadAllBytesAsync(TestFileHelper.GetTestFilePath("story.txt"));
+    var createFileRequest = new CreateFileRequest(fileBytes, "story.txt", "text/plain");
+    var createdFile = await client.CreateFileAsync(createFileRequest);
+
+    var responses = await client.ListAllFilesAsync(limit: 1).ToListAsync();
+
+    responses.Should().HaveCountGreaterThan(0);
+    responses.Select(r => r.Value).SelectMany(p => p.Data)
+      .Should().ContainSingle(f => f.Id == createdFile.Value.Id);
+  }
 }

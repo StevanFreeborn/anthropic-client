@@ -2068,4 +2068,103 @@ public class AnthropicApiClientTests : IntegrationTest
       }
     });
   }
+
+  [Fact]
+  public async Task ListAllFilesAsync_WhenCalled_ItShouldReturnAllFiles()
+  {
+    _mockHttpMessageHandler
+      .WhenListFilesRequest()
+      .WithExactQueryString(new Dictionary<string, string>()
+      {
+        { "limit", "20" },
+      })
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+            ""data"": [
+              {
+                ""created_at"": ""2023-11-07T05:31:56Z"",
+                ""downloadable"": false,
+                ""filename"": ""example.txt"",
+                ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+                ""mime_type"": ""text/plain"",
+                ""size_bytes"": 1234,
+                ""type"": ""file""
+              }
+            ],
+            ""has_more"": true,
+            ""first_id"": ""1"",
+            ""last_id"": ""1""
+          }"
+      );
+
+    _mockHttpMessageHandler
+      .WhenListFilesRequest()
+      .WithExactQueryString(new Dictionary<string, string>()
+      {
+        { "after_id", "1" },
+        { "limit", "20" },
+      })
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+            ""data"": [
+              {
+                ""created_at"": ""2023-11-07T05:31:56Z"",
+                ""downloadable"": false,
+                ""filename"": ""example.txt"",
+                ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+                ""mime_type"": ""text/plain"",
+                ""size_bytes"": 1234,
+                ""type"": ""file""
+              }
+            ],
+            ""has_more"": false,
+            ""first_id"": ""2"",
+            ""last_id"": ""2""
+          }"
+      );
+
+    var pageResponses = Client.ListAllFilesAsync();
+    var collectedPages = new List<Page<AnthropicFile>>();
+
+    await foreach (var response in pageResponses)
+    {
+      response.IsSuccess.Should().BeTrue();
+      response.Value.Should().BeOfType<Page<AnthropicFile>>();
+      collectedPages.Add(response.Value);
+    }
+
+    var expectedFile = new AnthropicFile()
+    {
+      CreatedAt = DateTimeOffset.Parse("2023-11-07T05:31:56Z"),
+      Downloadable = false,
+      Name = "example.txt",
+      Id = "file_013Zva2CMHLNnXjNJJKqJ2EF",
+      MimeType = "text/plain",
+      Size = 1234,
+      Type = "file"
+    };
+
+    collectedPages.Should().HaveCount(2);
+    collectedPages.Should().BeEquivalentTo(new List<Page<AnthropicFile>>()
+    {
+      new()
+      {
+        Data = [expectedFile],
+        FirstId = "1",
+        LastId = "1",
+        HasMore = true
+      },
+      new()
+      {
+        Data = [expectedFile],
+        FirstId = "2",
+        LastId = "2",
+        HasMore = false
+      }
+    });
+  }
 }

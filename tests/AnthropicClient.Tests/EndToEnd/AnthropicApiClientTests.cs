@@ -744,4 +744,40 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     responses.Select(r => r.Value).SelectMany(p => p.Data)
       .Should().ContainSingle(f => f.Id == createdFile.Value.Id);
   }
+
+  [Fact]
+  public async Task GetFileInfoAsync_WhenCalled_ItShouldReturnFile()
+  {
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var fileBytes = await File.ReadAllBytesAsync(TestFileHelper.GetTestFilePath("story.txt"));
+    var createFileRequest = new CreateFileRequest(fileBytes, "story.txt", "text/plain");
+    var createdFile = await client.CreateFileAsync(createFileRequest);
+
+    var result = await client.GetFileInfoAsync(createdFile.Value.Id);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<AnthropicFile>();
+    result.Value.Id.Should().Be(createdFile.Value.Id);
+  }
+
+  [Fact]
+  public async Task DeleteFileAsync_WhenCalled_ItShouldReturnDeleteResponse()
+  {
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var fileBytes = await File.ReadAllBytesAsync(TestFileHelper.GetTestFilePath("story.txt"));
+    var createFileRequest = new CreateFileRequest(fileBytes, "story.txt", "text/plain");
+    var createdFile = await client.CreateFileAsync(createFileRequest);
+
+    var result = await client.DeleteFileAsync(createdFile.Value.Id);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<AnthropicFileDeleteResponse>();
+    result.Value.Id.Should().Be(createdFile.Value.Id);
+  }
 }

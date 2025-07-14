@@ -2167,4 +2167,88 @@ public class AnthropicApiClientTests : IntegrationTest
       }
     });
   }
+
+  [Fact]
+  public async Task GetFileInfoAsync_WhenCalled_ItShouldReturnFile()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+
+    _mockHttpMessageHandler
+      .WhenGetFileRequest(fileId)
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+          ""created_at"": ""2023-11-07T05:31:56Z"",
+          ""downloadable"": false,
+          ""filename"": ""example.txt"",
+          ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+          ""mime_type"": ""text/plain"",
+          ""size_bytes"": 1234,
+          ""type"": ""file""
+        }"
+      );
+
+    var result = await Client.GetFileInfoAsync(fileId);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeEquivalentTo(new AnthropicFile()
+    {
+      CreatedAt = DateTimeOffset.Parse("2023-11-07T05:31:56Z"),
+      Downloadable = false,
+      Name = "example.txt",
+      Id = "file_013Zva2CMHLNnXjNJJKqJ2EF",
+      MimeType = "text/plain",
+      Size = 1234,
+      Type = "file"
+    });
+  }
+
+  [Fact]
+  public async Task GetFileAsync_WhenCalled_ItShouldReturnFileContent()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+    var fileContent = new MemoryStream(Encoding.UTF8.GetBytes("Example file content"));
+
+    _mockHttpMessageHandler
+      .WhenGetFileContentRequest(fileId)
+      .Respond(
+        HttpStatusCode.OK,
+        "application/octet-stream",
+        fileContent
+      );
+
+    var result = await Client.GetFileAsync(fileId);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeAssignableTo<Stream>();
+
+    using var streamReader = new StreamReader(result.Value);
+    var content = await streamReader.ReadToEndAsync();
+    content.Should().Be("Example file content");
+  }
+
+  [Fact]
+  public async Task DeleteFileAsync_WhenCalled_ItShouldReturnDeletionResponse()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+
+    _mockHttpMessageHandler
+      .WhenDeleteFileRequest(fileId)
+      .Respond(
+        HttpStatusCode.OK,
+        "application/json",
+        @"{
+          ""id"": ""file_013Zva2CMHLNnXjNJJKqJ2EF"",
+          ""type"": ""file_deleted""
+        }"
+      );
+
+    var result = await Client.DeleteFileAsync(fileId);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<AnthropicFileDeleteResponse>();
+    result.Value.Id.Should().Be(fileId);
+    result.Value.Type.Should().Be("file_deleted");
+  }
 }

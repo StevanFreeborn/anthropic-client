@@ -110,4 +110,10 @@ public static class MockHttpMessageHandlerExtensions
     return mockHttpMessageHandler
       .SetupBaseRequest(HttpMethod.Post, FilesEndpoint);
   }
+
+  public static MockedRequest WhenListFilesRequest(this MockHttpMessageHandler mockHttpMessageHandler)
+  {
+    return mockHttpMessageHandler
+      .SetupBaseRequest(HttpMethod.Get, FilesEndpoint);
+  }
 }

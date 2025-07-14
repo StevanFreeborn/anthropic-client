@@ -116,4 +116,22 @@ public static class MockHttpMessageHandlerExtensions
     return mockHttpMessageHandler
       .SetupBaseRequest(HttpMethod.Get, FilesEndpoint);
   }
+
+  public static MockedRequest WhenGetFileRequest(this MockHttpMessageHandler mockHttpMessageHandler, string fileId)
+  {
+    return mockHttpMessageHandler
+      .SetupBaseRequest(HttpMethod.Get, $"{FilesEndpoint}/{fileId}");
+  }
+
+  public static MockedRequest WhenGetFileContentRequest(this MockHttpMessageHandler mockHttpMessageHandler, string fileId)
+  {
+    return mockHttpMessageHandler
+      .SetupBaseRequest(HttpMethod.Get, $"{FilesEndpoint}/{fileId}/content");
+  }
+
+  public static MockedRequest WhenDeleteFileRequest(this MockHttpMessageHandler mockHttpMessageHandler, string fileId)
+  {
+    return mockHttpMessageHandler
+      .SetupBaseRequest(HttpMethod.Delete, $"{FilesEndpoint}/{fileId}");
+  }
 }

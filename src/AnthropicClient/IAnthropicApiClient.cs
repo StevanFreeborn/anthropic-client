@@ -135,4 +135,29 @@ public interface IAnthropicApiClient
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
   /// <returns>An asynchronous enumerable that yields the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="Page{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
   IAsyncEnumerable<AnthropicResult<Page<AnthropicFile>>> ListAllFilesAsync(int limit = 20, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Gets a file's metadata by its ID asynchronously.
+  /// </summary>
+  /// <param name="fileId">The ID of the file to get.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  Task<AnthropicResult<AnthropicFile>> GetFileInfoAsync(string fileId, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Gets a file's content by its ID asynchronously.
+  /// </summary>
+  /// <param name="fileId">The ID of the file to get the content for.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is a stream containing the file content.</returns>
+  Task<AnthropicResult<Stream>> GetFileAsync(string fileId, CancellationToken cancellationToken = default);
+
+
+  /// <summary>
+  /// Deletes a file by its ID asynchronously.
+  /// </summary>
+  /// <param name="fileId">The ID of the file to delete.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicFileDeleteResponse"/>.</returns>
+  Task<AnthropicResult<AnthropicFileDeleteResponse>> DeleteFileAsync(string fileId, CancellationToken cancellationToken = default);
 }

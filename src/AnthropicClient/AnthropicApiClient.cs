@@ -18,6 +18,7 @@ public class AnthropicApiClient : IAnthropicApiClient
   private string CountTokensEndpoint => $"{MessagesEndpoint}/count_tokens";
   private string MessageBatchesEndpoint => $"{MessagesEndpoint}/batches";
   private const string ModelsEndpoint = "models";
+  private const string FilesEndpoint = "files";
   private const string JsonContentType = "application/json";
   private const string EventPrefix = "event:";
   private const string DataPrefix = "data:";
@@ -380,6 +381,79 @@ public class AnthropicApiClient : IAnthropicApiClient
     return await CreateResultAsync<AnthropicModel>(response);
   }
 
+  /// <inheritdoc/>
+  public async Task<AnthropicResult<AnthropicFile>> CreateFileAsync(FileRequest request, CancellationToken cancellationToken = default)
+  {
+    var formData = new MultipartFormDataContent();
+    formData.Add(new ByteArrayContent(request.Content), "file", request.Filename);
+    formData.Add(new StringContent(request.Purpose), "purpose");
+
+    var httpRequest = new HttpRequestMessage(HttpMethod.Post, FilesEndpoint)
+    {
+      Content = formData
+    };
+
+    var response = await _httpClient.SendAsync(httpRequest, cancellationToken);
+    return await CreateResultAsync<AnthropicFile>(response);
+  }
+
+  /// <inheritdoc/>
+  public async Task<AnthropicResult<Page<AnthropicFile>>> ListFilesAsync(PagingRequest? request = null, CancellationToken cancellationToken = default)
+  {
+    var pagingRequest = request ?? new PagingRequest();
+    var endpoint = $"{FilesEndpoint}?{pagingRequest.ToQueryParameters()}";
+    var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
+    return await CreateResultAsync<Page<AnthropicFile>>(response);
+  }
+
+  /// <inheritdoc/>
+  public async IAsyncEnumerable<AnthropicResult<Page<AnthropicFile>>> ListAllFilesAsync(int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+  {
+    await foreach (var result in GetAllPagesAsync<AnthropicFile>(FilesEndpoint, limit, cancellationToken))
+    {
+      yield return result;
+    }
+  }
+
+  /// <inheritdoc/>
+  public async Task<AnthropicResult<AnthropicFile>> GetFileAsync(string fileId, CancellationToken cancellationToken = default)
+  {
+    var endpoint = $"{FilesEndpoint}/{fileId}";
+    var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
+    return await CreateResultAsync<AnthropicFile>(response);
+  }
+
+  /// <inheritdoc/>
+  public async Task<AnthropicResult<FileDownloadResponse>> DownloadFileAsync(string fileId, CancellationToken cancellationToken = default)
+  {
+    var endpoint = $"{FilesEndpoint}/{fileId}/content";
+    var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
+    var anthropicHeaders = new AnthropicHeaders(response.Headers);
+
+    if (response.IsSuccessStatusCode is false)
+    {
+      var errorContent = await response.Content.ReadAsStringAsync();
+      var error = Deserialize<AnthropicError>(errorContent) ?? new AnthropicError();
+      return AnthropicResult<FileDownloadResponse>.Failure(error, anthropicHeaders);
+    }
+
+    var content = await response.Content.ReadAsByteArrayAsync();
+    var contentType = response.Content.Headers.ContentType?.MediaType ?? "application/octet-stream";
+    var filename = ExtractFilenameFromContentDisposition(response.Content.Headers.ContentDisposition?.FileName) ?? fileId;
+    var sizeBytes = content.Length;
+
+    var downloadResponse = new FileDownloadResponse(content, filename, contentType, sizeBytes);
+    return AnthropicResult<FileDownloadResponse>.Success(downloadResponse, anthropicHeaders);
+  }
+
+  /// <inheritdoc/>
+  public async Task<AnthropicResult<FileDeleteResponse>> DeleteFileAsync(string fileId, CancellationToken cancellationToken = default)
+  {
+    var endpoint = $"{FilesEndpoint}/{fileId}";
+    var response = await SendRequestAsync(endpoint, HttpMethod.Delete, cancellationToken);
+    return await CreateResultAsync<FileDeleteResponse>(response);
+  }
+
   private async IAsyncEnumerable<AnthropicResult<Page<T>>> GetAllPagesAsync<T>(string endpoint, int limit = 20, [EnumeratorCancellation] CancellationToken cancellationToken = default)
   {
     var pagingRequest = new PagingRequest(limit: limit);
@@ -447,6 +521,17 @@ public class AnthropicApiClient : IAnthropicApiClient
 
     var model = Deserialize<T>(responseContent) ?? new T();
     return AnthropicResult<T>.Success(model, anthropicHeaders);
+  }
+
+  private static string? ExtractFilenameFromContentDisposition(string? contentDisposition)
+  {
+    if (string.IsNullOrEmpty(contentDisposition))
+    {
+      return null;
+    }
+
+    // Remove quotes if present
+    return contentDisposition!.Trim('"');
   }
 
   private async Task<HttpResponseMessage> SendRequestAsync(string endpoint, HttpMethod? method = null, CancellationToken cancellationToken = default)

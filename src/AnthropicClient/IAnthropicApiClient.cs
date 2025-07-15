@@ -111,4 +111,52 @@ public interface IAnthropicApiClient
   /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
   /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicModel"/>.</returns>
   Task<AnthropicResult<AnthropicModel>> GetModelAsync(string modelId, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Creates a file asynchronously.
+  /// </summary>
+  /// <param name="request">The file request to create.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  Task<AnthropicResult<AnthropicFile>> CreateFileAsync(FileRequest request, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Lists files asynchronously, returning a single page of results.
+  /// </summary>
+  /// <param name="request">The paging request to use for listing the files.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="Page{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  Task<AnthropicResult<Page<AnthropicFile>>> ListFilesAsync(PagingRequest? request = null, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Lists all files asynchronously, returning every page of results.
+  /// </summary>
+  /// <param name="limit">The maximum number of files to return in each page.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>An asynchronous enumerable that yields the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="Page{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  IAsyncEnumerable<AnthropicResult<Page<AnthropicFile>>> ListAllFilesAsync(int limit = 20, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Gets a file by its ID asynchronously.
+  /// </summary>
+  /// <param name="fileId">The ID of the file to get.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="AnthropicFile"/>.</returns>
+  Task<AnthropicResult<AnthropicFile>> GetFileAsync(string fileId, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Downloads a file by its ID asynchronously.
+  /// </summary>
+  /// <param name="fileId">The ID of the file to download.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="FileDownloadResponse"/>.</returns>
+  Task<AnthropicResult<FileDownloadResponse>> DownloadFileAsync(string fileId, CancellationToken cancellationToken = default);
+
+  /// <summary>
+  /// Deletes a file by its ID asynchronously.
+  /// </summary>
+  /// <param name="fileId">The ID of the file to delete.</param>
+  /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+  /// <returns>A task that represents the asynchronous operation. The task result contains the response as an <see cref="AnthropicResult{T}"/> where T is <see cref="FileDeleteResponse"/>.</returns>
+  Task<AnthropicResult<FileDeleteResponse>> DeleteFileAsync(string fileId, CancellationToken cancellationToken = default);
 }

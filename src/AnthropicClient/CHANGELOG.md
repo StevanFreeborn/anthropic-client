@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.1.0"></a>
+## [1.1.0](https://www.github.com/StevanFreeborn/anthropic-client/releases/tag/v1.1.0) (2025-07-15)
+
+### Features
+
+* add missing model constants ([b859859](https://www.github.com/StevanFreeborn/anthropic-client/commit/b8598595484739027bdd83cd8cdfe122ad3cb9cf))
+* add support for file source and url source ([1f83899](https://www.github.com/StevanFreeborn/anthropic-client/commit/1f83899eb88b9ee9d87d246158defd7cbde9b01e))
+* implement `GetFileInfoAsync`, `GetFileAsync`, and `DeleteFileAsync` ([d1e88a5](https://www.github.com/StevanFreeborn/anthropic-client/commit/d1e88a52ace603a5c017cca3bf48953846d7b271))
+* implement list all files method ([9cb8443](https://www.github.com/StevanFreeborn/anthropic-client/commit/9cb8443f94d2086192700aeb1f2dc977a86cb752))
+* implement listing a page of files ([9d5c620](https://www.github.com/StevanFreeborn/anthropic-client/commit/9d5c6201674bfb0923a0b0d70530286980ebdf62))
+* initial implementation of creating a file via the Files API ([e674b9a](https://www.github.com/StevanFreeborn/anthropic-client/commit/e674b9afe693143841a168c8356ef93079445db0))
+
+### Bug Fixes
+
+* remove unnecessary usings ([1cad19d](https://www.github.com/StevanFreeborn/anthropic-client/commit/1cad19d9c6c4418fef3c206f700ca14b7d250e26))
+* use sync copy to method ([b48baff](https://www.github.com/StevanFreeborn/anthropic-client/commit/b48baffb60a8acc8b89a60e53589bc04362a9505))
+
 <a name="1.0.0"></a>
 ## [1.0.0](https://www.github.com/StevanFreeborn/anthropic-client/releases/tag/v1.0.0) (2025-07-09)
 

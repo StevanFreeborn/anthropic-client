@@ -1967,6 +1967,33 @@ public class AnthropicApiClientTests : IntegrationTest
   }
 
   [Fact]
+  public async Task CreateFileAsync_WhenCalledAndRequestFails_ItShouldReturnError()
+  {
+    _mockHttpMessageHandler
+      .WhenCreateFileRequest()
+      .Respond(
+        HttpStatusCode.BadRequest,
+        "application/json",
+        @"{
+            ""type"": ""error"",
+            ""error"": {
+              ""type"": ""invalid_request_error"",
+              ""message"": ""file: file size exceeds limit""
+            }
+          }"
+      );
+
+    var fileContent = new MemoryStream(Encoding.UTF8.GetBytes("Example file content"));
+    var request = new CreateFileRequest(fileContent, "example.txt", "text/plain");
+
+    var result = await Client.CreateFileAsync(request);
+
+    result.IsSuccess.Should().BeFalse();
+    result.Error.Should().BeOfType<AnthropicError>();
+    result.Error.Error.Should().BeOfType<InvalidRequestError>();
+  }
+
+  [Fact]
   public async Task ListFilesAsync_WhenCalled_ItShouldReturnPageOfFiles()
   {
     _mockHttpMessageHandler
@@ -2012,6 +2039,30 @@ public class AnthropicApiClientTests : IntegrationTest
         Type = "file"
       }
     });
+  }
+
+  [Fact]
+  public async Task ListFilesAsync_WhenCalledAndRequestFails_ItShouldReturnError()
+  {
+    _mockHttpMessageHandler
+      .WhenListFilesRequest()
+      .Respond(
+        HttpStatusCode.BadRequest,
+        "application/json",
+        @"{
+            ""type"": ""error"",
+            ""error"": {
+              ""type"": ""invalid_request_error"",
+              ""message"": ""files: file not found""
+            }
+          }"
+      );
+
+    var result = await Client.ListFilesAsync();
+
+    result.IsSuccess.Should().BeFalse();
+    result.Error.Should().BeOfType<AnthropicError>();
+    result.Error.Error.Should().BeOfType<InvalidRequestError>();
   }
 
   [Fact]
@@ -2205,6 +2256,32 @@ public class AnthropicApiClientTests : IntegrationTest
   }
 
   [Fact]
+  public async Task GetFileInfoAsync_WhenCalledAndRequestFails_ItShouldReturnError()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+
+    _mockHttpMessageHandler
+      .WhenGetFileRequest(fileId)
+      .Respond(
+        HttpStatusCode.BadRequest,
+        "application/json",
+        @"{
+            ""type"": ""error"",
+            ""error"": {
+              ""type"": ""invalid_request_error"",
+              ""message"": ""file: file not found""
+            }
+          }"
+      );
+
+    var result = await Client.GetFileInfoAsync(fileId);
+
+    result.IsSuccess.Should().BeFalse();
+    result.Error.Should().BeOfType<AnthropicError>();
+    result.Error.Error.Should().BeOfType<InvalidRequestError>();
+  }
+
+  [Fact]
   public async Task GetFileAsync_WhenCalled_ItShouldReturnFileContent()
   {
     var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
@@ -2229,6 +2306,32 @@ public class AnthropicApiClientTests : IntegrationTest
   }
 
   [Fact]
+  public async Task GetFileAsync_WhenCalledAndRequestFails_ItShouldReturnError()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+
+    _mockHttpMessageHandler
+      .WhenGetFileContentRequest(fileId)
+      .Respond(
+        HttpStatusCode.BadRequest,
+        "application/json",
+        @"{
+            ""type"": ""error"",
+            ""error"": {
+              ""type"": ""invalid_request_error"",
+              ""message"": ""file: file not found""
+            }
+          }"
+      );
+
+    var result = await Client.GetFileAsync(fileId);
+
+    result.IsSuccess.Should().BeFalse();
+    result.Error.Should().BeOfType<AnthropicError>();
+    result.Error.Error.Should().BeOfType<InvalidRequestError>();
+  }
+
+  [Fact]
   public async Task DeleteFileAsync_WhenCalled_ItShouldReturnDeletionResponse()
   {
     var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
@@ -2250,5 +2353,31 @@ public class AnthropicApiClientTests : IntegrationTest
     result.Value.Should().BeOfType<AnthropicFileDeleteResponse>();
     result.Value.Id.Should().Be(fileId);
     result.Value.Type.Should().Be("file_deleted");
+  }
+
+  [Fact]
+  public async Task DeleteFileAsync_WhenCalledAndRequestFails_ItShouldReturnError()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+
+    _mockHttpMessageHandler
+      .WhenDeleteFileRequest(fileId)
+      .Respond(
+        HttpStatusCode.BadRequest,
+        "application/json",
+        @"{
+            ""type"": ""error"",
+            ""error"": {
+              ""type"": ""invalid_request_error"",
+              ""message"": ""file: file not found""
+            }
+          }"
+      );
+
+    var result = await Client.DeleteFileAsync(fileId);
+
+    result.IsSuccess.Should().BeFalse();
+    result.Error.Should().BeOfType<AnthropicError>();
+    result.Error.Error.Should().BeOfType<InvalidRequestError>();
   }
 }

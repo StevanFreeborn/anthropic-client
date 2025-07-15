@@ -56,7 +56,7 @@ public class CreateFileRequest
     ArgumentValidator.ThrowIfNullOrWhitespace(fileType, nameof(fileType));
 
     using var memoryStream = new MemoryStream();
-    stream.CopyToAsync(memoryStream);
+    stream.CopyTo(memoryStream);
     var fileContent = memoryStream.ToArray();
 
     File = fileContent;

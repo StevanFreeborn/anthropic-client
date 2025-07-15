@@ -2,8 +2,15 @@ using AnthropicClient.Tests.Files;
 
 namespace AnthropicClient.Tests.EndToEnd;
 
-public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndToEndTest(configFixture)
+public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndToEndTest(configFixture), IAsyncLifetime
 {
+  private readonly List<string> _filesToDelete = [];
+
+  public Task InitializeAsync()
+  {
+    return Task.CompletedTask;
+  }
+
   [Fact]
   public async Task CreateMessageAsync_WhenCalled_ItShouldReturnResponse()
   {
@@ -97,10 +104,40 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
   }
 
   [Fact]
+  public async Task CreateMessageAsync_WhenImageIsSentAsUrl_ItShouldReturnResponse()
+  {
+    var request = new MessageRequest(
+      model: AnthropicModels.Claude3Haiku,
+      messages: [
+        new(MessageRole.User, [
+          new ImageContent(new UrlSource("https://ftp.stevanfreeborn.com/share/anthropic-client/ant.jpg")),
+          new TextContent("What is in this image?")
+        ]),
+      ]
+    );
+
+    var result = await _client.CreateMessageAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+    result.Value.Should().BeOfType<MessageResponse>();
+    result.Value.Content.Should().NotBeNullOrEmpty();
+
+    var text = result.Value.Content.Aggregate("", static (acc, content) =>
+    {
+      if (content is TextContent textContent)
+      {
+        acc += textContent.Text;
+      }
+
+      return acc;
+    });
+
+    text.Should().Contain("ant");
+  }
+
+  [Fact]
   public async Task CreateMessageAsync_WhenSystemMessagesContainCacheControl_ItShouldUseCache()
   {
-    var client = CreateClient(new HttpClient());
-
     var storyPath = TestFileHelper.GetTestFilePath("story.txt");
     var storyText = await File.ReadAllTextAsync(storyPath);
 
@@ -127,7 +164,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("What is the main theme of this story?")]));
 
-    var resultTwo = await client.CreateMessageAsync(request);
+    var resultTwo = await _client.CreateMessageAsync(request);
 
     resultTwo.IsSuccess.Should().BeTrue();
     resultTwo.Value.Should().BeOfType<MessageResponse>();
@@ -138,8 +175,6 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
   [Fact]
   public async Task CreateMessageAsync_WhenMessagesContainCacheControl_ItShouldUseCache()
   {
-    var client = CreateClient(new HttpClient());
-
     var storyPath = TestFileHelper.GetTestFilePath("story.txt");
     var storyText = await File.ReadAllTextAsync(storyPath);
 
@@ -153,7 +188,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
       ]
     );
 
-    var resultOne = await client.CreateMessageAsync(request);
+    var resultOne = await _client.CreateMessageAsync(request);
 
     resultOne.IsSuccess.Should().BeTrue();
     resultOne.Value.Should().BeOfType<MessageResponse>();
@@ -163,7 +198,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("What is the main theme of this story?")]));
 
-    var resultTwo = await client.CreateMessageAsync(request);
+    var resultTwo = await _client.CreateMessageAsync(request);
 
     resultTwo.IsSuccess.Should().BeTrue();
     resultTwo.Value.Should().BeOfType<MessageResponse>();
@@ -174,8 +209,6 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
   [Fact]
   public async Task CreateMessageAsync_WhenToolsContainCacheControl_ItShouldUseCache()
   {
-    var client = CreateClient(new HttpClient());
-
     var func = (string ticker) => ticker;
 
     var tools = Enumerable
@@ -195,7 +228,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
       tools: tools
     );
 
-    var resultOne = await client.CreateMessageAsync(request);
+    var resultOne = await _client.CreateMessageAsync(request);
 
     resultOne.IsSuccess.Should().BeTrue();
     resultOne.Value.Should().BeOfType<MessageResponse>();
@@ -205,7 +238,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("Could you tell me the stock price for AAPL?")]));
 
-    var resultTwo = await client.CreateMessageAsync(request);
+    var resultTwo = await _client.CreateMessageAsync(request);
 
     resultTwo.IsSuccess.Should().BeTrue();
     resultTwo.Value.Should().BeOfType<MessageResponse>();
@@ -228,9 +261,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
       ]
     );
 
-    var client = CreateClient(new HttpClient());
-
-    var result = await client.CreateMessageAsync(request);
+    var result = await _client.CreateMessageAsync(request);
 
     result.IsSuccess.Should().BeTrue();
     result.Value.Should().BeOfType<MessageResponse>();
@@ -256,8 +287,6 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     var bytes = await File.ReadAllBytesAsync(pdfPath);
     var base64Data = Convert.ToBase64String(bytes);
 
-    var client = CreateClient(new HttpClient());
-
     var request = new MessageRequest(
       model: AnthropicModels.Claude35Sonnet,
       messages: [
@@ -268,7 +297,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
       ]
     );
 
-    var resultOne = await client.CreateMessageAsync(request);
+    var resultOne = await _client.CreateMessageAsync(request);
 
     resultOne.IsSuccess.Should().BeTrue();
     resultOne.Value.Should().BeOfType<MessageResponse>();
@@ -278,7 +307,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     request.Messages.Add(new(MessageRole.Assistant, resultOne.Value.Content));
     request.Messages.Add(new(MessageRole.User, [new TextContent("What is the main theme of this paper?")]));
 
-    var resultTwo = await client.CreateMessageAsync(request);
+    var resultTwo = await _client.CreateMessageAsync(request);
 
     resultTwo.IsSuccess.Should().BeTrue();
     resultTwo.Value.Should().BeOfType<MessageResponse>();
@@ -393,6 +422,58 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
       .SelectMany(static c => c.Citations is null ? [] : c.Citations);
 
     citations.OfType<ContentBlockLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenCitationsAreEnabledForFileSource_ItShouldReturnCitationsInResponse()
+  {
+    var fileName = "story.txt";
+    var fileType = "text/plain";
+    var filePath = TestFileHelper.GetTestFilePath("story.txt");
+    var fileContent = await File.ReadAllBytesAsync(filePath);
+    var createFileRequest = new CreateFileRequest(fileContent, fileName, fileType);
+
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var createdFile = await client.CreateFileAsync(createFileRequest);
+
+    var request = new MessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent(new FileSource(createdFile.Value.Id))
+            {
+              Title = "A Story",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("Can you tell me what the title of this story is?"),
+          ]
+        )
+      ]
+    );
+
+    var result = await client.CreateMessageAsync(request);
+
+    result.IsSuccess.Should().BeTrue();
+
+    var textContents = result.Value.Content.OfType<TextContent>();
+
+    var messageContent = textContents.Aggregate(new StringBuilder(), (sb, content) =>
+    {
+      sb.Append(content.Text);
+      return sb;
+    });
+    messageContent.ToString().Should().MatchRegex("The Forgotten Lighthouse");
+
+    var citations = textContents.SelectMany(static c => c.Citations is null ? [] : c.Citations);
+    citations.OfType<CharacterLocationCitation>().Should().NotBeEmpty();
+
+    _filesToDelete.Add(createdFile.Value.Id);
   }
 
   [Fact]
@@ -514,6 +595,64 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
       .SelectMany(static c => c.Citations is null ? [] : c.Citations);
 
     citations.OfType<ContentBlockLocationCitation>().Should().NotBeEmpty();
+  }
+
+  [Fact]
+  public async Task CreateMessageAsync_WhenStreamingAndCitationsAreEnabledForFileSource_ItShouldReturnCitationsInResponse()
+  {
+    var fileName = "story.txt";
+    var fileType = "text/plain";
+    var filePath = TestFileHelper.GetTestFilePath("story.txt");
+    var fileContent = await File.ReadAllBytesAsync(filePath);
+    var createFileRequest = new CreateFileRequest(fileContent, fileName, fileType);
+
+    using var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    var createdFile = await client.CreateFileAsync(createFileRequest);
+
+    var request = new StreamMessageRequest(
+      model: AnthropicModels.Claude35HaikuLatest,
+      messages: [
+        new(
+          MessageRole.User,
+          [
+            new DocumentContent(new FileSource(createdFile.Value.Id))
+            {
+              Title = "A Story",
+              Context = "This is a trustworthy document.",
+              Citations = new() { Enabled = true }
+            },
+            new TextContent("Can you tell me what the title of this story is?"),
+          ]
+        )
+      ]
+    );
+
+    var result = client.CreateMessageAsync(request);
+
+    var messageCompleteEvent = await result
+      .Where(e => e.Type is EventType.MessageComplete)
+      .FirstAsync();
+
+    var textContents = messageCompleteEvent.Data
+      .As<MessageCompleteEventData>()
+      .Message
+      .Content
+      .OfType<TextContent>();
+
+    var messageContent = textContents.Aggregate(new StringBuilder(), (sb, content) =>
+    {
+      sb.Append(content.Text);
+      return sb;
+    });
+    messageContent.ToString().Should().MatchRegex("The Forgotten Lighthouse");
+
+    var citations = textContents.SelectMany(static c => c.Citations is null ? [] : c.Citations);
+    citations.OfType<CharacterLocationCitation>().Should().NotBeEmpty();
+
+    _filesToDelete.Add(createdFile.Value.Id);
   }
 
   [Fact]
@@ -697,7 +836,7 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     var fileContent = await File.ReadAllBytesAsync(filePath);
     var request = new CreateFileRequest(fileContent, fileName, fileType);
 
-    var httpClient = new HttpClient();
+    using var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
     var client = CreateClient(httpClient);
 
@@ -707,12 +846,14 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.Value.Should().BeOfType<AnthropicFile>();
     result.Value.Name.Should().Be(fileName);
     result.Value.MimeType.Should().Be(fileType);
+
+    _filesToDelete.Add(result.Value.Id);
   }
 
   [Fact]
   public async Task ListFilesAsync_WhenCalled_ItShouldReturnPageOfFiles()
   {
-    var httpClient = new HttpClient();
+    using var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
     var client = CreateClient(httpClient);
 
@@ -725,12 +866,14 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.IsSuccess.Should().BeTrue();
     result.Value.Should().BeOfType<Page<AnthropicFile>>();
     result.Value.Data.Should().ContainSingle(f => f.Id == createdFile.Value.Id);
+
+    _filesToDelete.Add(createdFile.Value.Id);
   }
 
   [Fact]
   public async Task ListAllFilesAsync_WhenCalled_ItShouldReturnAllFiles()
   {
-    var httpClient = new HttpClient();
+    using var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
     var client = CreateClient(httpClient);
 
@@ -741,14 +884,18 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     var responses = await client.ListAllFilesAsync(limit: 1).ToListAsync();
 
     responses.Should().HaveCountGreaterThan(0);
-    responses.Select(r => r.Value).SelectMany(p => p.Data)
-      .Should().ContainSingle(f => f.Id == createdFile.Value.Id);
+    responses.Select(r => r.Value)
+      .SelectMany(p => p.Data)
+      .Should()
+      .ContainSingle(f => f.Id == createdFile.Value.Id);
+
+    _filesToDelete.Add(createdFile.Value.Id);
   }
 
   [Fact]
   public async Task GetFileInfoAsync_WhenCalled_ItShouldReturnFile()
   {
-    var httpClient = new HttpClient();
+    using var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
     var client = CreateClient(httpClient);
 
@@ -761,12 +908,14 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.IsSuccess.Should().BeTrue();
     result.Value.Should().BeOfType<AnthropicFile>();
     result.Value.Id.Should().Be(createdFile.Value.Id);
+
+    _filesToDelete.Add(createdFile.Value.Id);
   }
 
   [Fact]
   public async Task DeleteFileAsync_WhenCalled_ItShouldReturnDeleteResponse()
   {
-    var httpClient = new HttpClient();
+    using var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
     var client = CreateClient(httpClient);
 
@@ -779,5 +928,18 @@ public class AnthropicApiClientTests(ConfigurationFixture configFixture) : EndTo
     result.IsSuccess.Should().BeTrue();
     result.Value.Should().BeOfType<AnthropicFileDeleteResponse>();
     result.Value.Id.Should().Be(createdFile.Value.Id);
+  }
+
+  public async Task DisposeAsync()
+  {
+    using var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("anthropic-beta", "files-api-2025-04-14");
+    var client = CreateClient(httpClient);
+
+    foreach (var file in _filesToDelete)
+    {
+      var result = await client.DeleteFileAsync(file);
+      result.IsSuccess.Should().BeTrue();
+    }
   }
 }

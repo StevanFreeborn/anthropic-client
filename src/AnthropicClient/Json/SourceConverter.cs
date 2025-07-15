@@ -16,6 +16,8 @@ class SourceConverter : JsonConverter<Source>
     {
       SourceType.Text => JsonSerializer.Deserialize<TextSource>(root.GetRawText(), options)!,
       SourceType.Content => JsonSerializer.Deserialize<CustomSource>(root.GetRawText(), options)!,
+      SourceType.File => JsonSerializer.Deserialize<FileSource>(root.GetRawText(), options)!,
+      SourceType.Url => JsonSerializer.Deserialize<UrlSource>(root.GetRawText(), options)!,
       SourceType.Base64 => DeserializeBase64Source(root, options),
       _ => throw new JsonException($"Unknown source type: {type}")
     };
@@ -51,6 +53,18 @@ class SourceConverter : JsonConverter<Source>
     if (value is Base64Source base64Source)
     {
       JsonSerializer.Serialize(writer, base64Source, options);
+      return;
+    }
+
+    if (value is FileSource fileSource)
+    {
+      JsonSerializer.Serialize(writer, fileSource, options);
+      return;
+    }
+
+    if (value is UrlSource urlSource)
+    {
+      JsonSerializer.Serialize(writer, urlSource, options);
       return;
     }
 

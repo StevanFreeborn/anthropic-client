@@ -53,4 +53,32 @@ public class ImageContent : Content
 
     Source = new ImageSource(mediaType, data);
   }
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="ImageContent"/> class.
+  /// </summary>
+  /// <param name="source">The source of the image.</param>
+  /// <returns>A new instance of the <see cref="ImageContent"/> class.</returns>
+  /// <exception cref="ArgumentNullException">Thrown when the source is null.</exception>
+  public ImageContent(Source source) : base(ContentType.Image)
+  {
+    ArgumentValidator.ThrowIfNull(source, nameof(source));
+
+    Source = source;
+  }
+
+  /// <summary>
+  /// Initializes a new instance of the <see cref="ImageContent"/> class.
+  /// </summary>
+  /// <param name="source">The source of the image.</param>
+  /// <param name="cacheControl">The cache control to be used for the content.</param>
+  /// <returns>A new instance of the <see cref="ImageContent"/> class.</returns>
+  /// <exception cref="ArgumentNullException">Thrown when the source or cache control is null.</exception>
+  public ImageContent(Source source, CacheControl cacheControl) : base(ContentType.Image, cacheControl)
+  {
+    ArgumentValidator.ThrowIfNull(source, nameof(source));
+    ArgumentValidator.ThrowIfNull(cacheControl, nameof(cacheControl));
+
+    Source = source;
+  }
 }

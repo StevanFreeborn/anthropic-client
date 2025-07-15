@@ -77,7 +77,7 @@ public class ImageContentTests : SerializationTest
   }
 
   [Fact]
-  public void Constructor_WhenCalledWithCacheControlAndMediatTypeIsNull_ItShouldThrowArgumentNullException()
+  public void Constructor_WhenCalledWithCacheControlAndMediaTypeIsNull_ItShouldThrowArgumentNullException()
   {
     var expectedData = "data";
     var cacheControl = new EphemeralCacheControl();
@@ -94,6 +94,49 @@ public class ImageContentTests : SerializationTest
     var cacheControl = new EphemeralCacheControl();
 
     var action = () => new ImageContent(expectedMediaType, null!, cacheControl);
+
+    action.Should().Throw<ArgumentNullException>();
+  }
+
+  [Fact]
+  public void Constructor_WhenCalledWithSource_ItShouldInitializeSource()
+  {
+    var source = new ImageSource("image/png", "data");
+
+    var result = new ImageContent(source);
+
+    result.Source.Should().BeSameAs(source);
+  }
+
+  [Fact]
+  public void Constructor_WhenCalledWithSourceAndCacheControl_ItShouldInitializeSourceAndCacheControl()
+  {
+    var source = new ImageSource("image/png", "data");
+    var cacheControl = new EphemeralCacheControl();
+
+    var result = new ImageContent(source, cacheControl);
+
+    result.Source.Should().BeSameAs(source);
+    result.CacheControl.Should().BeSameAs(cacheControl);
+  }
+
+  [Fact]
+  public void Constructor_WhenSourceIsNull_ItShouldThrowArgumentNullException()
+  {
+    Source? source = null;
+
+    var action = () => new ImageContent(source!);
+
+    action.Should().Throw<ArgumentNullException>();
+  }
+
+  [Fact]
+  public void Constructor_WhenCacheControlIsNull_ItShouldThrowNullException()
+  {
+    var source = new ImageSource("image/png", "data");
+    CacheControl? cacheControl = null;
+
+    var action = () => new ImageContent(source, cacheControl!);
 
     action.Should().Throw<ArgumentNullException>();
   }

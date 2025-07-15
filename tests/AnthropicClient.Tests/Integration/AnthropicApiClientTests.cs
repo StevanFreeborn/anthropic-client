@@ -2332,6 +2332,26 @@ public class AnthropicApiClientTests : IntegrationTest
   }
 
   [Fact]
+  public async Task GetFileAsync_WhenCalledAndCanNotDeserializeResponse_ItShouldReturnError()
+  {
+    var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";
+
+    _mockHttpMessageHandler
+      .WhenGetFileContentRequest(fileId)
+      .Respond(
+        HttpStatusCode.BadRequest,
+        "application/json",
+        @"null"
+      );
+
+    var result = await Client.GetFileAsync(fileId);
+
+    result.IsSuccess.Should().BeFalse();
+    result.Error.Should().BeOfType<AnthropicError>();
+    result.Error.Error.Should().BeOfType<ApiError>();
+  }
+
+  [Fact]
   public async Task DeleteFileAsync_WhenCalled_ItShouldReturnDeletionResponse()
   {
     var fileId = "file_013Zva2CMHLNnXjNJJKqJ2EF";

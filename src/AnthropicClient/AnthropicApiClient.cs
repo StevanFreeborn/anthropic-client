@@ -385,14 +385,6 @@ public class AnthropicApiClient : IAnthropicApiClient
   public async Task<AnthropicResult<AnthropicFile>> CreateFileAsync(CreateFileRequest request, CancellationToken cancellationToken = default)
   {
     var response = await SendFileRequestAsync(FilesEndpoint, request, cancellationToken);
-
-    if (response.IsSuccessStatusCode is false)
-    {
-      var content = await response.Content.ReadAsStringAsync();
-      var error = Deserialize<AnthropicError>(content) ?? new AnthropicError();
-      return AnthropicResult<AnthropicFile>.Failure(error, new AnthropicHeaders(response.Headers));
-    }
-
     return await CreateResultAsync<AnthropicFile>(response);
   }
 
@@ -402,14 +394,6 @@ public class AnthropicApiClient : IAnthropicApiClient
     var pagingRequest = request ?? new PagingRequest();
     var endpoint = $"{FilesEndpoint}?{pagingRequest.ToQueryParameters()}";
     var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
-
-    if (response.IsSuccessStatusCode is false)
-    {
-      var content = await response.Content.ReadAsStringAsync();
-      var error = Deserialize<AnthropicError>(content) ?? new AnthropicError();
-      return AnthropicResult<Page<AnthropicFile>>.Failure(error, new AnthropicHeaders(response.Headers));
-    }
-
     return await CreateResultAsync<Page<AnthropicFile>>(response);
   }
 
@@ -427,14 +411,6 @@ public class AnthropicApiClient : IAnthropicApiClient
   {
     var endpoint = $"{FilesEndpoint}/{fileId}";
     var response = await SendRequestAsync(endpoint, cancellationToken: cancellationToken);
-
-    if (response.IsSuccessStatusCode is false)
-    {
-      var content = await response.Content.ReadAsStringAsync();
-      var error = Deserialize<AnthropicError>(content) ?? new AnthropicError();
-      return AnthropicResult<AnthropicFile>.Failure(error, new AnthropicHeaders(response.Headers));
-    }
-
     return await CreateResultAsync<AnthropicFile>(response);
   }
 
@@ -460,14 +436,6 @@ public class AnthropicApiClient : IAnthropicApiClient
   {
     var endpoint = $"{FilesEndpoint}/{fileId}";
     var response = await SendRequestAsync(endpoint, HttpMethod.Delete, cancellationToken);
-
-    if (response.IsSuccessStatusCode is false)
-    {
-      var content = await response.Content.ReadAsStringAsync();
-      var error = Deserialize<AnthropicError>(content) ?? new AnthropicError();
-      return AnthropicResult<AnthropicFileDeleteResponse>.Failure(error, new AnthropicHeaders(response.Headers));
-    }
-
     return await CreateResultAsync<AnthropicFileDeleteResponse>(response);
   }
 

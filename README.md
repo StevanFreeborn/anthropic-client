@@ -215,55 +215,130 @@ You can create a file using the Files API in several ways:
 ##### From a Byte Array
 
 ```csharp
-using AnthropicClient;
-using AnthropicClient.Models;
-using System.Text;
+var fileBytes = await File.ReadAllBytesAsync("path/to/file.txt");
+var request = new CreateFileRequest(fileBytes, "file.txt", "text/plain");
+var result = await client.CreateFileAsync(request);
 
-// Create a file from a byte array
-var content = "This is a sample text file for the Anthropic Files API.";
-var fileBytes = Encoding.UTF8.GetBytes(content);
-
-var request = new CreateFileRequest(fileBytes, "sample.txt", "text/plain");
-var response = await client.CreateFileAsync(request);
-
-if (response.IsSuccess)
+if (result.IsSuccess)
 {
-  Console.WriteLine("File created successfully from byte array!");
-  Console.WriteLine("File ID: {0}", response.Value.Id);
-  Console.WriteLine("File Name: {0}", response.Value.FileName);
-  Console.WriteLine("File Type: {0}", response.Value.FileType);
-  Console.WriteLine("File Size: {0} bytes", response.Value.SizeBytes);
-}
-else
-{
-  Console.WriteLine("Failed to create file");
-  Console.WriteLine("Error Type: {0}", response.Error.Error.Type);
-  Console.WriteLine("Error Message: {0}", response.Error.Error.Message);
+  var file = result.Value;
+  Console.WriteLine($"Created file: {file.Name} (ID: {file.Id})");
 }
 ```
 
 ##### From a Stream
 
 ```csharp
-using AnthropicClient;
-using AnthropicClient.Models;
-using System.Text;
+using var fileStream = File.OpenRead("path/to/file.txt");
+var request = new CreateFileRequest(fileStream, "file.txt", "text/plain");
 
-// Create a file from a stream
-using var stream = new MemoryStream(Encoding.UTF8.GetBytes("Stream content"));
-var request = new CreateFileRequest(stream, "stream-file.txt", "text/plain");
-var response = await client.CreateFileAsync(request);
+var result = await client.CreateFileAsync(request);
 
-if (response.IsSuccess)
+if (result.IsSuccess)
 {
-  Console.WriteLine("File created successfully from stream!");
-  Console.WriteLine("File ID: {0}", response.Value.Id);
+    var file = result.Value;
+    Console.WriteLine($"Created file: {file.Name} (ID: {file.Id})");
 }
-else
+```
+
+#### List Files
+
+You can list files in your account using pagination:
+
+##### Single Page
+
+```csharp
+var result = await client.ListFilesAsync();
+
+if (result.IsSuccess)
 {
-  Console.WriteLine("Failed to create file");
-  Console.WriteLine("Error Type: {0}", response.Error.Error.Type);
-  Console.WriteLine("Error Message: {0}", response.Error.Error.Message);
+    var page = result.Value;
+    Console.WriteLine($"Found {page.Data.Count} files");
+    
+    foreach (var file in page.Data)
+    {
+        Console.WriteLine($"- {file.Name} (ID: {file.Id}, Size: {file.Size} bytes)");
+    }
+    
+    if (page.HasMore)
+    {
+        Console.WriteLine("More files available...");
+    }
+}
+```
+
+##### With Pagination Options
+
+```csharp
+var pagingRequest = new PagingRequest(afterId: "file_12345", limit: 10);
+var result = await client.ListFilesAsync(pagingRequest);
+```
+
+##### All Files (Multiple Pages)
+
+```csharp
+await foreach (var pageResult in client.ListAllFilesAsync(limit: 20))
+{
+    if (pageResult.IsSuccess)
+    {
+        var page = pageResult.Value;
+        foreach (var file in page.Data)
+        {
+            Console.WriteLine($"- {file.Name} (ID: {file.Id})");
+        }
+    }
+}
+```
+
+#### Get File Information
+
+Retrieve metadata about a specific file:
+
+```csharp
+var result = await client.GetFileInfoAsync("file_12345");
+
+if (result.IsSuccess)
+{
+    var file = result.Value;
+    Console.WriteLine($"File: {file.Name}");
+    Console.WriteLine($"ID: {file.Id}");
+    Console.WriteLine($"MIME Type: {file.MimeType}");
+    Console.WriteLine($"Size: {file.Size} bytes");
+    Console.WriteLine($"Created: {file.CreatedAt}");
+    Console.WriteLine($"Downloadable: {file.Downloadable}");
+}
+```
+
+#### Get File Content
+
+Download the content of a file as a stream:
+
+```csharp
+var result = await client.GetFileAsync("file_12345");
+
+if (result.IsSuccess)
+{
+    using var contentStream = result.Value;
+    using var reader = new StreamReader(contentStream);
+    var content = await reader.ReadToEndAsync();
+    
+    Console.WriteLine("File content:");
+    Console.WriteLine(content);
+}
+```
+
+#### Delete a File
+
+Remove a file from your account:
+
+```csharp
+var result = await client.DeleteFileAsync("file_12345");
+
+if (result.IsSuccess)
+{
+    var deleteResponse = result.Value;
+    Console.WriteLine($"Deleted file: {deleteResponse.Id}");
+    Console.WriteLine($"Type: {deleteResponse.Type}");
 }
 ```
 

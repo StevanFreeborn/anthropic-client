@@ -33,6 +33,17 @@ public class FileSourceTests : SerializationTest
   }
 
   [Fact]
+  public void Constructor_WhenCalledWithId_ItShouldInitializeProperties()
+  {
+    var id = "id";
+
+    var result = new FileSource(id);
+
+    result.Id.Should().Be(id);
+    result.Type.Should().Be("file");
+  }
+
+  [Fact]
   public void JsonSerialization_WhenSerialized_ItShouldHaveExpectedShape()
   {
     var source = new FileSource() { Id = "id" };

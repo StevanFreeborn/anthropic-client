@@ -18,7 +18,7 @@ public class AnthropicFileTests : SerializationTest
     var result = new AnthropicFile();
 
     result.Id.Should().BeEmpty();
-    result.Type.Should().BeEmpty("file");
+    result.Type.Should().BeEmpty();
     result.Name.Should().BeEmpty();
     result.CreatedAt.Should().Be(DateTimeOffset.MinValue);
     result.Size.Should().Be(0);

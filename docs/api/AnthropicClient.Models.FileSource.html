@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DocumentSource | AnthropicClient </title>
+      <title>Class FileSource | AnthropicClient </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DocumentSource | AnthropicClient ">
+      <meta name="title" content="Class FileSource | AnthropicClient ">
       
-      <meta name="description" content="Represents a document source.">
+      <meta name="description" content="Represents a file source in the Anthropic API.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/StevanFreeborn/anthropic-client/new/main/apiSpec/new?filename=AnthropicClient_Models_DocumentSource.md&amp;value=---%0Auid%3A%20AnthropicClient.Models.DocumentSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/StevanFreeborn/anthropic-client/new/main/apiSpec/new?filename=AnthropicClient_Models_FileSource.md&amp;value=---%0Auid%3A%20AnthropicClient.Models.FileSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="AnthropicClient.Models.DocumentSource">
+        <article data-uid="AnthropicClient.Models.FileSource">
 
 
 
-  <h1 id="AnthropicClient_Models_DocumentSource" data-uid="AnthropicClient.Models.DocumentSource" class="text-break">
-Class DocumentSource  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/DocumentSource.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h1 id="AnthropicClient_Models_FileSource" data-uid="AnthropicClient.Models.FileSource" class="text-break">
+Class FileSource  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/FileSource.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class DocumentSource  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>AnthropicClient.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a document source.</p>
+  <div class="markdown summary"><p>Represents a file source in the Anthropic API.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DocumentSource : Base64Source</code></pre>
+    <pre><code class="lang-csharp hljs">public class FileSource : Source</code></pre>
   </div>
 
 
@@ -113,8 +113,7 @@ Class DocumentSource  <a class="header-action link-secondary" title="View source
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="AnthropicClient.Models.Source.html">Source</a></div>
-      <div><a class="xref" href="AnthropicClient.Models.Base64Source.html">Base64Source</a></div>
-      <div><span class="xref">DocumentSource</span></div>
+      <div><span class="xref">FileSource</span></div>
     </dd>
   </dl>
 
@@ -123,12 +122,6 @@ Class DocumentSource  <a class="header-action link-secondary" title="View source
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source_MediaType">Base64Source.MediaType</a>
-    </div>
-    <div>
-      <a class="xref" href="AnthropicClient.Models.Base64Source.html#AnthropicClient_Models_Base64Source_Data">Base64Source.Data</a>
-    </div>
     <div>
       <a class="xref" href="AnthropicClient.Models.Source.html#AnthropicClient_Models_Source_Type">Source.Type</a>
     </div>
@@ -164,28 +157,52 @@ Class DocumentSource  <a class="header-action link-secondary" title="View source
 </h2>
 
 
-  <a id="AnthropicClient_Models_DocumentSource__ctor_" data-uid="AnthropicClient.Models.DocumentSource.#ctor*"></a>
+  <a id="AnthropicClient_Models_FileSource__ctor_" data-uid="AnthropicClient.Models.FileSource.#ctor*"></a>
 
-  <h3 id="AnthropicClient_Models_DocumentSource__ctor_System_String_System_String_" data-uid="AnthropicClient.Models.DocumentSource.#ctor(System.String,System.String)">
-  DocumentSource(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/DocumentSource.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AnthropicClient_Models_FileSource__ctor" data-uid="AnthropicClient.Models.FileSource.#ctor">
+  FileSource()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/FileSource.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="AnthropicClient.Models.DocumentSource.html">DocumentSource</a> class.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="AnthropicClient.Models.FileSource.html">FileSource</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DocumentSource(string mediaType, string data)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileSource()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="AnthropicClient_Models_FileSource__ctor_" data-uid="AnthropicClient.Models.FileSource.#ctor*"></a>
+
+  <h3 id="AnthropicClient_Models_FileSource__ctor_System_String_" data-uid="AnthropicClient.Models.FileSource.#ctor(System.String)">
+  FileSource(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/FileSource.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="AnthropicClient.Models.FileSource.html">FileSource</a> class with a specified file ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileSource(string id)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>mediaType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The media type of the document.</p>
-</dd>
-    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The data of the document.</p>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique identifier for the file source.</p>
 </dd>
   </dl>
 
@@ -197,15 +214,43 @@ Class DocumentSource  <a class="header-action link-secondary" title="View source
 
 
 
-  <h4 class="section">Exceptions</h4>
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="AnthropicClient_Models_FileSource_Id_" data-uid="AnthropicClient.Models.FileSource.Id*"></a>
+
+  <h3 id="AnthropicClient_Models_FileSource_Id" data-uid="AnthropicClient.Models.FileSource.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/FileSource.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the unique identifier for the file source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;file_id&quot;)]
+public string Id { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown when the media type is invalid.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown when the media type or data is null.</p>
-</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
   </dl>
+
+
+
+
+
 
 
 
@@ -213,7 +258,7 @@ Class DocumentSource  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/DocumentSource.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/StevanFreeborn/anthropic-client/blob/main/src/AnthropicClient/Models/FileSource.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
 

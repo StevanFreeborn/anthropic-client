@@ -227,6 +227,119 @@ if (response.IsFailure)
 
 Console.WriteLine(&quot;Model Id: {0}&quot;, response.Value.Id);
 </code></pre>
+<h3 id="files-api">Files API</h3>
+<p>The <code>AnthropicApiClient</code> provides support for the Anthropic Files API, which allows you to upload and manage files for use with the Anthropic API.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The Files API is currently in beta. To use the Files API, you’ll need to include the beta feature header: <code>anthropic-beta: files-api-2025-04-14</code></p>
+</div>
+<h4 id="create-a-file">Create a File</h4>
+<p>You can create a file using the Files API in several ways:</p>
+<h5 id="from-a-byte-array">From a Byte Array</h5>
+<pre><code class="lang-csharp">var fileBytes = await File.ReadAllBytesAsync(&quot;path/to/file.txt&quot;);
+var request = new CreateFileRequest(fileBytes, &quot;file.txt&quot;, &quot;text/plain&quot;);
+var result = await client.CreateFileAsync(request);
+
+if (result.IsSuccess)
+{
+  var file = result.Value;
+  Console.WriteLine($&quot;Created file: {file.Name} (ID: {file.Id})&quot;);
+}
+</code></pre>
+<h5 id="from-a-stream">From a Stream</h5>
+<pre><code class="lang-csharp">using var fileStream = File.OpenRead(&quot;path/to/file.txt&quot;);
+var request = new CreateFileRequest(fileStream, &quot;file.txt&quot;, &quot;text/plain&quot;);
+
+var result = await client.CreateFileAsync(request);
+
+if (result.IsSuccess)
+{
+    var file = result.Value;
+    Console.WriteLine($&quot;Created file: {file.Name} (ID: {file.Id})&quot;);
+}
+</code></pre>
+<h4 id="list-files">List Files</h4>
+<p>You can list files in your account using pagination:</p>
+<h5 id="single-page">Single Page</h5>
+<pre><code class="lang-csharp">var result = await client.ListFilesAsync();
+
+if (result.IsSuccess)
+{
+    var page = result.Value;
+    Console.WriteLine($&quot;Found {page.Data.Count} files&quot;);
+    
+    foreach (var file in page.Data)
+    {
+        Console.WriteLine($&quot;- {file.Name} (ID: {file.Id}, Size: {file.Size} bytes)&quot;);
+    }
+    
+    if (page.HasMore)
+    {
+        Console.WriteLine(&quot;More files available...&quot;);
+    }
+}
+</code></pre>
+<h5 id="with-pagination-options">With Pagination Options</h5>
+<pre><code class="lang-csharp">var pagingRequest = new PagingRequest(afterId: &quot;file_12345&quot;, limit: 10);
+var result = await client.ListFilesAsync(pagingRequest);
+</code></pre>
+<h5 id="all-files-multiple-pages">All Files (Multiple Pages)</h5>
+<pre><code class="lang-csharp">await foreach (var pageResult in client.ListAllFilesAsync(limit: 20))
+{
+    if (pageResult.IsSuccess)
+    {
+        var page = pageResult.Value;
+        foreach (var file in page.Data)
+        {
+            Console.WriteLine($&quot;- {file.Name} (ID: {file.Id})&quot;);
+        }
+    }
+}
+</code></pre>
+<h4 id="get-file-information">Get File Information</h4>
+<p>Retrieve metadata about a specific file:</p>
+<pre><code class="lang-csharp">var result = await client.GetFileInfoAsync(&quot;file_12345&quot;);
+
+if (result.IsSuccess)
+{
+    var file = result.Value;
+    Console.WriteLine($&quot;File: {file.Name}&quot;);
+    Console.WriteLine($&quot;ID: {file.Id}&quot;);
+    Console.WriteLine($&quot;MIME Type: {file.MimeType}&quot;);
+    Console.WriteLine($&quot;Size: {file.Size} bytes&quot;);
+    Console.WriteLine($&quot;Created: {file.CreatedAt}&quot;);
+    Console.WriteLine($&quot;Downloadable: {file.Downloadable}&quot;);
+}
+</code></pre>
+<h4 id="get-file-content">Get File Content</h4>
+<p>Download the content of a file as a stream:</p>
+<pre><code class="lang-csharp">var result = await client.GetFileAsync(&quot;file_12345&quot;);
+
+if (result.IsSuccess)
+{
+    using var contentStream = result.Value;
+    using var reader = new StreamReader(contentStream);
+    var content = await reader.ReadToEndAsync();
+    
+    Console.WriteLine(&quot;File content:&quot;);
+    Console.WriteLine(content);
+}
+</code></pre>
+<h4 id="delete-a-file">Delete a File</h4>
+<p>Remove a file from your account:</p>
+<pre><code class="lang-csharp">var result = await client.DeleteFileAsync(&quot;file_12345&quot;);
+
+if (result.IsSuccess)
+{
+    var deleteResponse = result.Value;
+    Console.WriteLine($&quot;Deleted file: {deleteResponse.Id}&quot;);
+    Console.WriteLine($&quot;Type: {deleteResponse.Type}&quot;);
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The Files API has certain limitations on file size, supported file types, and usage quotas. Please refer to the <a href="https://docs.anthropic.com/en/docs/build-with-claude/files">Anthropic API Documentation</a> for the most up-to-date information on these limitations.</p>
+</div>
 <h3 id="create-a-message">Create a message</h3>
 <p>The <code>AnthropicApiClient</code> exposes a method named <code>CreateMessageAsync</code> that can be used to create a message. The method requires a <code>MessageRequest</code> or a <code>StreamMessageRequest</code> instance as a parameter. The <code>MessageRequest</code> class is used to create a message whose response is not streamed and the <code>StreamMessageRequest</code> class is used to create a message whose response is streamed. The <code>MessageRequest</code> instance's properties can be set to configure how the message is created.</p>
 <h4 id="non-streaming">Non-Streaming</h4>

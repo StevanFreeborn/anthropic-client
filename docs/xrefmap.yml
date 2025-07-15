@@ -61,6 +61,19 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.CountMessageTokensAsync
   nameWithType: AnthropicApiClient.CountMessageTokensAsync
+- uid: AnthropicClient.AnthropicApiClient.CreateFileAsync(AnthropicClient.Models.CreateFileRequest,System.Threading.CancellationToken)
+  name: CreateFileAsync(CreateFileRequest, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateFileAsync_AnthropicClient_Models_CreateFileRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.CreateFileAsync(AnthropicClient.Models.CreateFileRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.CreateFileAsync(AnthropicClient.Models.CreateFileRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.CreateFileAsync(CreateFileRequest, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.CreateFileAsync*
+  name: CreateFileAsync
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateFileAsync_
+  commentId: Overload:AnthropicClient.AnthropicApiClient.CreateFileAsync
+  isSpec: "True"
+  fullName: AnthropicClient.AnthropicApiClient.CreateFileAsync
+  nameWithType: AnthropicApiClient.CreateFileAsync
 - uid: AnthropicClient.AnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)
   name: CreateMessageAsync(MessageRequest, CancellationToken)
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_System_Threading_CancellationToken_
@@ -93,6 +106,22 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.CreateMessageBatchAsync
   nameWithType: AnthropicApiClient.CreateMessageBatchAsync
+- uid: AnthropicClient.AnthropicApiClient.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  name: DeleteFileAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_DeleteFileAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  name.vb: DeleteFileAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.DeleteFileAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.DeleteFileAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.DeleteFileAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.DeleteFileAsync(String, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.DeleteFileAsync*
+  name: DeleteFileAsync
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_DeleteFileAsync_
+  commentId: Overload:AnthropicClient.AnthropicApiClient.DeleteFileAsync
+  isSpec: "True"
+  fullName: AnthropicClient.AnthropicApiClient.DeleteFileAsync
+  nameWithType: AnthropicApiClient.DeleteFileAsync
 - uid: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)
   name: DeleteMessageBatchAsync(string, CancellationToken)
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_DeleteMessageBatchAsync_System_String_System_Threading_CancellationToken_
@@ -109,6 +138,38 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.DeleteMessageBatchAsync
   nameWithType: AnthropicApiClient.DeleteMessageBatchAsync
+- uid: AnthropicClient.AnthropicApiClient.GetFileAsync(System.String,System.Threading.CancellationToken)
+  name: GetFileAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetFileAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.GetFileAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetFileAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.GetFileAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.GetFileAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.GetFileAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.GetFileAsync(String, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.GetFileAsync*
+  name: GetFileAsync
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetFileAsync_
+  commentId: Overload:AnthropicClient.AnthropicApiClient.GetFileAsync
+  isSpec: "True"
+  fullName: AnthropicClient.AnthropicApiClient.GetFileAsync
+  nameWithType: AnthropicApiClient.GetFileAsync
+- uid: AnthropicClient.AnthropicApiClient.GetFileInfoAsync(System.String,System.Threading.CancellationToken)
+  name: GetFileInfoAsync(string, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetFileInfoAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.GetFileInfoAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetFileInfoAsync(String, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.GetFileInfoAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.GetFileInfoAsync(String, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.GetFileInfoAsync(string, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.GetFileInfoAsync(String, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.GetFileInfoAsync*
+  name: GetFileInfoAsync
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetFileInfoAsync_
+  commentId: Overload:AnthropicClient.AnthropicApiClient.GetFileInfoAsync
+  isSpec: "True"
+  fullName: AnthropicClient.AnthropicApiClient.GetFileInfoAsync
+  nameWithType: AnthropicApiClient.GetFileInfoAsync
 - uid: AnthropicClient.AnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)
   name: GetMessageBatchAsync(string, CancellationToken)
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_GetMessageBatchAsync_System_String_System_Threading_CancellationToken_
@@ -157,6 +218,22 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.GetModelAsync
   nameWithType: AnthropicApiClient.GetModelAsync
+- uid: AnthropicClient.AnthropicApiClient.ListAllFilesAsync(System.Int32,System.Threading.CancellationToken)
+  name: ListAllFilesAsync(int, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllFilesAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.ListAllFilesAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ListAllFilesAsync(Integer, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.ListAllFilesAsync(int, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.ListAllFilesAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.ListAllFilesAsync(int, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.ListAllFilesAsync(Integer, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.ListAllFilesAsync*
+  name: ListAllFilesAsync
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllFilesAsync_
+  commentId: Overload:AnthropicClient.AnthropicApiClient.ListAllFilesAsync
+  isSpec: "True"
+  fullName: AnthropicClient.AnthropicApiClient.ListAllFilesAsync
+  nameWithType: AnthropicApiClient.ListAllFilesAsync
 - uid: AnthropicClient.AnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)
   name: ListAllMessageBatchesAsync(int, CancellationToken)
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_System_Threading_CancellationToken_
@@ -189,6 +266,22 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.AnthropicApiClient.ListAllModelsAsync
   nameWithType: AnthropicApiClient.ListAllModelsAsync
+- uid: AnthropicClient.AnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name: ListFilesAsync(PagingRequest?, CancellationToken)
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListFilesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.AnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name.vb: ListFilesAsync(PagingRequest, CancellationToken)
+  fullName: AnthropicClient.AnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest?, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.AnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest, System.Threading.CancellationToken)
+  nameWithType: AnthropicApiClient.ListFilesAsync(PagingRequest?, CancellationToken)
+  nameWithType.vb: AnthropicApiClient.ListFilesAsync(PagingRequest, CancellationToken)
+- uid: AnthropicClient.AnthropicApiClient.ListFilesAsync*
+  name: ListFilesAsync
+  href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListFilesAsync_
+  commentId: Overload:AnthropicClient.AnthropicApiClient.ListFilesAsync
+  isSpec: "True"
+  fullName: AnthropicClient.AnthropicApiClient.ListFilesAsync
+  nameWithType: AnthropicApiClient.ListFilesAsync
 - uid: AnthropicClient.AnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
   name: ListMessageBatchesAsync(PagingRequest?, CancellationToken)
   href: api/AnthropicClient.AnthropicApiClient.html#AnthropicClient_AnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
@@ -256,6 +349,19 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.CountMessageTokensAsync
   nameWithType: IAnthropicApiClient.CountMessageTokensAsync
+- uid: AnthropicClient.IAnthropicApiClient.CreateFileAsync(AnthropicClient.Models.CreateFileRequest,System.Threading.CancellationToken)
+  name: CreateFileAsync(CreateFileRequest, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateFileAsync_AnthropicClient_Models_CreateFileRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.CreateFileAsync(AnthropicClient.Models.CreateFileRequest,System.Threading.CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.CreateFileAsync(AnthropicClient.Models.CreateFileRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.CreateFileAsync(CreateFileRequest, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.CreateFileAsync*
+  name: CreateFileAsync
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateFileAsync_
+  commentId: Overload:AnthropicClient.IAnthropicApiClient.CreateFileAsync
+  isSpec: "True"
+  fullName: AnthropicClient.IAnthropicApiClient.CreateFileAsync
+  nameWithType: IAnthropicApiClient.CreateFileAsync
 - uid: AnthropicClient.IAnthropicApiClient.CreateMessageAsync(AnthropicClient.Models.MessageRequest,System.Threading.CancellationToken)
   name: CreateMessageAsync(MessageRequest, CancellationToken)
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_CreateMessageAsync_AnthropicClient_Models_MessageRequest_System_Threading_CancellationToken_
@@ -288,6 +394,22 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.CreateMessageBatchAsync
   nameWithType: IAnthropicApiClient.CreateMessageBatchAsync
+- uid: AnthropicClient.IAnthropicApiClient.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  name: DeleteFileAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_DeleteFileAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.DeleteFileAsync(System.String,System.Threading.CancellationToken)
+  name.vb: DeleteFileAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.DeleteFileAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.DeleteFileAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.DeleteFileAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.DeleteFileAsync(String, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.DeleteFileAsync*
+  name: DeleteFileAsync
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_DeleteFileAsync_
+  commentId: Overload:AnthropicClient.IAnthropicApiClient.DeleteFileAsync
+  isSpec: "True"
+  fullName: AnthropicClient.IAnthropicApiClient.DeleteFileAsync
+  nameWithType: IAnthropicApiClient.DeleteFileAsync
 - uid: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync(System.String,System.Threading.CancellationToken)
   name: DeleteMessageBatchAsync(string, CancellationToken)
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_DeleteMessageBatchAsync_System_String_System_Threading_CancellationToken_
@@ -304,6 +426,38 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.DeleteMessageBatchAsync
   nameWithType: IAnthropicApiClient.DeleteMessageBatchAsync
+- uid: AnthropicClient.IAnthropicApiClient.GetFileAsync(System.String,System.Threading.CancellationToken)
+  name: GetFileAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetFileAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.GetFileAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetFileAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.GetFileAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.GetFileAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.GetFileAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.GetFileAsync(String, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.GetFileAsync*
+  name: GetFileAsync
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetFileAsync_
+  commentId: Overload:AnthropicClient.IAnthropicApiClient.GetFileAsync
+  isSpec: "True"
+  fullName: AnthropicClient.IAnthropicApiClient.GetFileAsync
+  nameWithType: IAnthropicApiClient.GetFileAsync
+- uid: AnthropicClient.IAnthropicApiClient.GetFileInfoAsync(System.String,System.Threading.CancellationToken)
+  name: GetFileInfoAsync(string, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetFileInfoAsync_System_String_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.GetFileInfoAsync(System.String,System.Threading.CancellationToken)
+  name.vb: GetFileInfoAsync(String, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.GetFileInfoAsync(string, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.GetFileInfoAsync(String, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.GetFileInfoAsync(string, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.GetFileInfoAsync(String, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.GetFileInfoAsync*
+  name: GetFileInfoAsync
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetFileInfoAsync_
+  commentId: Overload:AnthropicClient.IAnthropicApiClient.GetFileInfoAsync
+  isSpec: "True"
+  fullName: AnthropicClient.IAnthropicApiClient.GetFileInfoAsync
+  nameWithType: IAnthropicApiClient.GetFileInfoAsync
 - uid: AnthropicClient.IAnthropicApiClient.GetMessageBatchAsync(System.String,System.Threading.CancellationToken)
   name: GetMessageBatchAsync(string, CancellationToken)
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_GetMessageBatchAsync_System_String_System_Threading_CancellationToken_
@@ -352,6 +506,22 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.GetModelAsync
   nameWithType: IAnthropicApiClient.GetModelAsync
+- uid: AnthropicClient.IAnthropicApiClient.ListAllFilesAsync(System.Int32,System.Threading.CancellationToken)
+  name: ListAllFilesAsync(int, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllFilesAsync_System_Int32_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.ListAllFilesAsync(System.Int32,System.Threading.CancellationToken)
+  name.vb: ListAllFilesAsync(Integer, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.ListAllFilesAsync(int, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.ListAllFilesAsync(Integer, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.ListAllFilesAsync(int, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.ListAllFilesAsync(Integer, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.ListAllFilesAsync*
+  name: ListAllFilesAsync
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllFilesAsync_
+  commentId: Overload:AnthropicClient.IAnthropicApiClient.ListAllFilesAsync
+  isSpec: "True"
+  fullName: AnthropicClient.IAnthropicApiClient.ListAllFilesAsync
+  nameWithType: IAnthropicApiClient.ListAllFilesAsync
 - uid: AnthropicClient.IAnthropicApiClient.ListAllMessageBatchesAsync(System.Int32,System.Threading.CancellationToken)
   name: ListAllMessageBatchesAsync(int, CancellationToken)
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListAllMessageBatchesAsync_System_Int32_System_Threading_CancellationToken_
@@ -384,6 +554,22 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.IAnthropicApiClient.ListAllModelsAsync
   nameWithType: IAnthropicApiClient.ListAllModelsAsync
+- uid: AnthropicClient.IAnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name: ListFilesAsync(PagingRequest?, CancellationToken)
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListFilesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
+  commentId: M:AnthropicClient.IAnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
+  name.vb: ListFilesAsync(PagingRequest, CancellationToken)
+  fullName: AnthropicClient.IAnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest?, System.Threading.CancellationToken)
+  fullName.vb: AnthropicClient.IAnthropicApiClient.ListFilesAsync(AnthropicClient.Models.PagingRequest, System.Threading.CancellationToken)
+  nameWithType: IAnthropicApiClient.ListFilesAsync(PagingRequest?, CancellationToken)
+  nameWithType.vb: IAnthropicApiClient.ListFilesAsync(PagingRequest, CancellationToken)
+- uid: AnthropicClient.IAnthropicApiClient.ListFilesAsync*
+  name: ListFilesAsync
+  href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListFilesAsync_
+  commentId: Overload:AnthropicClient.IAnthropicApiClient.ListFilesAsync
+  isSpec: "True"
+  fullName: AnthropicClient.IAnthropicApiClient.ListFilesAsync
+  nameWithType: IAnthropicApiClient.ListFilesAsync
 - uid: AnthropicClient.IAnthropicApiClient.ListMessageBatchesAsync(AnthropicClient.Models.PagingRequest,System.Threading.CancellationToken)
   name: ListMessageBatchesAsync(PagingRequest?, CancellationToken)
   href: api/AnthropicClient.IAnthropicApiClient.html#AnthropicClient_IAnthropicApiClient_ListMessageBatchesAsync_AnthropicClient_Models_PagingRequest_System_Threading_CancellationToken_
@@ -524,6 +710,135 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.AnthropicEvent.Type
   nameWithType: AnthropicEvent.Type
+- uid: AnthropicClient.Models.AnthropicFile
+  name: AnthropicFile
+  href: api/AnthropicClient.Models.AnthropicFile.html
+  commentId: T:AnthropicClient.Models.AnthropicFile
+  fullName: AnthropicClient.Models.AnthropicFile
+  nameWithType: AnthropicFile
+- uid: AnthropicClient.Models.AnthropicFile.CreatedAt
+  name: CreatedAt
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_CreatedAt
+  commentId: P:AnthropicClient.Models.AnthropicFile.CreatedAt
+  fullName: AnthropicClient.Models.AnthropicFile.CreatedAt
+  nameWithType: AnthropicFile.CreatedAt
+- uid: AnthropicClient.Models.AnthropicFile.CreatedAt*
+  name: CreatedAt
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_CreatedAt_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.CreatedAt
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.CreatedAt
+  nameWithType: AnthropicFile.CreatedAt
+- uid: AnthropicClient.Models.AnthropicFile.Downloadable
+  name: Downloadable
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Downloadable
+  commentId: P:AnthropicClient.Models.AnthropicFile.Downloadable
+  fullName: AnthropicClient.Models.AnthropicFile.Downloadable
+  nameWithType: AnthropicFile.Downloadable
+- uid: AnthropicClient.Models.AnthropicFile.Downloadable*
+  name: Downloadable
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Downloadable_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.Downloadable
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.Downloadable
+  nameWithType: AnthropicFile.Downloadable
+- uid: AnthropicClient.Models.AnthropicFile.Id
+  name: Id
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Id
+  commentId: P:AnthropicClient.Models.AnthropicFile.Id
+  fullName: AnthropicClient.Models.AnthropicFile.Id
+  nameWithType: AnthropicFile.Id
+- uid: AnthropicClient.Models.AnthropicFile.Id*
+  name: Id
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Id_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.Id
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.Id
+  nameWithType: AnthropicFile.Id
+- uid: AnthropicClient.Models.AnthropicFile.MimeType
+  name: MimeType
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_MimeType
+  commentId: P:AnthropicClient.Models.AnthropicFile.MimeType
+  fullName: AnthropicClient.Models.AnthropicFile.MimeType
+  nameWithType: AnthropicFile.MimeType
+- uid: AnthropicClient.Models.AnthropicFile.MimeType*
+  name: MimeType
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_MimeType_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.MimeType
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.MimeType
+  nameWithType: AnthropicFile.MimeType
+- uid: AnthropicClient.Models.AnthropicFile.Name
+  name: Name
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Name
+  commentId: P:AnthropicClient.Models.AnthropicFile.Name
+  fullName: AnthropicClient.Models.AnthropicFile.Name
+  nameWithType: AnthropicFile.Name
+- uid: AnthropicClient.Models.AnthropicFile.Name*
+  name: Name
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Name_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.Name
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.Name
+  nameWithType: AnthropicFile.Name
+- uid: AnthropicClient.Models.AnthropicFile.Size
+  name: Size
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Size
+  commentId: P:AnthropicClient.Models.AnthropicFile.Size
+  fullName: AnthropicClient.Models.AnthropicFile.Size
+  nameWithType: AnthropicFile.Size
+- uid: AnthropicClient.Models.AnthropicFile.Size*
+  name: Size
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Size_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.Size
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.Size
+  nameWithType: AnthropicFile.Size
+- uid: AnthropicClient.Models.AnthropicFile.Type
+  name: Type
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Type
+  commentId: P:AnthropicClient.Models.AnthropicFile.Type
+  fullName: AnthropicClient.Models.AnthropicFile.Type
+  nameWithType: AnthropicFile.Type
+- uid: AnthropicClient.Models.AnthropicFile.Type*
+  name: Type
+  href: api/AnthropicClient.Models.AnthropicFile.html#AnthropicClient_Models_AnthropicFile_Type_
+  commentId: Overload:AnthropicClient.Models.AnthropicFile.Type
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFile.Type
+  nameWithType: AnthropicFile.Type
+- uid: AnthropicClient.Models.AnthropicFileDeleteResponse
+  name: AnthropicFileDeleteResponse
+  href: api/AnthropicClient.Models.AnthropicFileDeleteResponse.html
+  commentId: T:AnthropicClient.Models.AnthropicFileDeleteResponse
+  fullName: AnthropicClient.Models.AnthropicFileDeleteResponse
+  nameWithType: AnthropicFileDeleteResponse
+- uid: AnthropicClient.Models.AnthropicFileDeleteResponse.Id
+  name: Id
+  href: api/AnthropicClient.Models.AnthropicFileDeleteResponse.html#AnthropicClient_Models_AnthropicFileDeleteResponse_Id
+  commentId: P:AnthropicClient.Models.AnthropicFileDeleteResponse.Id
+  fullName: AnthropicClient.Models.AnthropicFileDeleteResponse.Id
+  nameWithType: AnthropicFileDeleteResponse.Id
+- uid: AnthropicClient.Models.AnthropicFileDeleteResponse.Id*
+  name: Id
+  href: api/AnthropicClient.Models.AnthropicFileDeleteResponse.html#AnthropicClient_Models_AnthropicFileDeleteResponse_Id_
+  commentId: Overload:AnthropicClient.Models.AnthropicFileDeleteResponse.Id
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFileDeleteResponse.Id
+  nameWithType: AnthropicFileDeleteResponse.Id
+- uid: AnthropicClient.Models.AnthropicFileDeleteResponse.Type
+  name: Type
+  href: api/AnthropicClient.Models.AnthropicFileDeleteResponse.html#AnthropicClient_Models_AnthropicFileDeleteResponse_Type
+  commentId: P:AnthropicClient.Models.AnthropicFileDeleteResponse.Type
+  fullName: AnthropicClient.Models.AnthropicFileDeleteResponse.Type
+  nameWithType: AnthropicFileDeleteResponse.Type
+- uid: AnthropicClient.Models.AnthropicFileDeleteResponse.Type*
+  name: Type
+  href: api/AnthropicClient.Models.AnthropicFileDeleteResponse.html#AnthropicClient_Models_AnthropicFileDeleteResponse_Type_
+  commentId: Overload:AnthropicClient.Models.AnthropicFileDeleteResponse.Type
+  isSpec: "True"
+  fullName: AnthropicClient.Models.AnthropicFileDeleteResponse.Type
+  nameWithType: AnthropicFileDeleteResponse.Type
 - uid: AnthropicClient.Models.AnthropicFunction
   name: AnthropicFunction
   href: api/AnthropicClient.Models.AnthropicFunction.html
@@ -785,6 +1100,18 @@ references:
   commentId: F:AnthropicClient.Models.AnthropicModels.Claude35SonnetLatest
   fullName: AnthropicClient.Models.AnthropicModels.Claude35SonnetLatest
   nameWithType: AnthropicModels.Claude35SonnetLatest
+- uid: AnthropicClient.Models.AnthropicModels.Claude37Sonnet20250219
+  name: Claude37Sonnet20250219
+  href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_Claude37Sonnet20250219
+  commentId: F:AnthropicClient.Models.AnthropicModels.Claude37Sonnet20250219
+  fullName: AnthropicClient.Models.AnthropicModels.Claude37Sonnet20250219
+  nameWithType: AnthropicModels.Claude37Sonnet20250219
+- uid: AnthropicClient.Models.AnthropicModels.Claude37SonnetLatest
+  name: Claude37SonnetLatest
+  href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_Claude37SonnetLatest
+  commentId: F:AnthropicClient.Models.AnthropicModels.Claude37SonnetLatest
+  fullName: AnthropicClient.Models.AnthropicModels.Claude37SonnetLatest
+  nameWithType: AnthropicModels.Claude37SonnetLatest
 - uid: AnthropicClient.Models.AnthropicModels.Claude3Haiku
   name: Claude3Haiku
   href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_Claude3Haiku
@@ -827,6 +1154,30 @@ references:
   commentId: F:AnthropicClient.Models.AnthropicModels.Claude3Sonnet20240229
   fullName: AnthropicClient.Models.AnthropicModels.Claude3Sonnet20240229
   nameWithType: AnthropicModels.Claude3Sonnet20240229
+- uid: AnthropicClient.Models.AnthropicModels.ClaudeOpus40
+  name: ClaudeOpus40
+  href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_ClaudeOpus40
+  commentId: F:AnthropicClient.Models.AnthropicModels.ClaudeOpus40
+  fullName: AnthropicClient.Models.AnthropicModels.ClaudeOpus40
+  nameWithType: AnthropicModels.ClaudeOpus40
+- uid: AnthropicClient.Models.AnthropicModels.ClaudeOpus420250514
+  name: ClaudeOpus420250514
+  href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_ClaudeOpus420250514
+  commentId: F:AnthropicClient.Models.AnthropicModels.ClaudeOpus420250514
+  fullName: AnthropicClient.Models.AnthropicModels.ClaudeOpus420250514
+  nameWithType: AnthropicModels.ClaudeOpus420250514
+- uid: AnthropicClient.Models.AnthropicModels.ClaudeSonnet40
+  name: ClaudeSonnet40
+  href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_ClaudeSonnet40
+  commentId: F:AnthropicClient.Models.AnthropicModels.ClaudeSonnet40
+  fullName: AnthropicClient.Models.AnthropicModels.ClaudeSonnet40
+  nameWithType: AnthropicModels.ClaudeSonnet40
+- uid: AnthropicClient.Models.AnthropicModels.ClaudeSonnet420250514
+  name: ClaudeSonnet420250514
+  href: api/AnthropicClient.Models.AnthropicModels.html#AnthropicClient_Models_AnthropicModels_ClaudeSonnet420250514
+  commentId: F:AnthropicClient.Models.AnthropicModels.ClaudeSonnet420250514
+  fullName: AnthropicClient.Models.AnthropicModels.ClaudeSonnet420250514
+  nameWithType: AnthropicModels.ClaudeSonnet420250514
 - uid: AnthropicClient.Models.AnyToolChoice
   name: AnyToolChoice
   href: api/AnthropicClient.Models.AnyToolChoice.html
@@ -1908,6 +2259,79 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.CountMessageTokensRequest.Tools
   nameWithType: CountMessageTokensRequest.Tools
+- uid: AnthropicClient.Models.CreateFileRequest
+  name: CreateFileRequest
+  href: api/AnthropicClient.Models.CreateFileRequest.html
+  commentId: T:AnthropicClient.Models.CreateFileRequest
+  fullName: AnthropicClient.Models.CreateFileRequest
+  nameWithType: CreateFileRequest
+- uid: AnthropicClient.Models.CreateFileRequest.#ctor(System.Byte[],System.String,System.String)
+  name: CreateFileRequest(byte[], string, string)
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest__ctor_System_Byte___System_String_System_String_
+  commentId: M:AnthropicClient.Models.CreateFileRequest.#ctor(System.Byte[],System.String,System.String)
+  name.vb: New(Byte(), String, String)
+  fullName: AnthropicClient.Models.CreateFileRequest.CreateFileRequest(byte[], string, string)
+  fullName.vb: AnthropicClient.Models.CreateFileRequest.New(Byte(), String, String)
+  nameWithType: CreateFileRequest.CreateFileRequest(byte[], string, string)
+  nameWithType.vb: CreateFileRequest.New(Byte(), String, String)
+- uid: AnthropicClient.Models.CreateFileRequest.#ctor(System.IO.Stream,System.String,System.String)
+  name: CreateFileRequest(Stream, string, string)
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest__ctor_System_IO_Stream_System_String_System_String_
+  commentId: M:AnthropicClient.Models.CreateFileRequest.#ctor(System.IO.Stream,System.String,System.String)
+  name.vb: New(Stream, String, String)
+  fullName: AnthropicClient.Models.CreateFileRequest.CreateFileRequest(System.IO.Stream, string, string)
+  fullName.vb: AnthropicClient.Models.CreateFileRequest.New(System.IO.Stream, String, String)
+  nameWithType: CreateFileRequest.CreateFileRequest(Stream, string, string)
+  nameWithType.vb: CreateFileRequest.New(Stream, String, String)
+- uid: AnthropicClient.Models.CreateFileRequest.#ctor*
+  name: CreateFileRequest
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest__ctor_
+  commentId: Overload:AnthropicClient.Models.CreateFileRequest.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.CreateFileRequest.CreateFileRequest
+  fullName.vb: AnthropicClient.Models.CreateFileRequest.New
+  nameWithType: CreateFileRequest.CreateFileRequest
+  nameWithType.vb: CreateFileRequest.New
+- uid: AnthropicClient.Models.CreateFileRequest.File
+  name: File
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest_File
+  commentId: P:AnthropicClient.Models.CreateFileRequest.File
+  fullName: AnthropicClient.Models.CreateFileRequest.File
+  nameWithType: CreateFileRequest.File
+- uid: AnthropicClient.Models.CreateFileRequest.File*
+  name: File
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest_File_
+  commentId: Overload:AnthropicClient.Models.CreateFileRequest.File
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CreateFileRequest.File
+  nameWithType: CreateFileRequest.File
+- uid: AnthropicClient.Models.CreateFileRequest.FileName
+  name: FileName
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest_FileName
+  commentId: P:AnthropicClient.Models.CreateFileRequest.FileName
+  fullName: AnthropicClient.Models.CreateFileRequest.FileName
+  nameWithType: CreateFileRequest.FileName
+- uid: AnthropicClient.Models.CreateFileRequest.FileName*
+  name: FileName
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest_FileName_
+  commentId: Overload:AnthropicClient.Models.CreateFileRequest.FileName
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CreateFileRequest.FileName
+  nameWithType: CreateFileRequest.FileName
+- uid: AnthropicClient.Models.CreateFileRequest.FileType
+  name: FileType
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest_FileType
+  commentId: P:AnthropicClient.Models.CreateFileRequest.FileType
+  fullName: AnthropicClient.Models.CreateFileRequest.FileType
+  nameWithType: CreateFileRequest.FileType
+- uid: AnthropicClient.Models.CreateFileRequest.FileType*
+  name: FileType
+  href: api/AnthropicClient.Models.CreateFileRequest.html#AnthropicClient_Models_CreateFileRequest_FileType_
+  commentId: Overload:AnthropicClient.Models.CreateFileRequest.FileType
+  isSpec: "True"
+  fullName: AnthropicClient.Models.CreateFileRequest.FileType
+  nameWithType: CreateFileRequest.FileType
 - uid: AnthropicClient.Models.CustomSource
   name: CustomSource
   href: api/AnthropicClient.Models.CustomSource.html
@@ -2398,6 +2822,53 @@ references:
   fullName.vb: AnthropicClient.Models.ExpiredMessageBatchResult.New
   nameWithType: ExpiredMessageBatchResult.ExpiredMessageBatchResult
   nameWithType.vb: ExpiredMessageBatchResult.New
+- uid: AnthropicClient.Models.FileSource
+  name: FileSource
+  href: api/AnthropicClient.Models.FileSource.html
+  commentId: T:AnthropicClient.Models.FileSource
+  fullName: AnthropicClient.Models.FileSource
+  nameWithType: FileSource
+- uid: AnthropicClient.Models.FileSource.#ctor
+  name: FileSource()
+  href: api/AnthropicClient.Models.FileSource.html#AnthropicClient_Models_FileSource__ctor
+  commentId: M:AnthropicClient.Models.FileSource.#ctor
+  name.vb: New()
+  fullName: AnthropicClient.Models.FileSource.FileSource()
+  fullName.vb: AnthropicClient.Models.FileSource.New()
+  nameWithType: FileSource.FileSource()
+  nameWithType.vb: FileSource.New()
+- uid: AnthropicClient.Models.FileSource.#ctor(System.String)
+  name: FileSource(string)
+  href: api/AnthropicClient.Models.FileSource.html#AnthropicClient_Models_FileSource__ctor_System_String_
+  commentId: M:AnthropicClient.Models.FileSource.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AnthropicClient.Models.FileSource.FileSource(string)
+  fullName.vb: AnthropicClient.Models.FileSource.New(String)
+  nameWithType: FileSource.FileSource(string)
+  nameWithType.vb: FileSource.New(String)
+- uid: AnthropicClient.Models.FileSource.#ctor*
+  name: FileSource
+  href: api/AnthropicClient.Models.FileSource.html#AnthropicClient_Models_FileSource__ctor_
+  commentId: Overload:AnthropicClient.Models.FileSource.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.FileSource.FileSource
+  fullName.vb: AnthropicClient.Models.FileSource.New
+  nameWithType: FileSource.FileSource
+  nameWithType.vb: FileSource.New
+- uid: AnthropicClient.Models.FileSource.Id
+  name: Id
+  href: api/AnthropicClient.Models.FileSource.html#AnthropicClient_Models_FileSource_Id
+  commentId: P:AnthropicClient.Models.FileSource.Id
+  fullName: AnthropicClient.Models.FileSource.Id
+  nameWithType: FileSource.Id
+- uid: AnthropicClient.Models.FileSource.Id*
+  name: Id
+  href: api/AnthropicClient.Models.FileSource.html#AnthropicClient_Models_FileSource_Id_
+  commentId: Overload:AnthropicClient.Models.FileSource.Id
+  isSpec: "True"
+  fullName: AnthropicClient.Models.FileSource.Id
+  nameWithType: FileSource.Id
 - uid: AnthropicClient.Models.FunctionParameterAttribute
   name: FunctionParameterAttribute
   href: api/AnthropicClient.Models.FunctionParameterAttribute.html
@@ -2590,6 +3061,24 @@ references:
   commentId: T:AnthropicClient.Models.ImageContent
   fullName: AnthropicClient.Models.ImageContent
   nameWithType: ImageContent
+- uid: AnthropicClient.Models.ImageContent.#ctor(AnthropicClient.Models.Source)
+  name: ImageContent(Source)
+  href: api/AnthropicClient.Models.ImageContent.html#AnthropicClient_Models_ImageContent__ctor_AnthropicClient_Models_Source_
+  commentId: M:AnthropicClient.Models.ImageContent.#ctor(AnthropicClient.Models.Source)
+  name.vb: New(Source)
+  fullName: AnthropicClient.Models.ImageContent.ImageContent(AnthropicClient.Models.Source)
+  fullName.vb: AnthropicClient.Models.ImageContent.New(AnthropicClient.Models.Source)
+  nameWithType: ImageContent.ImageContent(Source)
+  nameWithType.vb: ImageContent.New(Source)
+- uid: AnthropicClient.Models.ImageContent.#ctor(AnthropicClient.Models.Source,AnthropicClient.Models.CacheControl)
+  name: ImageContent(Source, CacheControl)
+  href: api/AnthropicClient.Models.ImageContent.html#AnthropicClient_Models_ImageContent__ctor_AnthropicClient_Models_Source_AnthropicClient_Models_CacheControl_
+  commentId: M:AnthropicClient.Models.ImageContent.#ctor(AnthropicClient.Models.Source,AnthropicClient.Models.CacheControl)
+  name.vb: New(Source, CacheControl)
+  fullName: AnthropicClient.Models.ImageContent.ImageContent(AnthropicClient.Models.Source, AnthropicClient.Models.CacheControl)
+  fullName.vb: AnthropicClient.Models.ImageContent.New(AnthropicClient.Models.Source, AnthropicClient.Models.CacheControl)
+  nameWithType: ImageContent.ImageContent(Source, CacheControl)
+  nameWithType.vb: ImageContent.New(Source, CacheControl)
 - uid: AnthropicClient.Models.ImageContent.#ctor(System.String,System.String)
   name: ImageContent(string, string)
   href: api/AnthropicClient.Models.ImageContent.html#AnthropicClient_Models_ImageContent__ctor_System_String_System_String_
@@ -4129,12 +4618,24 @@ references:
   commentId: F:AnthropicClient.Models.SourceType.Content
   fullName: AnthropicClient.Models.SourceType.Content
   nameWithType: SourceType.Content
+- uid: AnthropicClient.Models.SourceType.File
+  name: File
+  href: api/AnthropicClient.Models.SourceType.html#AnthropicClient_Models_SourceType_File
+  commentId: F:AnthropicClient.Models.SourceType.File
+  fullName: AnthropicClient.Models.SourceType.File
+  nameWithType: SourceType.File
 - uid: AnthropicClient.Models.SourceType.Text
   name: Text
   href: api/AnthropicClient.Models.SourceType.html#AnthropicClient_Models_SourceType_Text
   commentId: F:AnthropicClient.Models.SourceType.Text
   fullName: AnthropicClient.Models.SourceType.Text
   nameWithType: SourceType.Text
+- uid: AnthropicClient.Models.SourceType.Url
+  name: Url
+  href: api/AnthropicClient.Models.SourceType.html#AnthropicClient_Models_SourceType_Url
+  commentId: F:AnthropicClient.Models.SourceType.Url
+  fullName: AnthropicClient.Models.SourceType.Url
+  nameWithType: SourceType.Url
 - uid: AnthropicClient.Models.SpecificToolChoice
   name: SpecificToolChoice
   href: api/AnthropicClient.Models.SpecificToolChoice.html
@@ -4990,6 +5491,53 @@ references:
   isSpec: "True"
   fullName: AnthropicClient.Models.ToolUseContent.Name
   nameWithType: ToolUseContent.Name
+- uid: AnthropicClient.Models.UrlSource
+  name: UrlSource
+  href: api/AnthropicClient.Models.UrlSource.html
+  commentId: T:AnthropicClient.Models.UrlSource
+  fullName: AnthropicClient.Models.UrlSource
+  nameWithType: UrlSource
+- uid: AnthropicClient.Models.UrlSource.#ctor
+  name: UrlSource()
+  href: api/AnthropicClient.Models.UrlSource.html#AnthropicClient_Models_UrlSource__ctor
+  commentId: M:AnthropicClient.Models.UrlSource.#ctor
+  name.vb: New()
+  fullName: AnthropicClient.Models.UrlSource.UrlSource()
+  fullName.vb: AnthropicClient.Models.UrlSource.New()
+  nameWithType: UrlSource.UrlSource()
+  nameWithType.vb: UrlSource.New()
+- uid: AnthropicClient.Models.UrlSource.#ctor(System.String)
+  name: UrlSource(string)
+  href: api/AnthropicClient.Models.UrlSource.html#AnthropicClient_Models_UrlSource__ctor_System_String_
+  commentId: M:AnthropicClient.Models.UrlSource.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AnthropicClient.Models.UrlSource.UrlSource(string)
+  fullName.vb: AnthropicClient.Models.UrlSource.New(String)
+  nameWithType: UrlSource.UrlSource(string)
+  nameWithType.vb: UrlSource.New(String)
+- uid: AnthropicClient.Models.UrlSource.#ctor*
+  name: UrlSource
+  href: api/AnthropicClient.Models.UrlSource.html#AnthropicClient_Models_UrlSource__ctor_
+  commentId: Overload:AnthropicClient.Models.UrlSource.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AnthropicClient.Models.UrlSource.UrlSource
+  fullName.vb: AnthropicClient.Models.UrlSource.New
+  nameWithType: UrlSource.UrlSource
+  nameWithType.vb: UrlSource.New
+- uid: AnthropicClient.Models.UrlSource.Url
+  name: Url
+  href: api/AnthropicClient.Models.UrlSource.html#AnthropicClient_Models_UrlSource_Url
+  commentId: P:AnthropicClient.Models.UrlSource.Url
+  fullName: AnthropicClient.Models.UrlSource.Url
+  nameWithType: UrlSource.Url
+- uid: AnthropicClient.Models.UrlSource.Url*
+  name: Url
+  href: api/AnthropicClient.Models.UrlSource.html#AnthropicClient_Models_UrlSource_Url_
+  commentId: Overload:AnthropicClient.Models.UrlSource.Url
+  isSpec: "True"
+  fullName: AnthropicClient.Models.UrlSource.Url
+  nameWithType: UrlSource.Url
 - uid: AnthropicClient.Models.Usage
   name: Usage
   href: api/AnthropicClient.Models.Usage.html

@@ -68,6 +68,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.AnthropicFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.AnthropicFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicFile",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicFile.yml\" sourcestartlinenumber=\"1\">Represents a file object from the Anthropic Files API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.AnthropicFileDeleteResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.AnthropicFileDeleteResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.AnthropicFileDeleteResponse",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.AnthropicFileDeleteResponse.yml\" sourcestartlinenumber=\"1\">Represents the response from deleting a file in the Anthropic API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AnthropicClient.Models.AnthropicFunction.yml",
       "output": {
         ".html": {
@@ -446,6 +474,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.CreateFileRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.CreateFileRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.CreateFileRequest",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.CreateFileRequest.yml\" sourcestartlinenumber=\"1\">Represents a request to create a file via the Anthropic Files API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AnthropicClient.Models.CustomSource.yml",
       "output": {
         ".html": {
@@ -597,6 +639,20 @@
       "IsMRef": true,
       "Title": "AnthropicClient.Models.ExpiredMessageBatchResult",
       "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ExpiredMessageBatchResult.yml\" sourcestartlinenumber=\"1\">Represents a message batch result that has expired.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.FileSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.FileSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.FileSource",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.FileSource.yml\" sourcestartlinenumber=\"1\">Represents a file source in the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1353,6 +1409,20 @@
       "IsMRef": true,
       "Title": "AnthropicClient.Models.ToolUseContent",
       "Summary": "<p sourcefile=\"api/AnthropicClient.Models.ToolUseContent.yml\" sourcestartlinenumber=\"1\">Represents tool use content that is part of a message.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnthropicClient.Models.UrlSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnthropicClient.Models.UrlSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "AnthropicClient.Models.UrlSource",
+      "Summary": "<p sourcefile=\"api/AnthropicClient.Models.UrlSource.yml\" sourcestartlinenumber=\"1\">Represents a URL source in the Anthropic API.</p>\n"
     },
     {
       "type": "ManagedReference",

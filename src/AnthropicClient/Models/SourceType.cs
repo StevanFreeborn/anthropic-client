@@ -19,4 +19,14 @@ public static class SourceType
   /// The text document source type.
   /// </summary>
   public const string Text = "text";
+
+  /// <summary>
+  /// The file document source type.
+  /// </summary>
+  public const string File = "file";
+
+  /// <summary>
+  /// The URL document source type.
+  /// </summary>
+  public const string Url = "url";
 }

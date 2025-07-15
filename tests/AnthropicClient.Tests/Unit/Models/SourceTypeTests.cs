@@ -19,4 +19,10 @@ public class SourceTypeTests
   {
     SourceType.Text.Should().Be("text");
   }
+
+  [Fact]
+  public void File_WhenCalled_ItShouldReturnCorrectValue()
+  {
+    SourceType.File.Should().Be("file");
+  }
 }

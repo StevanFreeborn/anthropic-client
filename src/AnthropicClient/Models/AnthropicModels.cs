@@ -21,6 +21,16 @@ public static class AnthropicModels
   public const string Claude3OpusLatest = "claude-3-opus-latest";
 
   /// <summary>
+  /// The Claude 4 Opus model.
+  /// </summary>
+  public const string ClaudeOpus420250514 = "claude-opus-4-20250514";
+
+  /// <summary>
+  /// The Claude 4 Opus model.
+  /// </summary>
+  public const string ClaudeOpus40 = "claude-opus-4-0";
+
+  /// <summary>
   /// The Claude 3 Sonnet model.
   /// </summary>
   public const string Claude3Sonnet = "claude-3-sonnet-20240229";
@@ -49,6 +59,26 @@ public static class AnthropicModels
   /// The Claude 3.5 Sonnet model.
   /// </summary>
   public const string Claude35SonnetLatest = "claude-3-5-sonnet-latest";
+
+  /// <summary>
+  /// The Claude 3 Sonnet model
+  /// </summary>
+  public const string Claude37Sonnet20250219 = "claude-3-7-sonnet-20250219";
+
+  /// <summary>
+  /// The Claude 3 Sonnet model
+  /// </summary>
+  public const string Claude37SonnetLatest = "claude-3-7-sonnet-latest";
+
+  /// <summary>
+  /// The Claude 4 Sonnet model.
+  /// </summary>
+  public const string ClaudeSonnet420250514 = "claude-sonnet-4-20250514";
+
+  /// <summary>
+  /// The Claude 4 Sonnet model.
+  /// </summary>
+  public const string ClaudeSonnet40 = "claude-sonnet-4-0";
 
   /// <summary>
   /// The Claude 3 Haiku model.

@@ -131,4 +131,64 @@ public class AnthropicModelsTests
 
     actual.Should().Be(expected);
   }
+
+  [Fact]
+  public void Claude37Sonnet20250219_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "claude-3-7-sonnet-20250219";
+
+    var actual = AnthropicModels.Claude37Sonnet20250219;
+
+    actual.Should().Be(expected);
+  }
+
+  [Fact]
+  public void Claude37SonnetLatest_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "claude-3-7-sonnet-latest";
+
+    var actual = AnthropicModels.Claude37SonnetLatest;
+
+    actual.Should().Be(expected);
+  }
+
+  [Fact]
+  public void ClaudeSonnet420250514_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "claude-sonnet-4-20250514";
+
+    var actual = AnthropicModels.ClaudeSonnet420250514;
+
+    actual.Should().Be(expected);
+  }
+
+  [Fact]
+  public void ClaudeSonnet40_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "claude-sonnet-4-0";
+
+    var actual = AnthropicModels.ClaudeSonnet40;
+
+    actual.Should().Be(expected);
+  }
+
+  [Fact]
+  public void ClaudeOpus420250514_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "claude-opus-4-20250514";
+
+    var actual = AnthropicModels.ClaudeOpus420250514;
+
+    actual.Should().Be(expected);
+  }
+
+  [Fact]
+  public void ClaudeOpus40_WhenCalled_ItShouldReturnExpectedValue()
+  {
+    var expected = "claude-opus-4-0";
+
+    var actual = AnthropicModels.ClaudeOpus40;
+
+    actual.Should().Be(expected);
+  }
 }
